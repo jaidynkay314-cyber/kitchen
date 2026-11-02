@@ -506,7 +506,7 @@ function renderEditor(id) {
     ED = src ? JSON.parse(JSON.stringify(src)) : blankRecipe();
     ED._for = id || ""; ED.share ??= guessShare(ED);
     if (src && !src.local) { ED.id = ""; ED.title = src.title + " (my version)"; }
-    for (const g of ED.ingredients) { g.batch ??= batchQty(g, ED.base); g.sh ??= g.per.J ? +(g.per.P / g.per.J).toFixed(4) : (g.per.P ? "P" : 0); g.ownShare ??= g.sh === "P" || Math.abs(g.sh - ED.share) > .005; }
+    for (const g of ED.ingredients) { g.batch ??= batchQty(g, ED.base); g.sh ??= g.per.J ? +(g.per.P / g.per.J).toFixed(4) : (g.per.P ? "P" : 0); g.ownShare ??= g.sh === "P" || Math.abs(g.sh - ED.share) > 1e-4; }
   }
   let draft = null; try { draft = JSON.parse(localStorage.getItem(DRAFT) || "null"); } catch (e) {}
   const m = edMacros();
