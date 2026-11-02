@@ -1,0 +1,204 @@
+{
+ "schema": "kitchen-recipe",
+ "schemaVersion": 1,
+ "id": "haloumi-chicken-salad",
+ "title": "Haloumi and Chicken Salad with Roast Pumpkin and Quinoa",
+ "category": "dinner",
+ "desc": "A big warm salad: grilled chicken and light haloumi with roast pumpkin, quinoa, rocket and cherry tomatoes.",
+ "tags": [
+  "chicken",
+  "salad",
+  "high protein"
+ ],
+ "time": 40,
+ "base": {
+  "J": 1,
+  "P": 1
+ },
+ "portions": {
+  "J": "180 g raw chicken, 50 g haloumi, 3/4 cup cooked quinoa, half the veg",
+  "P": "120 g raw chicken, 30 g haloumi, 1/2 cup cooked quinoa, half the veg"
+ },
+ "ingredients": [
+  {
+   "id": "i1",
+   "name": "chicken breast",
+   "food": "chicken breast",
+   "unit": "g",
+   "gpu": 1,
+   "k100": 106,
+   "p100": 23,
+   "aisle": "Meat",
+   "per": {
+    "J": 180,
+    "P": 120
+   }
+  },
+  {
+   "id": "i2",
+   "name": "light haloumi, sliced",
+   "food": "light haloumi",
+   "unit": "g",
+   "gpu": 1,
+   "k100": 260,
+   "p100": 23,
+   "aisle": "Dairy and eggs",
+   "per": {
+    "J": 50,
+    "P": 30
+   }
+  },
+  {
+   "id": "i3",
+   "name": "quinoa",
+   "food": "quinoa, uncooked",
+   "unit": "cup",
+   "gpu": 170,
+   "k100": 370,
+   "p100": 14,
+   "aisle": "Pantry",
+   "per": {
+    "J": 0.25,
+    "P": 0.17
+   }
+  },
+  {
+   "id": "i4",
+   "name": "butternut pumpkin, in 2 cm cubes",
+   "food": "butternut pumpkin",
+   "unit": "g",
+   "gpu": 1,
+   "k100": 45,
+   "p100": 1.1,
+   "aisle": "Produce",
+   "per": {
+    "J": 200.0,
+    "P": 200.0
+   }
+  },
+  {
+   "id": "i5",
+   "name": "red onion, in wedges",
+   "food": "red onion",
+   "unit": "whole",
+   "gpu": 150,
+   "k100": 40,
+   "p100": 1.1,
+   "aisle": "Produce",
+   "per": {
+    "J": 0.5,
+    "P": 0.5
+   }
+  },
+  {
+   "id": "i6",
+   "name": "olive oil",
+   "food": "olive oil",
+   "unit": "tbsp",
+   "gpu": 14,
+   "k100": 884,
+   "p100": 0,
+   "aisle": "Pantry",
+   "per": {
+    "J": 0.5,
+    "P": 0.5
+   }
+  },
+  {
+   "id": "i7",
+   "name": "Spices (cumin, smoked paprika)",
+   "food": "spices (your mix)",
+   "unit": "tsp",
+   "gpu": 2.5,
+   "k100": 0,
+   "p100": 0,
+   "aisle": "Sauces and spices",
+   "per": {
+    "J": 0.5,
+    "P": 0.5
+   }
+  },
+  {
+   "id": "i8",
+   "name": "rocket",
+   "food": "rocket",
+   "unit": "g",
+   "gpu": 1,
+   "k100": 25,
+   "p100": 2.6,
+   "aisle": "Produce",
+   "per": {
+    "J": 40.0,
+    "P": 40.0
+   }
+  },
+  {
+   "id": "i9",
+   "name": "cherry tomatoes, halved",
+   "food": "cherry tomatoes",
+   "unit": "g",
+   "gpu": 1,
+   "k100": 18,
+   "p100": 0.9,
+   "aisle": "Produce",
+   "per": {
+    "J": 75.0,
+    "P": 75.0
+   }
+  },
+  {
+   "id": "i10",
+   "name": "lemon juice",
+   "food": "lemon juice",
+   "unit": "tbsp",
+   "gpu": 15,
+   "k100": 22,
+   "p100": 0.4,
+   "aisle": "Produce",
+   "per": {
+    "J": 0.5,
+    "P": 0.5
+   }
+  }
+ ],
+ "steps": [
+  {
+   "title": "Roast the pumpkin",
+   "text": "Oven to 220°C (200°C fan). Toss the pumpkin and onion with half the oil, the spices and salt, and roast until golden.",
+   "timer": 1500
+  },
+  {
+   "title": "Quinoa",
+   "text": "Rinse the quinoa and simmer in twice its volume of water until the water's absorbed. Fluff and cool a little.",
+   "timer": 900
+  },
+  {
+   "title": "Chicken",
+   "text": "Season the chicken and cook on a hot pan or barbecue, about 4 to 5 minutes a side. Rest and slice.",
+   "timer": 540
+  },
+  {
+   "title": "Haloumi",
+   "text": "Same pan, dry, cook the haloumi until golden on both sides. It goes squeaky and rubbery if it cools, so do it last.",
+   "timer": 180
+  },
+  {
+   "title": "Toss and serve",
+   "text": "Toss the rocket, tomatoes, quinoa and pumpkin with the lemon juice and the rest of the oil. Top with the chicken and haloumi.",
+   "timer": 0
+  }
+ ],
+ "notes": "Leftover roast pumpkin and quinoa make this a quick work lunch.",
+ "macros": {
+  "J": {
+   "kcal": 685,
+   "protein": 64
+  },
+  "P": {
+   "kcal": 519,
+   "protein": 43
+  }
+ },
+ "sauce": "lemon-tahini-yoghurt",
+ "short": "Haloumi chicken salad, pumpkin, quinoa"
+}

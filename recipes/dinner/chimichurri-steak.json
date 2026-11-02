@@ -1,0 +1,222 @@
+{
+ "schema": "kitchen-recipe",
+ "schemaVersion": 1,
+ "id": "chimichurri-steak",
+ "title": "Chimichurri Steak with Corn and Charred Capsicum Salad",
+ "category": "dinner",
+ "desc": "Barbecued rump with a bright, light-on-oil chimichurri, corn on the cob and a charred capsicum and rocket salad.",
+ "tags": [
+  "beef",
+  "bbq",
+  "high protein"
+ ],
+ "time": 35,
+ "base": {
+  "J": 1,
+  "P": 1
+ },
+ "portions": {
+  "J": "250 g raw rump (about 190 g cooked), 1 cob of corn, half the salad",
+  "P": "150 g raw rump (about 115 g cooked), 1 cob of corn, half the salad"
+ },
+ "ingredients": [
+  {
+   "id": "i1",
+   "name": "rump steak, fat trimmed",
+   "food": "lean rump steak",
+   "unit": "g",
+   "gpu": 1,
+   "k100": 140,
+   "p100": 22,
+   "aisle": "Meat",
+   "per": {
+    "J": 250,
+    "P": 150
+   }
+  },
+  {
+   "id": "i2",
+   "name": "corn cob",
+   "food": "corn cob",
+   "unit": "whole",
+   "gpu": 100,
+   "k100": 86,
+   "p100": 3.3,
+   "aisle": "Produce",
+   "per": {
+    "J": 1.0,
+    "P": 1.0
+   }
+  },
+  {
+   "id": "i3",
+   "name": "capsicums, quartered",
+   "food": "red capsicum",
+   "unit": "whole",
+   "gpu": 160,
+   "k100": 31,
+   "p100": 1,
+   "aisle": "Produce",
+   "per": {
+    "J": 1.0,
+    "P": 1.0
+   }
+  },
+  {
+   "id": "i4",
+   "name": "red onion, thinly sliced",
+   "food": "red onion",
+   "unit": "whole",
+   "gpu": 150,
+   "k100": 40,
+   "p100": 1.1,
+   "aisle": "Produce",
+   "per": {
+    "J": 0.25,
+    "P": 0.25
+   }
+  },
+  {
+   "id": "i5",
+   "name": "rocket",
+   "food": "rocket",
+   "unit": "g",
+   "gpu": 1,
+   "k100": 25,
+   "p100": 2.6,
+   "aisle": "Produce",
+   "per": {
+    "J": 30.0,
+    "P": 30.0
+   }
+  },
+  {
+   "id": "i6",
+   "name": "flat-leaf parsley, a big bunch, finely chopped",
+   "food": "fresh herbs (dill, mint, parsley or chives)",
+   "unit": "tbsp",
+   "gpu": 4,
+   "k100": 40,
+   "p100": 3,
+   "aisle": "Produce",
+   "per": {
+    "J": 4.0,
+    "P": 4.0
+   }
+  },
+  {
+   "id": "i7",
+   "name": "olive oil",
+   "food": "olive oil",
+   "unit": "tbsp",
+   "gpu": 14,
+   "k100": 884,
+   "p100": 0,
+   "aisle": "Pantry",
+   "per": {
+    "J": 0.5,
+    "P": 0.5
+   }
+  },
+  {
+   "id": "i8",
+   "name": "red wine vinegar",
+   "food": "red wine vinegar",
+   "unit": "tbsp",
+   "gpu": 15,
+   "k100": 20,
+   "p100": 0,
+   "aisle": "Sauces and spices",
+   "per": {
+    "J": 1.0,
+    "P": 1.0
+   }
+  },
+  {
+   "id": "i9",
+   "name": "garlic",
+   "food": "garlic",
+   "unit": "clove",
+   "gpu": 5,
+   "k100": 149,
+   "p100": 6.4,
+   "aisle": "Produce",
+   "per": {
+    "J": 1.0,
+    "P": 1.0
+   }
+  },
+  {
+   "id": "i10",
+   "name": "dried oregano",
+   "food": "dried oregano",
+   "unit": "tsp",
+   "gpu": 1,
+   "k100": 265,
+   "p100": 9,
+   "aisle": "Sauces and spices",
+   "per": {
+    "J": 0.5,
+    "P": 0.5
+   }
+  },
+  {
+   "id": "i11",
+   "name": "chilli flakes",
+   "food": "spices (your mix)",
+   "unit": "tsp",
+   "gpu": 2.5,
+   "k100": 0,
+   "p100": 0,
+   "aisle": "Sauces and spices",
+   "per": {
+    "J": 0.25,
+    "P": 0.25
+   }
+  }
+ ],
+ "steps": [
+  {
+   "title": "Make the chimichurri",
+   "text": "Mix the parsley, oil, vinegar, crushed garlic, oregano, chilli flakes, salt and 2 tbsp water. It's better after 15 minutes.",
+   "timer": 900
+  },
+  {
+   "title": "Steak out",
+   "text": "Take the steak out to come up to room temperature. Pat dry and season well.",
+   "timer": 0
+  },
+  {
+   "title": "Grill the veg",
+   "text": "Hot barbecue. Grill the corn, turning, until charred in spots, and the capsicum until blistered and soft.",
+   "timer": 600
+  },
+  {
+   "title": "Grill the steak",
+   "text": "Cook the rump on the hottest part, 3 to 4 minutes a side for medium rare depending on thickness.",
+   "timer": 420
+  },
+  {
+   "title": "Rest and salad",
+   "text": "Rest the steak 5 minutes. Slice the capsicum and toss with the onion, rocket and a spoon of the chimichurri.",
+   "timer": 300
+  },
+  {
+   "title": "Serve",
+   "text": "Slice the steak across the grain and spoon chimichurri over the top. Corn and salad on the side.",
+   "timer": 0
+  }
+ ],
+ "notes": "Rump is lean and full of flavour, but it can be chewy: slice thin and across the grain.",
+ "macros": {
+  "J": {
+   "kcal": 588,
+   "protein": 62
+  },
+  "P": {
+   "kcal": 448,
+   "protein": 40
+  }
+ },
+ "short": "Chimichurri steak, corn, salad"
+}

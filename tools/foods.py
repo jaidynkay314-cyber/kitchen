@@ -82,6 +82,23 @@ FOODS = {
  "raw prawns, peeled": (85, 20, "Seafood", {}),
  "cherry tomatoes": (18, 0.9, "Produce", {}),
  "fresh chilli": (40, 2, "Produce", {"whole": 15}),
+ "lean rump steak": (140, 22, "Meat", {}),
+ "corn cob": (86, 3.3, "Produce", {"whole": 100}),
+ "red wine vinegar": (20, 0, "Sauces and spices", {"tbsp": 15}),
+ "rocket": (25, 2.6, "Produce", {}),
+ "mini naan": (285, 9, "Bakery", {"whole": 50}),
+ "green curry paste": (120, 2, "Sauces and spices", {"tbsp": 15}),
+ "snow peas": (40, 2.8, "Produce", {}),
+ "pork fillet": (110, 22, "Meat", {}),
+ "cornflour": (360, 0.3, "Pantry", {"tbsp": 10, "tsp": 3}),
+ "pineapple pieces in juice, tinned": (60, 0.5, "Pantry", {"tin": 225}),
+ "tomato sauce": (100, 1, "Sauces and spices", {"tbsp": 18}),
+ "wholemeal wraps": (290, 9, "Bakery", {"whole": 60}),
+ "cos lettuce": (17, 1.2, "Produce", {"whole": 300}),
+ "short-cut bacon": (130, 20, "Deli", {}),
+ "light haloumi": (260, 23, "Dairy and eggs", {}),
+ "quinoa, uncooked": (370, 14, "Pantry", {"cup": 170}),
+ "butternut pumpkin": (45, 1.1, "Produce", {}),
 }
 UNIT_G = {"g": 1, "ml": 1, "kg": 1000}
 def grams(food, qty, unit):

@@ -432,3 +432,131 @@ recipe(id="garlic-chilli-prawn-linguine", title="Garlic Chilli Prawn Linguine", 
   ("Prawns", "Add the prawns and cook until pink and curled, about 2 minutes. Don't overcook them.", 120),
   ("Toss it all", "Add the drained pasta, spinach, lemon zest and juice and a good splash of pasta water. Toss until glossy and the spinach wilts. Top with parmesan and parsley.", 0),
  ], notes="The pasta water does the job extra oil would do. Use it.")
+
+# ---- Batch 4 dinners (picked 2 Nov 2026) ----
+recipe(id="chimichurri-steak", title="Chimichurri Steak with Corn and Charred Capsicum Salad", category="dinner", short="Chimichurri steak, corn, salad",
+ desc="Barbecued rump with a bright, light-on-oil chimichurri, corn on the cob and a charred capsicum and rocket salad.",
+ tags=["beef", "bbq", "high protein"], time=35, base={"J": 1, "P": 1}, share=0.6,
+ portions={"J": "250 g raw rump (about 190 g cooked), 1 cob of corn, half the salad", "P": "150 g raw rump (about 115 g cooked), 1 cob of corn, half the salad"},
+ ingredients=[
+  ("lean rump steak", 400, "g", {"per": {"J": 250, "P": 150}, "label": "rump steak, fat trimmed"}),
+  ("corn cob", 2, "whole", {"share": 1}),
+  ("red capsicum", 2, "whole", {"share": 1, "label": "capsicums, quartered"}), ("red onion", 0.5, "whole", {"share": 1, "label": "red onion, thinly sliced"}),
+  ("rocket", 60, "g", {"share": 1}),
+  ("fresh herbs (dill, mint, parsley or chives)", 8, "tbsp", {"share": 1, "label": "flat-leaf parsley, a big bunch, finely chopped"}),
+  ("olive oil", 1, "tbsp", {"share": 1}), ("red wine vinegar", 2, "tbsp", {"share": 1}), ("garlic", 2, "clove", {"share": 1}),
+  ("dried oregano", 1, "tsp", {"share": 1}), ("spices (your mix)", 0.5, "tsp", {"share": 1, "label": "chilli flakes"}),
+ ],
+ steps=[
+  ("Make the chimichurri", "Mix the parsley, oil, vinegar, crushed garlic, oregano, chilli flakes, salt and 2 tbsp water. It's better after 15 minutes.", 900),
+  ("Steak out", "Take the steak out to come up to room temperature. Pat dry and season well.", 0),
+  ("Grill the veg", "Hot barbecue. Grill the corn, turning, until charred in spots, and the capsicum until blistered and soft.", 600),
+  ("Grill the steak", "Cook the rump on the hottest part, 3 to 4 minutes a side for medium rare depending on thickness.", 420),
+  ("Rest and salad", "Rest the steak 5 minutes. Slice the capsicum and toss with the onion, rocket and a spoon of the chimichurri.", 300),
+  ("Serve", "Slice the steak across the grain and spoon chimichurri over the top. Corn and salad on the side.", 0),
+ ], notes="Rump is lean and full of flavour, but it can be chewy: slice thin and across the grain.")
+
+recipe(id="tandoori-chicken", sauce="tzatziki", title="Tandoori Chicken with Cucumber Salad and Naan", category="dinner", short="Tandoori chicken, salad, naan",
+ desc="Yoghurt-marinated tandoori chicken thighs off the barbecue, with a crunchy cucumber and onion salad and a mini naan.",
+ tags=["chicken", "bbq", "indian"], time=40, base={"J": 1, "P": 1}, share=0.6,
+ portions={"J": "220 g raw chicken, 1 mini naan, half the salad", "P": "140 g raw chicken, 1 mini naan, half the salad"},
+ ingredients=[
+  ("chicken thigh fillet, skinless", 360, "g", {"per": {"J": 220, "P": 140}}),
+  ("high-protein Greek yoghurt", 100, "g", {"share": 1, "label": "Greek yoghurt, for the marinade"}),
+  ("garam masala", 2, "tsp", {"share": 1}), ("smoked paprika", 2, "tsp", {"share": 1}), ("ground cumin", 1, "tsp", {"share": 1}),
+  ("spices (your mix)", 1, "tsp", {"share": 1, "label": "chilli powder and turmeric, to taste"}),
+  ("lemon juice", 1, "tbsp", {"share": 1}), ("garlic", 2, "clove", {"share": 1}), ("fresh ginger, grated", 1, "tsp", {"share": 1}),
+  ("Lebanese cucumber", 1, "whole", {"share": 1, "label": "Lebanese cucumber, diced"}), ("red onion", 0.5, "whole", {"share": 1, "label": "red onion, finely sliced"}),
+  ("fresh herbs (dill, mint, parsley or chives)", 2, "tbsp", {"share": 1, "label": "fresh mint or coriander"}),
+  ("mini naan", 2, "whole", {"share": 1}),
+ ],
+ steps=[
+  ("Marinate", "Mix the yoghurt, spices, lemon juice, garlic, ginger and salt. Slash the chicken a few times and coat well. At least 30 minutes, ideally overnight.", 1800),
+  ("Salad", "Toss the cucumber, onion and mint with a squeeze of lemon and a pinch of salt.", 0),
+  ("Grill", "Hot barbecue. Cook the chicken until charred at the edges and cooked through, about 5 to 6 minutes a side.", 660),
+  ("Naan and serve", "Warm the naan on the barbecue for the last minute. Serve with the salad and tzatziki.", 60),
+ ], notes="The yoghurt marinade is what keeps the thighs so tender. Don't skip the slashes.")
+
+recipe(id="thai-green-chicken-curry", title="Thai Green Chicken Curry", category="dinner", short="Thai green chicken curry, rice",
+ desc="Green curry with chicken, zucchini, capsicum and snow peas, made with light coconut milk.",
+ tags=["chicken", "thai", "curry"], time=30, base={"J": 1, "P": 1}, share=0.6,
+ portions={"J": "200 g raw chicken and a generous ladle of curry, a cup of cooked rice", "P": "130 g raw chicken and a smaller ladle, 2/3 cup cooked rice"},
+ ingredients=[
+  ("chicken thigh fillet, skinless", 330, "g", {"per": {"J": 200, "P": 130}, "label": "chicken thigh, sliced"}),
+  ("green curry paste", 2, "tbsp"), ("light coconut milk", 270, "ml", {"label": "light coconut milk (a small tin)"}),
+  ("zucchini", 1, "whole", {"label": "zucchini, sliced"}), ("red capsicum", 1, "whole", {"label": "red capsicum, sliced"}), ("snow peas", 100, "g"),
+  ("fish sauce", 2, "tsp"), ("honey", 1, "tsp", {"label": "honey or brown sugar"}), ("lime juice", 1, "tbsp"),
+  ("fresh herbs (dill, mint, parsley or chives)", 3, "tbsp", {"share": 1, "label": "Thai basil or coriander"}),
+  ("white rice, uncooked", RICE_J + RICE_P, "cup", {"per": {"J": RICE_J, "P": RICE_P}, "label": "jasmine rice"}),
+ ],
+ steps=[
+  ("Rice on", "Rinse and cook the rice.", 900),
+  ("Fry the paste", "In a deep pan or wok on medium, fry the curry paste with a splash of the coconut milk until fragrant.", 120),
+  ("Brown the chicken", "Add the chicken and stir until it's coated and sealed.", 180),
+  ("Simmer", "Add the rest of the coconut milk, half a cup of water, the zucchini and capsicum. Simmer until the chicken is cooked through.", 480),
+  ("Finish", "Add the snow peas for the last 2 minutes. Season with the fish sauce, honey and lime, tasting as you go. Stir through the basil.", 120),
+ ], notes="Curry pastes vary a lot in heat. Start with 1.5 tbsp if you're not sure about the brand.")
+
+recipe(id="sweet-and-sour-pork", title="Sweet and Sour Pork", category="dinner", short="Sweet and sour pork, rice",
+ desc="A lighter sweet and sour: lean pork fillet, pineapple, capsicum and onion in a glossy sauce. No deep frying.",
+ tags=["pork", "asian", "fakeaway"], time=30, base={"J": 1, "P": 1}, share=0.6,
+ portions={"J": "200 g raw pork, half the veg and sauce, a cup of cooked rice", "P": "130 g raw pork, half the veg and sauce, 2/3 cup cooked rice"},
+ ingredients=[
+  ("pork fillet", 330, "g", {"per": {"J": 200, "P": 130}, "label": "pork fillet, in bite-size pieces"}),
+  ("cornflour", 1, "tbsp", {"share": 1, "label": "cornflour (plus 1 tsp for the sauce)"}),
+  ("pineapple pieces in juice, tinned", 1, "tin", {"share": 1, "label": "pineapple pieces in juice (keep the juice)"}),
+  ("red capsicum", 1, "whole", {"share": 1, "label": "red capsicum, in chunks"}), ("brown onion", 1, "whole", {"share": 1, "label": "onion, in chunks"}),
+  ("tomato sauce", 2, "tbsp", {"share": 1}), ("rice vinegar", 2, "tbsp", {"share": 1}), ("honey", 1, "tbsp", {"share": 1}), ("soy sauce", 1, "tbsp", {"share": 1, "label": "soy sauce (salt-reduced)"}),
+  ("olive oil", 2, "tsp", {"share": 1, "label": "oil"}), ("spring onions", 2, "whole", {"share": 1, "label": "spring onions, sliced"}),
+  ("white rice, uncooked", RICE_J + RICE_P, "cup", {"per": {"J": RICE_J, "P": RICE_P}, "label": "jasmine rice"}),
+ ],
+ steps=[
+  ("Rice on", "Rinse and cook the rice.", 900),
+  ("Mix the sauce", "Whisk the tomato sauce, vinegar, honey, soy, 1 tsp cornflour and the pineapple juice from the tin.", 0),
+  ("Coat and sear the pork", "Toss the pork in the cornflour with a pinch of salt. Heat the oil in a wok on high and sear the pork until golden and just cooked. Set aside.", 360),
+  ("Veg", "Same wok, stir-fry the onion and capsicum 2 to 3 minutes so they keep some crunch. Add the pineapple.", 180),
+  ("Sauce and serve", "Pour in the sauce and bubble until glossy and thick, then toss the pork back through. Serve over rice with spring onion.", 120),
+ ], notes="The cornflour coating gives a crisp edge with 2 tsp of oil instead of a deep fryer.")
+
+recipe(id="chicken-caesar-wraps", title="Chicken Caesar Wraps", category="dinner", short="Chicken caesar wraps",
+ desc="Grilled chicken, crispy short-cut bacon, cos and parmesan with a creamy Greek yoghurt caesar dressing, rolled in wholemeal wraps.",
+ tags=["chicken", "quick", "high protein"], time=25, base={"J": 1, "P": 1}, share=0.6,
+ portions={"J": "2 wraps: 200 g raw chicken, 40 g bacon", "P": "1 big wrap: 130 g raw chicken, 20 g bacon"},
+ ingredients=[
+  ("chicken breast", 330, "g", {"per": {"J": 200, "P": 130}}),
+  ("short-cut bacon", 60, "g", {"per": {"J": 40, "P": 20}}),
+  ("wholemeal wraps", 3, "whole", {"per": {"J": 2, "P": 1}}),
+  ("cos lettuce", 1, "whole", {"share": 1, "label": "cos lettuce, shredded"}),
+  ("parmesan, grated", 20, "g", {"per": {"J": 12, "P": 8}}),
+  ("high-protein Greek yoghurt", 100, "g", {"share": 1, "label": "Greek yoghurt, for the dressing"}),
+  ("lemon juice", 1, "tbsp", {"share": 1}), ("garlic", 1, "clove", {"share": 1, "label": "small garlic clove, grated"}),
+  ("wholegrain mustard", 1, "tsp", {"share": 1, "label": "mustard (Dijon or wholegrain)"}),
+  ("spices (your mix)", 1, "tsp", {"share": 1, "label": "Spices for the chicken (garlic powder, paprika, pepper)"}),
+ ],
+ steps=[
+  ("Dressing", "Mix the yoghurt, lemon juice, garlic, mustard, half the parmesan, black pepper and a splash of water to make it pourable.", 0),
+  ("Cook the chicken", "Flatten the breasts to an even thickness, season with the spices and cook on a hot pan or barbecue, about 4 to 5 minutes a side.", 540),
+  ("Crisp the bacon", "Same pan, cook the bacon until crisp, then chop it.", 240),
+  ("Assemble", "Rest and slice the chicken. Toss the cos in most of the dressing. Fill the wraps with lettuce, chicken, bacon and the rest of the parmesan, drizzle the last of the dressing and roll tight.", 0),
+ ], notes="Leftover chicken makes these a 5-minute lunch the next day.")
+
+recipe(id="haloumi-chicken-salad", sauce="lemon-tahini-yoghurt", title="Haloumi and Chicken Salad with Roast Pumpkin and Quinoa", category="dinner", short="Haloumi chicken salad, pumpkin, quinoa",
+ desc="A big warm salad: grilled chicken and light haloumi with roast pumpkin, quinoa, rocket and cherry tomatoes.",
+ tags=["chicken", "salad", "high protein"], time=40, base={"J": 1, "P": 1}, share=0.65,
+ portions={"J": "180 g raw chicken, 50 g haloumi, 3/4 cup cooked quinoa, half the veg", "P": "120 g raw chicken, 30 g haloumi, 1/2 cup cooked quinoa, half the veg"},
+ ingredients=[
+  ("chicken breast", 300, "g", {"per": {"J": 180, "P": 120}}),
+  ("light haloumi", 80, "g", {"per": {"J": 50, "P": 30}, "label": "light haloumi, sliced"}),
+  ("quinoa, uncooked", 0.42, "cup", {"per": {"J": 0.25, "P": 0.17}, "label": "quinoa"}),
+  ("butternut pumpkin", 400, "g", {"share": 1, "label": "butternut pumpkin, in 2 cm cubes"}), ("red onion", 1, "whole", {"share": 1, "label": "red onion, in wedges"}),
+  ("olive oil", 1, "tbsp", {"share": 1}), ("spices (your mix)", 1, "tsp", {"share": 1, "label": "Spices (cumin, smoked paprika)"}),
+  ("rocket", 80, "g", {"share": 1}), ("cherry tomatoes", 150, "g", {"share": 1, "label": "cherry tomatoes, halved"}),
+  ("lemon juice", 1, "tbsp", {"share": 1}),
+ ],
+ steps=[
+  ("Roast the pumpkin", "Oven to 220°C (200°C fan). Toss the pumpkin and onion with half the oil, the spices and salt, and roast until golden.", 1500),
+  ("Quinoa", "Rinse the quinoa and simmer in twice its volume of water until the water's absorbed. Fluff and cool a little.", 900),
+  ("Chicken", "Season the chicken and cook on a hot pan or barbecue, about 4 to 5 minutes a side. Rest and slice.", 540),
+  ("Haloumi", "Same pan, dry, cook the haloumi until golden on both sides. It goes squeaky and rubbery if it cools, so do it last.", 180),
+  ("Toss and serve", "Toss the rocket, tomatoes, quinoa and pumpkin with the lemon juice and the rest of the oil. Top with the chicken and haloumi.", 0),
+ ], notes="Leftover roast pumpkin and quinoa make this a quick work lunch.")
