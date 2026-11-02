@@ -1,0 +1,157 @@
+{
+ "schema": "kitchen-recipe",
+ "schemaVersion": 1,
+ "id": "teriyaki-chicken-burgers",
+ "title": "Teriyaki Chicken Burgers",
+ "category": "dinner",
+ "desc": "Grilled teriyaki chicken thigh fillets with charred pineapple and crunchy Asian slaw in a soft bun.",
+ "tags": [
+  "chicken",
+  "bbq",
+  "fakeaway"
+ ],
+ "time": 30,
+ "base": {
+  "J": 1,
+  "P": 1
+ },
+ "portions": {
+  "J": "1 burger with 2 thigh fillets (about 180 g raw)",
+  "P": "1 burger with 1 large thigh fillet (about 120 g raw)"
+ },
+ "ingredients": [
+  {
+   "id": "i1",
+   "name": "chicken thigh fillet, skinless",
+   "food": "chicken thigh fillet, skinless",
+   "unit": "g",
+   "gpu": 1,
+   "k100": 121,
+   "p100": 19.5,
+   "aisle": "Meat",
+   "per": {
+    "J": 180,
+    "P": 120
+   }
+  },
+  {
+   "id": "i2",
+   "name": "teriyaki sauce",
+   "food": "teriyaki sauce",
+   "unit": "tbsp",
+   "gpu": 18,
+   "k100": 100,
+   "p100": 5,
+   "aisle": "Sauces and spices",
+   "per": {
+    "J": 1.5,
+    "P": 1.5
+   }
+  },
+  {
+   "id": "i3",
+   "name": "pineapple rings or pieces in juice",
+   "food": "pineapple pieces in juice, tinned",
+   "unit": "tin",
+   "gpu": 225,
+   "k100": 60,
+   "p100": 0.5,
+   "aisle": "Pantry",
+   "per": {
+    "J": 0.25,
+    "P": 0.25
+   }
+  },
+  {
+   "id": "i4",
+   "name": "burger buns",
+   "food": "burger buns",
+   "unit": "whole",
+   "gpu": 70,
+   "k100": 265,
+   "p100": 9,
+   "aisle": "Bakery",
+   "per": {
+    "J": 1.0,
+    "P": 1.0
+   }
+  },
+  {
+   "id": "i5",
+   "name": "coleslaw mix",
+   "food": "coleslaw mix",
+   "unit": "g",
+   "gpu": 1,
+   "k100": 25,
+   "p100": 1.2,
+   "aisle": "Produce",
+   "per": {
+    "J": 70,
+    "P": 50
+   }
+  },
+  {
+   "id": "i6",
+   "name": "lime juice, for the slaw",
+   "food": "lime juice",
+   "unit": "tsp",
+   "gpu": 5,
+   "k100": 25,
+   "p100": 0.4,
+   "aisle": "Produce",
+   "per": {
+    "J": 1.0,
+    "P": 1.0
+   }
+  },
+  {
+   "id": "i7",
+   "name": "sesame oil",
+   "food": "sesame oil",
+   "unit": "tsp",
+   "gpu": 4.5,
+   "k100": 884,
+   "p100": 0,
+   "aisle": "Sauces and spices",
+   "per": {
+    "J": 0.25,
+    "P": 0.25
+   }
+  }
+ ],
+ "steps": [
+  {
+   "title": "Marinate",
+   "text": "Flatten the thighs a little and toss in 2 tbsp of the teriyaki. 15 minutes is enough.",
+   "timer": 900
+  },
+  {
+   "title": "Slaw",
+   "text": "Toss the slaw mix with the lime juice, sesame oil and a pinch of salt.",
+   "timer": 0
+  },
+  {
+   "title": "Grill",
+   "text": "Medium-high barbecue. Cook the chicken about 5 minutes a side, brushing with the last of the teriyaki in the final minute. Grill the pineapple until charred.",
+   "timer": 600
+  },
+  {
+   "title": "Build",
+   "text": "Toast the buns. Chicken, pineapple, slaw and sauce.",
+   "timer": 0
+  }
+ ],
+ "notes": "",
+ "macros": {
+  "J": {
+   "kcal": 493,
+   "protein": 44
+  },
+  "P": {
+   "kcal": 415,
+   "protein": 32
+  }
+ },
+ "sauce": "sriracha-lime-yoghurt",
+ "short": "Teriyaki chicken burgers"
+}

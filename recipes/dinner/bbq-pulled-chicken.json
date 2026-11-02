@@ -1,0 +1,189 @@
+{
+ "schema": "kitchen-recipe",
+ "schemaVersion": 1,
+ "id": "bbq-pulled-chicken",
+ "title": "Smoky BBQ Pulled Chicken Sliders",
+ "category": "dinner",
+ "desc": "Slow cooker pulled chicken thighs in smoky barbecue sauce, in slider buns with a yoghurt slaw. Makes two nights' worth.",
+ "tags": [
+  "chicken",
+  "slow cooker",
+  "fakeaway"
+ ],
+ "time": 20,
+ "base": {
+  "J": 2,
+  "P": 2
+ },
+ "portions": {
+  "J": "2 sliders loaded with 250 g raw chicken (about 190 g pulled), plus slaw",
+  "P": "1 slider plus a bowl of chicken and slaw: 150 g raw chicken"
+ },
+ "ingredients": [
+  {
+   "id": "i1",
+   "name": "chicken thigh fillet, skinless",
+   "food": "chicken thigh fillet, skinless",
+   "unit": "g",
+   "gpu": 1,
+   "k100": 121,
+   "p100": 19.5,
+   "aisle": "Meat",
+   "per": {
+    "J": 250.0,
+    "P": 150.0
+   }
+  },
+  {
+   "id": "i2",
+   "name": "BBQ sauce",
+   "food": "BBQ sauce",
+   "unit": "tbsp",
+   "gpu": 18,
+   "k100": 150,
+   "p100": 1,
+   "aisle": "Sauces and spices",
+   "per": {
+    "J": 1.25,
+    "P": 0.75
+   }
+  },
+  {
+   "id": "i3",
+   "name": "smoked paprika",
+   "food": "smoked paprika",
+   "unit": "tsp",
+   "gpu": 2.3,
+   "k100": 282,
+   "p100": 14,
+   "aisle": "Sauces and spices",
+   "per": {
+    "J": 0.5,
+    "P": 0.5
+   }
+  },
+  {
+   "id": "i4",
+   "name": "garlic",
+   "food": "garlic",
+   "unit": "clove",
+   "gpu": 5,
+   "k100": 149,
+   "p100": 6.4,
+   "aisle": "Produce",
+   "per": {
+    "J": 0.5,
+    "P": 0.5
+   }
+  },
+  {
+   "id": "i5",
+   "name": "brown onion, sliced",
+   "food": "brown onion",
+   "unit": "whole",
+   "gpu": 150,
+   "k100": 40,
+   "p100": 1.1,
+   "aisle": "Produce",
+   "per": {
+    "J": 0.25,
+    "P": 0.25
+   }
+  },
+  {
+   "id": "i6",
+   "name": "vinegar (apple cider or red wine)",
+   "food": "red wine vinegar",
+   "unit": "tbsp",
+   "gpu": 15,
+   "k100": 20,
+   "p100": 0,
+   "aisle": "Sauces and spices",
+   "per": {
+    "J": 0.25,
+    "P": 0.25
+   }
+  },
+  {
+   "id": "i7",
+   "name": "slider buns",
+   "food": "slider buns",
+   "unit": "whole",
+   "gpu": 40,
+   "k100": 270,
+   "p100": 9,
+   "aisle": "Bakery",
+   "per": {
+    "J": 2,
+    "P": 1
+   }
+  },
+  {
+   "id": "i8",
+   "name": "coleslaw mix",
+   "food": "coleslaw mix",
+   "unit": "g",
+   "gpu": 1,
+   "k100": 25,
+   "p100": 1.2,
+   "aisle": "Produce",
+   "per": {
+    "J": 75.0,
+    "P": 75.0
+   }
+  },
+  {
+   "id": "i9",
+   "name": "Greek yoghurt, for the slaw",
+   "food": "high-protein Greek yoghurt",
+   "unit": "g",
+   "gpu": 1,
+   "k100": 60,
+   "p100": 10,
+   "aisle": "Dairy and eggs",
+   "per": {
+    "J": 15.0,
+    "P": 15.0
+   }
+  }
+ ],
+ "steps": [
+  {
+   "title": "Into the slow cooker",
+   "text": "Onion on the bottom, chicken on top. Mix the BBQ sauce, paprika, garlic, vinegar and a pinch of salt and pour over. No extra liquid.",
+   "timer": 0
+  },
+  {
+   "title": "Cook",
+   "text": "Low for 6 hours or high for 3 to 4, until it falls apart.",
+   "timer": 0
+  },
+  {
+   "title": "Pull",
+   "text": "Shred the chicken with two forks right in the sauce and stir it through. Taste and add a splash more BBQ sauce if you like.",
+   "timer": 0
+  },
+  {
+   "title": "Slaw",
+   "text": "Toss the slaw mix with the yoghurt, a squeeze of lemon, salt and pepper.",
+   "timer": 0
+  },
+  {
+   "title": "Serve",
+   "text": "Warm the buns and load them up with chicken and slaw.",
+   "timer": 0
+  }
+ ],
+ "notes": "Half the batch is the next night (or lunches). Lettuce cups instead of buns save about 110 kcal each.",
+ "macros": {
+  "J": {
+   "kcal": 603,
+   "protein": 59
+  },
+  "P": {
+   "kcal": 360,
+   "protein": 36
+  }
+ },
+ "short": "BBQ pulled chicken sliders"
+}

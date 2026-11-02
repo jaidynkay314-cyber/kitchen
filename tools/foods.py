@@ -99,6 +99,17 @@ FOODS = {
  "light haloumi": (260, 23, "Dairy and eggs", {}),
  "quinoa, uncooked": (370, 14, "Pantry", {"cup": 170}),
  "butternut pumpkin": (45, 1.1, "Produce", {}),
+ "BBQ sauce": (150, 1, "Sauces and spices", {"tbsp": 18}),
+ "slider buns": (270, 9, "Bakery", {"whole": 40}),
+ "burger buns": (265, 9, "Bakery", {"whole": 70}),
+ "teriyaki sauce": (100, 5, "Sauces and spices", {"tbsp": 18}),
+ "light basil pesto": (280, 5, "Sauces and spices", {"tbsp": 15}),
+ "pasta, dry": (355, 12.5, "Pantry", {}),
+ "rice vermicelli, dry": (360, 6, "Pantry", {}),
+ "curry powder": (325, 13, "Sauces and spices", {"tsp": 2}),
+ "pita bread": (275, 9, "Bakery", {"whole": 70}),
+ "sourdough": (250, 9, "Bakery", {"slice": 50}),
+ "tomato": (18, 0.9, "Produce", {"whole": 120}),
 }
 UNIT_G = {"g": 1, "ml": 1, "kg": 1000}
 def grams(food, qty, unit):

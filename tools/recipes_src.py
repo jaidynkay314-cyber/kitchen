@@ -560,3 +560,139 @@ recipe(id="haloumi-chicken-salad", sauce="lemon-tahini-yoghurt", title="Haloumi 
   ("Haloumi", "Same pan, dry, cook the haloumi until golden on both sides. It goes squeaky and rubbery if it cools, so do it last.", 180),
   ("Toss and serve", "Toss the rocket, tomatoes, quinoa and pumpkin with the lemon juice and the rest of the oil. Top with the chicken and haloumi.", 0),
  ], notes="Leftover roast pumpkin and quinoa make this a quick work lunch.")
+
+# ---- Batch 5 dinners (picked 2 Nov 2026) ----
+recipe(id="bbq-pulled-chicken", title="Smoky BBQ Pulled Chicken Sliders", category="dinner", short="BBQ pulled chicken sliders",
+ desc="Slow cooker pulled chicken thighs in smoky barbecue sauce, in slider buns with a yoghurt slaw. Makes two nights' worth.",
+ tags=["chicken", "slow cooker", "fakeaway"], time=20, base={"J": 2, "P": 2}, share=0.6,
+ portions={"J": "2 sliders loaded with 250 g raw chicken (about 190 g pulled), plus slaw", "P": "1 slider plus a bowl of chicken and slaw: 150 g raw chicken"},
+ ingredients=[
+  ("chicken thigh fillet, skinless", 800, "g"),
+  ("BBQ sauce", 4, "tbsp"), ("smoked paprika", 2, "tsp", {"share": 1}), ("garlic", 2, "clove", {"share": 1}),
+  ("brown onion", 1, "whole", {"share": 1, "label": "brown onion, sliced"}), ("red wine vinegar", 1, "tbsp", {"share": 1, "label": "vinegar (apple cider or red wine)"}),
+  ("slider buns", 6, "whole", {"per": {"J": 2, "P": 1}}),
+  ("coleslaw mix", 300, "g", {"share": 1}), ("high-protein Greek yoghurt", 60, "g", {"share": 1, "label": "Greek yoghurt, for the slaw"}),
+ ],
+ steps=[
+  ("Into the slow cooker", "Onion on the bottom, chicken on top. Mix the BBQ sauce, paprika, garlic, vinegar and a pinch of salt and pour over. No extra liquid.", 0),
+  ("Cook", "Low for 6 hours or high for 3 to 4, until it falls apart.", 0),
+  ("Pull", "Shred the chicken with two forks right in the sauce and stir it through. Taste and add a splash more BBQ sauce if you like.", 0),
+  ("Slaw", "Toss the slaw mix with the yoghurt, a squeeze of lemon, salt and pepper.", 0),
+  ("Serve", "Warm the buns and load them up with chicken and slaw.", 0),
+ ], notes="Half the batch is the next night (or lunches). Lettuce cups instead of buns save about 110 kcal each.")
+
+recipe(id="teriyaki-chicken-burgers", sauce="sriracha-lime-yoghurt", title="Teriyaki Chicken Burgers", category="dinner", short="Teriyaki chicken burgers",
+ desc="Grilled teriyaki chicken thigh fillets with charred pineapple and crunchy Asian slaw in a soft bun.",
+ tags=["chicken", "bbq", "fakeaway"], time=30, base={"J": 1, "P": 1}, share=0.65,
+ portions={"J": "1 burger with 2 thigh fillets (about 180 g raw)", "P": "1 burger with 1 large thigh fillet (about 120 g raw)"},
+ ingredients=[
+  ("chicken thigh fillet, skinless", 300, "g", {"per": {"J": 180, "P": 120}}),
+  ("teriyaki sauce", 3, "tbsp", {"share": 1}),
+  ("pineapple pieces in juice, tinned", 0.5, "tin", {"share": 1, "label": "pineapple rings or pieces in juice"}),
+  ("burger buns", 2, "whole", {"share": 1}),
+  ("coleslaw mix", 120, "g", {"per": {"J": 70, "P": 50}}), ("lime juice", 2, "tsp", {"share": 1, "label": "lime juice, for the slaw"}),
+  ("sesame oil", 0.5, "tsp", {"share": 1}),
+ ],
+ steps=[
+  ("Marinate", "Flatten the thighs a little and toss in 2 tbsp of the teriyaki. 15 minutes is enough.", 900),
+  ("Slaw", "Toss the slaw mix with the lime juice, sesame oil and a pinch of salt.", 0),
+  ("Grill", "Medium-high barbecue. Cook the chicken about 5 minutes a side, brushing with the last of the teriyaki in the final minute. Grill the pineapple until charred.", 600),
+  ("Build", "Toast the buns. Chicken, pineapple, slaw and sauce.", 0),
+ ])
+
+recipe(id="chicken-pesto-pasta", title="Chicken Pesto Pasta", category="dinner", short="Chicken pesto pasta",
+ desc="Chicken, light basil pesto, cherry tomatoes and spinach through pasta. A 20-minute weeknight.",
+ tags=["chicken", "pasta", "quick"], time=20, base={"J": 1, "P": 1}, share=0.67,
+ portions={"J": "180 g raw chicken, 90 g dry pasta (about 2 cups cooked)", "P": "120 g raw chicken, 60 g dry pasta (about 1.3 cups cooked)"},
+ ingredients=[
+  ("chicken breast", 300, "g", {"per": {"J": 180, "P": 120}, "label": "chicken breast, sliced"}),
+  ("pasta, dry", 150, "g", {"per": {"J": 90, "P": 60}, "label": "pasta (penne or spirals)"}),
+  ("light basil pesto", 3, "tbsp"), ("cherry tomatoes", 200, "g", {"share": 1, "label": "cherry tomatoes, halved"}),
+  ("baby spinach", 60, "g", {"share": 1}), ("garlic", 1, "clove", {"share": 1}),
+  ("parmesan, grated", 15, "g", {"per": {"J": 9, "P": 6}}),
+ ],
+ steps=[
+  ("Pasta on", "Cook the pasta in well-salted water. Save a mug of pasta water.", 600),
+  ("Chicken", "Season and cook the chicken in a hot non-stick pan until golden and cooked through. Set aside.", 360),
+  ("Tomatoes and garlic", "Same pan, cook the tomatoes and garlic until the tomatoes just soften.", 120),
+  ("Toss", "Off the heat, add the drained pasta, chicken, pesto, spinach and a splash of pasta water. Toss until glossy and the spinach wilts. Top with parmesan.", 0),
+ ], notes="Pesto on a hot pan goes dark and bitter. Off the heat keeps it bright.")
+
+recipe(id="singapore-noodles", title="Singapore Noodles", category="dinner", short="Singapore noodles",
+ desc="Curried rice vermicelli stir-fried with prawns, chicken, egg, capsicum and spring onion.",
+ tags=["seafood", "chicken", "asian", "fakeaway"], time=30, base={"J": 1, "P": 1}, share=0.65,
+ portions={"J": "80 g dry noodles, 100 g prawns, 100 g chicken, 1 egg", "P": "55 g dry noodles, 65 g prawns, 65 g chicken, 1 egg"},
+ ingredients=[
+  ("rice vermicelli, dry", 135, "g", {"per": {"J": 80, "P": 55}, "label": "rice vermicelli"}),
+  ("raw prawns, peeled", 165, "g", {"per": {"J": 100, "P": 65}}), ("chicken breast", 165, "g", {"per": {"J": 100, "P": 65}, "label": "chicken breast, thinly sliced"}),
+  ("eggs", 2, "whole", {"share": 1}), ("red capsicum", 1, "whole", {"share": 1, "label": "red capsicum, thinly sliced"}),
+  ("spring onions", 3, "whole", {"share": 1, "label": "spring onions, in 4 cm lengths"}), ("garlic", 2, "clove", {"share": 1}),
+  ("curry powder", 2, "tsp", {"share": 1}), ("soy sauce", 2, "tbsp", {"share": 1, "label": "soy sauce (salt-reduced)"}), ("oyster sauce", 1, "tbsp", {"share": 1}),
+  ("sesame oil", 1, "tsp", {"share": 1}), ("olive oil", 2, "tsp", {"share": 1, "label": "oil"}),
+ ],
+ steps=[
+  ("Soak the noodles", "Cover the vermicelli with boiling water for 3 to 4 minutes, drain, rinse cold and snip into shorter lengths with scissors.", 240),
+  ("Egg", "Hot wok, a drop of the oil. Scramble the eggs into a thin omelette, roll it up and slice. Set aside.", 120),
+  ("Chicken and prawns", "Add the rest of the oil, cook the chicken until nearly done, then the prawns until pink. Set aside.", 300),
+  ("Veg and spice", "Stir-fry the capsicum, garlic and spring onion 1 minute, then add the curry powder for 30 seconds.", 90),
+  ("Toss it together", "Add the noodles, soy, oyster sauce, sesame oil and a splash of water and toss until evenly yellow. Return the chicken, prawns and egg and toss through.", 120),
+ ], notes="Tongs are your friend here: lift and toss rather than stir, or the noodles clump.")
+
+recipe(id="loaded-sweet-potatoes", sauce="chipotle-lime-yoghurt", title="Loaded Sweet Potatoes with Chilli Beef", category="dinner", short="Loaded sweet potatoes, chilli beef",
+ desc="Baked sweet potatoes split and loaded with a quick chilli beef and bean mince, cheese and spring onion.",
+ tags=["beef", "mexican", "high protein"], time=50, base={"J": 1, "P": 1}, share=0.65,
+ portions={"J": "1 large sweet potato (350 g), 180 g raw mince worth of chilli, 18 g cheese", "P": "1 medium sweet potato (250 g), 120 g raw mince worth of chilli, 12 g cheese"},
+ ingredients=[
+  ("sweet potato", 600, "g", {"per": {"J": 350, "P": 250}, "label": "sweet potatoes, 1 each, scrubbed"}),
+  ("lean beef mince (5% fat)", 300, "g", {"per": {"J": 180, "P": 120}}),
+  ("brown onion", 0.5, "whole", {"share": 1, "label": "onion, diced"}), ("garlic", 2, "clove", {"share": 1}),
+  ("spices (your mix)", 2, "tsp", {"share": 1, "label": "Chilli spices (cumin, smoked paprika, chipotle or chilli)"}),
+  ("kidney beans, tinned (drained)", 0.5, "tin", {"label": "kidney beans, drained (half a tin)"}), ("diced tomatoes, tinned", 0.5, "tin", {"share": 1, "label": "diced tomatoes (half a tin)"}),
+  ("reduced-fat cheese, grated", 30, "g", {"per": {"J": 18, "P": 12}}), ("spring onions", 2, "whole", {"share": 1, "label": "spring onions, sliced"}),
+ ],
+ steps=[
+  ("Bake the sweet potatoes", "Oven to 200°C (180°C fan). Prick the sweet potatoes all over and bake on a tray until completely soft. (Or microwave 8 to 10 minutes, then 10 minutes in the oven to crisp the skin.)", 2700),
+  ("Brown the mince", "Hot pan, brown the mince with the onion until any liquid cooks off.", 420),
+  ("Chilli", "Add the garlic and spices for a minute, then the beans and tomatoes. Simmer until thick.", 600),
+  ("Load and serve", "Split the sweet potatoes, fluff the insides with a fork, pile in the chilli, then cheese and spring onion.", 0),
+ ], notes="The chilli doubles easily and freezes, for an even faster version next time.")
+
+recipe(id="chicken-gyros", sauce="tzatziki", title="Chicken Gyros", category="dinner", short="Chicken gyros",
+ desc="Garlic, lemon and oregano chicken thighs, sliced and wrapped in warm pita with tomato, onion, lettuce and tzatziki.",
+ tags=["chicken", "greek", "fakeaway"], time=35, base={"J": 1, "P": 1}, share=0.65,
+ portions={"J": "2 pitas with 200 g raw chicken", "P": "1 pita with 130 g raw chicken (the extra chicken on the side)"},
+ ingredients=[
+  ("chicken thigh fillet, skinless", 330, "g", {"per": {"J": 200, "P": 130}}),
+  ("high-protein Greek yoghurt", 50, "g", {"share": 1, "label": "Greek yoghurt, for the marinade"}),
+  ("lemon juice", 1, "tbsp", {"share": 1}), ("garlic", 3, "clove", {"share": 1}), ("dried oregano", 2, "tsp", {"share": 1}), ("smoked paprika", 1, "tsp", {"share": 1}),
+  ("pita bread", 3, "whole", {"per": {"J": 2, "P": 1}}),
+  ("tomato", 2, "whole", {"share": 1, "label": "tomatoes, sliced"}), ("red onion", 0.5, "whole", {"share": 1, "label": "red onion, thinly sliced"}),
+  ("cos lettuce", 0.5, "whole", {"share": 1, "label": "cos lettuce, shredded"}),
+ ],
+ steps=[
+  ("Marinate", "Mix the yoghurt, lemon juice, crushed garlic, oregano, paprika and salt. Coat the chicken and leave at least 20 minutes, or overnight.", 1200),
+  ("Cook", "Hot barbecue or grill pan. Cook the chicken until charred and cooked through, about 5 minutes a side.", 600),
+  ("Slice", "Rest 5 minutes, then slice thinly.", 300),
+  ("Wrap", "Warm the pitas. Load with chicken, tomato, onion, lettuce and tzatziki, and roll up in baking paper to hold it together.", 0),
+ ])
+
+recipe(id="prawn-saganaki", title="Prawn Saganaki", category="dinner", short="Prawn saganaki with sourdough",
+ desc="Prawns baked in a garlicky tomato sauce with feta and oregano, with sourdough to mop it up.",
+ tags=["seafood", "greek", "quick"], time=30, base={"J": 1, "P": 1}, share=0.65,
+ portions={"J": "200 g raw prawns, half the sauce, 2 slices sourdough", "P": "130 g raw prawns, half the sauce, 1 slice sourdough"},
+ ingredients=[
+  ("raw prawns, peeled", 330, "g", {"per": {"J": 200, "P": 130}}),
+  ("diced tomatoes, tinned", 1, "tin", {"share": 1}), ("brown onion", 1, "whole", {"share": 1, "label": "onion, finely diced"}),
+  ("garlic", 3, "clove", {"share": 1}), ("olive oil", 2, "tsp", {"share": 1}), ("dried oregano", 1, "tsp", {"share": 1}),
+  ("spices (your mix)", 0.5, "tsp", {"share": 1, "label": "chilli flakes"}),
+  ("light feta", 60, "g", {"per": {"J": 35, "P": 25}, "label": "light feta, crumbled"}),
+  ("fresh herbs (dill, mint, parsley or chives)", 2, "tbsp", {"share": 1, "label": "parsley or dill, chopped"}),
+  ("sourdough", 3, "slice", {"per": {"J": 2, "P": 1}}),
+ ],
+ steps=[
+  ("Sauce", "Oven to 200°C (180°C fan). In an ovenproof pan, cook the onion in the oil until soft, then the garlic, oregano and chilli for a minute.", 420),
+  ("Simmer", "Add the tomatoes and simmer until thick, about 10 minutes. Season.", 600),
+  ("Prawns and feta", "Nestle the prawns into the sauce and crumble the feta over the top.", 0),
+  ("Bake", "Bake until the prawns are pink and the feta is soft and golden at the edges.", 600),
+  ("Serve", "Scatter with herbs and serve with toasted sourdough.", 0),
+ ], notes="No ovenproof pan? Simmer the prawns in the sauce with the lid on for 3 to 4 minutes, then add the feta.")

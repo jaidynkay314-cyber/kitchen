@@ -1,0 +1,232 @@
+{
+ "schema": "kitchen-recipe",
+ "schemaVersion": 1,
+ "id": "singapore-noodles",
+ "title": "Singapore Noodles",
+ "category": "dinner",
+ "desc": "Curried rice vermicelli stir-fried with prawns, chicken, egg, capsicum and spring onion.",
+ "tags": [
+  "seafood",
+  "chicken",
+  "asian",
+  "fakeaway"
+ ],
+ "time": 30,
+ "base": {
+  "J": 1,
+  "P": 1
+ },
+ "portions": {
+  "J": "80 g dry noodles, 100 g prawns, 100 g chicken, 1 egg",
+  "P": "55 g dry noodles, 65 g prawns, 65 g chicken, 1 egg"
+ },
+ "ingredients": [
+  {
+   "id": "i1",
+   "name": "rice vermicelli",
+   "food": "rice vermicelli, dry",
+   "unit": "g",
+   "gpu": 1,
+   "k100": 360,
+   "p100": 6,
+   "aisle": "Pantry",
+   "per": {
+    "J": 80,
+    "P": 55
+   }
+  },
+  {
+   "id": "i2",
+   "name": "raw prawns, peeled",
+   "food": "raw prawns, peeled",
+   "unit": "g",
+   "gpu": 1,
+   "k100": 85,
+   "p100": 20,
+   "aisle": "Seafood",
+   "per": {
+    "J": 100,
+    "P": 65
+   }
+  },
+  {
+   "id": "i3",
+   "name": "chicken breast, thinly sliced",
+   "food": "chicken breast",
+   "unit": "g",
+   "gpu": 1,
+   "k100": 106,
+   "p100": 23,
+   "aisle": "Meat",
+   "per": {
+    "J": 100,
+    "P": 65
+   }
+  },
+  {
+   "id": "i4",
+   "name": "eggs",
+   "food": "eggs",
+   "unit": "whole",
+   "gpu": 50,
+   "k100": 143,
+   "p100": 12.6,
+   "aisle": "Dairy and eggs",
+   "per": {
+    "J": 1.0,
+    "P": 1.0
+   }
+  },
+  {
+   "id": "i5",
+   "name": "red capsicum, thinly sliced",
+   "food": "red capsicum",
+   "unit": "whole",
+   "gpu": 160,
+   "k100": 31,
+   "p100": 1,
+   "aisle": "Produce",
+   "per": {
+    "J": 0.5,
+    "P": 0.5
+   }
+  },
+  {
+   "id": "i6",
+   "name": "spring onions, in 4 cm lengths",
+   "food": "spring onions",
+   "unit": "whole",
+   "gpu": 15,
+   "k100": 32,
+   "p100": 1.8,
+   "aisle": "Produce",
+   "per": {
+    "J": 1.5,
+    "P": 1.5
+   }
+  },
+  {
+   "id": "i7",
+   "name": "garlic",
+   "food": "garlic",
+   "unit": "clove",
+   "gpu": 5,
+   "k100": 149,
+   "p100": 6.4,
+   "aisle": "Produce",
+   "per": {
+    "J": 1.0,
+    "P": 1.0
+   }
+  },
+  {
+   "id": "i8",
+   "name": "curry powder",
+   "food": "curry powder",
+   "unit": "tsp",
+   "gpu": 2,
+   "k100": 325,
+   "p100": 13,
+   "aisle": "Sauces and spices",
+   "per": {
+    "J": 1.0,
+    "P": 1.0
+   }
+  },
+  {
+   "id": "i9",
+   "name": "soy sauce (salt-reduced)",
+   "food": "soy sauce",
+   "unit": "tbsp",
+   "gpu": 16,
+   "k100": 53,
+   "p100": 8,
+   "aisle": "Sauces and spices",
+   "per": {
+    "J": 1.0,
+    "P": 1.0
+   }
+  },
+  {
+   "id": "i10",
+   "name": "oyster sauce",
+   "food": "oyster sauce",
+   "unit": "tbsp",
+   "gpu": 18,
+   "k100": 110,
+   "p100": 2,
+   "aisle": "Sauces and spices",
+   "per": {
+    "J": 0.5,
+    "P": 0.5
+   }
+  },
+  {
+   "id": "i11",
+   "name": "sesame oil",
+   "food": "sesame oil",
+   "unit": "tsp",
+   "gpu": 4.5,
+   "k100": 884,
+   "p100": 0,
+   "aisle": "Sauces and spices",
+   "per": {
+    "J": 0.5,
+    "P": 0.5
+   }
+  },
+  {
+   "id": "i12",
+   "name": "oil",
+   "food": "olive oil",
+   "unit": "tsp",
+   "gpu": 4.5,
+   "k100": 884,
+   "p100": 0,
+   "aisle": "Pantry",
+   "per": {
+    "J": 1.0,
+    "P": 1.0
+   }
+  }
+ ],
+ "steps": [
+  {
+   "title": "Soak the noodles",
+   "text": "Cover the vermicelli with boiling water for 3 to 4 minutes, drain, rinse cold and snip into shorter lengths with scissors.",
+   "timer": 240
+  },
+  {
+   "title": "Egg",
+   "text": "Hot wok, a drop of the oil. Scramble the eggs into a thin omelette, roll it up and slice. Set aside.",
+   "timer": 120
+  },
+  {
+   "title": "Chicken and prawns",
+   "text": "Add the rest of the oil, cook the chicken until nearly done, then the prawns until pink. Set aside.",
+   "timer": 300
+  },
+  {
+   "title": "Veg and spice",
+   "text": "Stir-fry the capsicum, garlic and spring onion 1 minute, then add the curry powder for 30 seconds.",
+   "timer": 90
+  },
+  {
+   "title": "Toss it together",
+   "text": "Add the noodles, soy, oyster sauce, sesame oil and a splash of water and toss until evenly yellow. Return the chicken, prawns and egg and toss through.",
+   "timer": 120
+  }
+ ],
+ "notes": "Tongs are your friend here: lift and toss rather than stir, or the noodles clump.",
+ "macros": {
+  "J": {
+   "kcal": 674,
+   "protein": 57
+  },
+  "P": {
+   "kcal": 518,
+   "protein": 41
+  }
+ },
+ "short": "Singapore noodles"
+}
