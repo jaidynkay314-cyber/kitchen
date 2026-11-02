@@ -148,6 +148,18 @@ video.scan { width: 100%; border-radius: 12px; background: #000; aspect-ratio: 4
 .danger { color: var(--chilli); }
 .banner { background: var(--sunk); border: 1px dashed var(--gold); border-radius: 12px; padding: 10px 12px; display: flex; gap: 10px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
 @media (prefers-reduced-motion: no-preference) { .rcard, .btn { transition: transform .12s; } .rcard:active, .btn:active { transform: scale(.98); } }
+
+.instbar { position: fixed; left: 12px; right: 12px; bottom: calc(80px + env(safe-area-inset-bottom, 0px)); z-index: 90; max-width: 520px; margin: 0 auto;
+  display: flex; gap: 10px; align-items: center; justify-content: space-between; flex-wrap: wrap; padding: 12px 14px; border-radius: 12px;
+  background: var(--card); color: var(--ink); border: 1px solid var(--line); box-shadow: 0 10px 30px rgb(0 0 0 / .35); font-size: 14.5px; line-height: 1.35; }
+.instbar[hidden] { display: none; }
+.instmsg { flex: 1 1 200px; min-width: 0; }
+.instmsg > b:first-child { display: block; font-size: 15.5px; margin-bottom: 2px; }
+.instbtns { display: flex; gap: 8px; }
+.instbtns button { font: inherit; font-weight: 700; border-radius: 9px; padding: 8px 14px; min-height: 40px; cursor: pointer; }
+.instgo { background: var(--basil); color: var(--basil-ink); border: 1px solid var(--basil); }
+.instgo[hidden] { display: none; }
+.instno { background: none; color: inherit; border: 1px solid var(--line); }
 </style>
 </head>
 <body>
@@ -167,7 +179,7 @@ video.scan { width: 100%; border-radius: 12px; background: #000; aspect-ratio: 4
 <script>
 "use strict";
 /* ================= SETUP ================= */
-const VERSION = "1.0";
+const VERSION = "1.1";
 const SL_URL = "https://jaidynkay314-cyber.github.io/solo-lifting/";
 const PEOPLE = { J: "Jaidyn", P: "Paris" };
 const CATS = ["dinner", "lunch prep", "friday", "breakfast", "snack", "other"];
@@ -677,6 +689,37 @@ function renderSettings() {
 /* ================= START ================= */
 route();
 if ("serviceWorker" in navigator && location.protocol === "https:") navigator.serviceWorker.register("sw.js").catch(() => {});
+</script>
+
+<div id="instBar" class="instbar" hidden role="dialog" aria-label="Install the app">
+  <div class="instmsg"></div>
+  <div class="instbtns"><button type="button" class="instgo">Install</button><button type="button" class="instno" aria-label="Not now">Not now</button></div>
+</div>
+<script>
+/* Install prompt. Android Chrome: our own banner fires the browser's install dialog (beforeinstallprompt).
+   iPhone Safari has no install API, so the banner shows the Share, Add to Home Screen steps instead.
+   Hidden when already running as an installed app, and for 14 days after "Not now". */
+(() => {
+  const KEY = "kitchen.install", bar = document.getElementById("instBar"), msg = bar.querySelector(".instmsg"), go = bar.querySelector(".instgo");
+  const standalone = matchMedia("(display-mode: standalone)").matches || navigator.standalone === true;
+  let snoozed = false; try { snoozed = Date.now() < +(localStorage.getItem(KEY) || 0); } catch (e) {}
+  if (standalone || snoozed) return;
+  const ios = /iPhone|iPad|iPod/.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+  const hide = snooze => { bar.hidden = true; if (snooze) try { localStorage.setItem(KEY, String(Date.now() + 14 * 864e5)); } catch (e) {} };
+  bar.querySelector(".instno").onclick = () => hide(true);
+  let evt = null;
+  addEventListener("beforeinstallprompt", e => { e.preventDefault(); evt = e; msg.innerHTML = "<b>Install Kitchen</b>Adds it to your home screen and works offline."; go.hidden = false; setTimeout(() => bar.hidden = false, 1500); });
+  go.onclick = async () => { if (!evt) return; evt.prompt(); try { await evt.userChoice; } catch (e) {} evt = null; hide(false); };
+  addEventListener("appinstalled", () => hide(false));
+  if (ios) {
+    const safari = !/CriOS|FxiOS|EdgiOS|OPiOS/.test(navigator.userAgent);
+    go.hidden = true;
+    msg.innerHTML = safari
+      ? '<b>Install Kitchen</b>Tap <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-label="Share" style="vertical-align:-3px"><path d="M12 3v12M8 7l4-4 4 4"/><path d="M6 11v9h12v-9"/></svg> Share, then <b style="display:inline">Add to Home Screen</b>.'
+      : "<b>Install Kitchen</b>Open this page in Safari, then Share, Add to Home Screen.";
+    setTimeout(() => bar.hidden = false, 1500);
+  }
+})();
 </script>
 </body>
 </html>
