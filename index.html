@@ -108,7 +108,8 @@ label.f { display: flex; flex-direction: column; gap: 4px; font-size: 13.5px; fo
 .day .dh { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
 .day .dh b { font-family: var(--font-display); font-size: 17px; }
 .pitem { display: grid; grid-template-columns: 1fr auto; gap: 6px 10px; align-items: center; padding: 8px 10px; border-radius: 10px; background: var(--sunk); }
-.pitem .pt { font-weight: 600; min-width: 0; }
+.pitem .pt { font-weight: 600; min-width: 0; color: inherit; }
+.pitem .pc { grid-column: 1 / -1; }
 .pitem .pc { display: flex; gap: 10px; align-items: center; font-size: 13.5px; }
 .mini { display: inline-flex; align-items: center; gap: 4px; }
 .mini button { width: 28px; height: 28px; border-radius: 8px; border: 1px solid var(--line); background: var(--card); padding: 0; }
@@ -182,7 +183,7 @@ video.scan { width: 100%; border-radius: 12px; background: #000; aspect-ratio: 4
 <script>
 "use strict";
 /* ================= SETUP ================= */
-const VERSION = "1.3.1";
+const VERSION = "1.3.2";
 const SL_URL = "https://jaidynkay314-cyber.github.io/solo-lifting/";
 const PEOPLE = { J: "Jaidyn", P: "Paris" };
 const CATS = ["dinner", "lunch prep", "friday", "breakfast", "snack", "sauce", "other"];
@@ -428,8 +429,8 @@ function renderPlan() {
     for (const it of items) { const r = getR(it.id); if (!r) continue; if (isSauce(r)) continue; for (const x of ["J", "P"]) if (it[x]) { const m = mealMac(r, x, it.sc); wk[x].kcal += m.kcal; wk[x].protein += m.protein; wk[x].n++; } }
     const t = dayTotals(d);
     return `<section class="card day"><div class="dh"><b>${parseD(d).toLocaleDateString("en-AU", { weekday: "long", day: "numeric", month: "short" })}${d === today ? " · today" : ""}</b><button class="btn small ghost" data-addto="${d}">+ Add</button></div>
-      ${items.map(it => { const r = getR(it.id); return r ? `<div class="pitem"><a class="pt" href="#r/${esc(r.id)}/${esc(it.k)}">${esc(r.title)}${it.sc && getR(it.sc.id) ? `<br><span class="sub">with ${esc(getR(it.sc.id).title.toLowerCase())}</span>` : ""}</a><button class="btn small ghost" data-rm="${d}|${it.k}" aria-label="Remove">✕</button>
-        <span class="pc"><span class="mini pj">Jaidyn <button data-pc="${d}|${it.k}|J|-1" aria-label="Fewer">−</button><b class="num">${it.J}</b><button data-pc="${d}|${it.k}|J|1" aria-label="More">+</button></span>
+      ${items.map(it => { const r = getR(it.id); return r ? `<div class="pitem"><a class="pt" href="#r/${esc(r.id)}/${esc(it.k)}">${esc(r.title)}</a><button class="btn small ghost" data-rm="${d}|${it.k}" aria-label="Remove">✕</button>
+        ${it.sc && getR(it.sc.id) ? `<span class="sub" style="grid-column:1/-1">with ${esc(getR(it.sc.id).title.toLowerCase())} <button class="btn small ghost" data-nosc="${d}|${it.k}" aria-label="Remove the sauce">✕ sauce</button></span>` : ""}<span class="pc"><span class="mini pj">Jaidyn <button data-pc="${d}|${it.k}|J|-1" aria-label="Fewer">−</button><b class="num">${it.J}</b><button data-pc="${d}|${it.k}|J|1" aria-label="More">+</button></span>
         <span class="mini pp">Paris <button data-pc="${d}|${it.k}|P|-1" aria-label="Fewer">−</button><b class="num">${it.P}</b><button data-pc="${d}|${it.k}|P|1" aria-label="More">+</button></span></span></div>` : ""; }).join("") || `<p class="sub">Nothing planned.</p>`}
       ${items.length ? `<div class="totals"><span class="pj">Jaidyn: <b class="num">${t.J.kcal}</b> kcal · ${t.J.protein} g per serve set</span><span class="pp">Paris: <b class="num">${t.P.kcal}</b> kcal · ${t.P.protein} g</span></div>` : ""}</section>`;
   };
@@ -444,6 +445,7 @@ function renderPlan() {
   app.querySelectorAll("[data-wk]").forEach(b => b.onclick = () => { weekStart = addD(weekStart, +b.dataset.wk); renderPlan(); });
   app.querySelectorAll("[data-rm]").forEach(b => b.onclick = () => { const [d, k] = b.dataset.rm.split("|"); planDel(k); renderPlan(); });
   app.querySelectorAll("[data-pc]").forEach(b => b.onclick = () => { const [d, k, x, dd] = b.dataset.pc.split("|"), it = (ST.plan[d] || []).find(y => y.k === k); if (it) { planPut(d, { ...it, [x]: Math.max(0, Math.min(40, it[x] + +dd)) }); renderPlan(); } });
+  app.querySelectorAll("[data-nosc]").forEach(b => b.onclick = () => { const [d, k] = b.dataset.nosc.split("|"), it = (ST.plan[d] || []).find(y => y.k === k); if (it) { const { sc, ...rest } = it; planPut(d, rest); renderPlan(); } });
   app.querySelectorAll("[data-addto]").forEach(b => b.onclick = () => chooseRecipe(b.dataset.addto));
 }
 function chooseRecipe(d) {
