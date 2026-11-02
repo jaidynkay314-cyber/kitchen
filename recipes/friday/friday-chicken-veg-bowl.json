@@ -1,0 +1,160 @@
+{
+ "schema": "kitchen-recipe",
+ "schemaVersion": 1,
+ "id": "friday-chicken-veg-bowl",
+ "title": "Lean Chicken and Veg Bowl",
+ "category": "friday",
+ "desc": "Light, high-protein freezer lunch for Fridays before beers.",
+ "tags": [
+  "chicken",
+  "freezer",
+  "low calorie"
+ ],
+ "time": 35,
+ "base": {
+  "J": 6,
+  "P": 0
+ },
+ "portions": {
+  "J": "1 container (a sixth of the batch)",
+  "P": "2/3 of a container"
+ },
+ "ingredients": [
+  {
+   "id": "i1",
+   "name": "chicken breast, diced",
+   "food": "chicken breast",
+   "unit": "g",
+   "gpu": 1,
+   "k100": 106,
+   "p100": 23,
+   "aisle": "Meat",
+   "per": {
+    "J": 183.3333,
+    "P": 122.2222
+   }
+  },
+  {
+   "id": "i2",
+   "name": "frozen mixed veg",
+   "food": "frozen mixed veg",
+   "unit": "g",
+   "gpu": 1,
+   "k100": 65,
+   "p100": 3,
+   "aisle": "Frozen",
+   "per": {
+    "J": 150.0,
+    "P": 100.0
+   }
+  },
+  {
+   "id": "i3",
+   "name": "jasmine rice (about 2/3 cup)",
+   "food": "white rice, uncooked",
+   "unit": "g",
+   "gpu": 1,
+   "k100": 360,
+   "p100": 7,
+   "aisle": "Pantry",
+   "per": {
+    "J": 20.8333,
+    "P": 13.8889
+   }
+  },
+  {
+   "id": "i4",
+   "name": "soy sauce",
+   "food": "soy sauce",
+   "unit": "tbsp",
+   "gpu": 16,
+   "k100": 53,
+   "p100": 8,
+   "aisle": "Sauces and spices",
+   "per": {
+    "J": 0.5,
+    "P": 0.3333
+   }
+  },
+  {
+   "id": "i5",
+   "name": "sweet chilli sauce",
+   "food": "sweet chilli sauce",
+   "unit": "tbsp",
+   "gpu": 18,
+   "k100": 230,
+   "p100": 0.5,
+   "aisle": "Sauces and spices",
+   "per": {
+    "J": 0.3333,
+    "P": 0.2222
+   }
+  },
+  {
+   "id": "i6",
+   "name": "garlic",
+   "food": "garlic",
+   "unit": "clove",
+   "gpu": 5,
+   "k100": 149,
+   "p100": 6.4,
+   "aisle": "Produce",
+   "per": {
+    "J": 0.3333,
+    "P": 0.2222
+   }
+  },
+  {
+   "id": "i7",
+   "name": "fresh ginger, grated",
+   "food": "fresh ginger, grated",
+   "unit": "tsp",
+   "gpu": 2,
+   "k100": 80,
+   "p100": 1.8,
+   "aisle": "Produce",
+   "per": {
+    "J": 0.1667,
+    "P": 0.1111
+   }
+  }
+ ],
+ "steps": [
+  {
+   "title": "Cook the rice",
+   "text": "Cook the rice and spread it on a tray to cool.",
+   "timer": 900
+  },
+  {
+   "title": "Brown the chicken",
+   "text": "Spray a large pan and brown the chicken in two batches over high heat.",
+   "timer": 840
+  },
+  {
+   "title": "Veg",
+   "text": "Add the garlic, ginger and frozen veg and cook until just tender.",
+   "timer": 300
+  },
+  {
+   "title": "Sauce",
+   "text": "Return the chicken, add the soy and sweet chilli and toss 1 minute.",
+   "timer": 60
+  },
+  {
+   "title": "Portion",
+   "text": "Divide the rice and chicken between 6 containers. Cool, lid and freeze.",
+   "timer": 0
+  }
+ ],
+ "notes": "",
+ "macros": {
+  "J": {
+   "kcal": 388,
+   "protein": 49
+  },
+  "P": {
+   "kcal": 258,
+   "protein": 33
+  }
+ }
+}

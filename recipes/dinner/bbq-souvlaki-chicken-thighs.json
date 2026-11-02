@@ -1,0 +1,249 @@
+{
+ "schema": "kitchen-recipe",
+ "schemaVersion": 1,
+ "id": "bbq-souvlaki-chicken-thighs",
+ "title": "BBQ Souvlaki Chicken Thighs",
+ "category": "dinner",
+ "desc": "Lemon, garlic and oregano chicken thighs off the barbecue, with sweet potato mash, broccoli and a high-protein tzatziki.",
+ "tags": [
+  "chicken",
+  "bbq",
+  "high protein"
+ ],
+ "time": 45,
+ "base": {
+  "J": 1,
+  "P": 1
+ },
+ "portions": {
+  "J": "250 g chicken, about 300 g sweet potato mash, half the broccoli and tzatziki",
+  "P": "150 g chicken, about 200 g sweet potato mash, half the broccoli and tzatziki"
+ },
+ "ingredients": [
+  {
+   "id": "i1",
+   "name": "chicken thigh fillet, skinless",
+   "food": "chicken thigh fillet, skinless",
+   "unit": "g",
+   "gpu": 1,
+   "k100": 121,
+   "p100": 19.5,
+   "aisle": "Meat",
+   "per": {
+    "J": 250,
+    "P": 150
+   }
+  },
+  {
+   "id": "i2",
+   "name": "olive oil",
+   "food": "olive oil",
+   "unit": "tbsp",
+   "gpu": 14,
+   "k100": 884,
+   "p100": 0,
+   "aisle": "Pantry",
+   "per": {
+    "J": 0.5,
+    "P": 0.5
+   }
+  },
+  {
+   "id": "i3",
+   "name": "lemon, juiced and zested",
+   "food": "lemon",
+   "unit": "whole",
+   "gpu": 60,
+   "k100": 29,
+   "p100": 1.1,
+   "aisle": "Produce",
+   "per": {
+    "J": 0.5,
+    "P": 0.5
+   }
+  },
+  {
+   "id": "i4",
+   "name": "garlic",
+   "food": "garlic",
+   "unit": "clove",
+   "gpu": 5,
+   "k100": 149,
+   "p100": 6.4,
+   "aisle": "Produce",
+   "per": {
+    "J": 1.5,
+    "P": 1.5
+   }
+  },
+  {
+   "id": "i5",
+   "name": "dried oregano",
+   "food": "dried oregano",
+   "unit": "tsp",
+   "gpu": 1,
+   "k100": 265,
+   "p100": 9,
+   "aisle": "Sauces and spices",
+   "per": {
+    "J": 1.0,
+    "P": 1.0
+   }
+  },
+  {
+   "id": "i6",
+   "name": "smoked paprika",
+   "food": "smoked paprika",
+   "unit": "tsp",
+   "gpu": 2.3,
+   "k100": 282,
+   "p100": 14,
+   "aisle": "Sauces and spices",
+   "per": {
+    "J": 0.5,
+    "P": 0.5
+   }
+  },
+  {
+   "id": "i7",
+   "name": "salt",
+   "food": "salt",
+   "unit": "tsp",
+   "gpu": 6,
+   "k100": 0,
+   "p100": 0,
+   "aisle": "Sauces and spices",
+   "per": {
+    "J": 0.25,
+    "P": 0.25
+   }
+  },
+  {
+   "id": "i8",
+   "name": "sweet potato, peeled and chopped",
+   "food": "sweet potato",
+   "unit": "g",
+   "gpu": 1,
+   "k100": 86,
+   "p100": 1.6,
+   "aisle": "Produce",
+   "per": {
+    "J": 300,
+    "P": 200
+   }
+  },
+  {
+   "id": "i9",
+   "name": "butter",
+   "food": "butter",
+   "unit": "g",
+   "gpu": 1,
+   "k100": 717,
+   "p100": 0.9,
+   "aisle": "Dairy and eggs",
+   "per": {
+    "J": 5.0,
+    "P": 5.0
+   }
+  },
+  {
+   "id": "i10",
+   "name": "milk, full cream",
+   "food": "milk, full cream",
+   "unit": "tbsp",
+   "gpu": 15,
+   "k100": 64,
+   "p100": 3.3,
+   "aisle": "Dairy and eggs",
+   "per": {
+    "J": 1.0,
+    "P": 1.0
+   }
+  },
+  {
+   "id": "i11",
+   "name": "broccoli, in florets",
+   "food": "broccoli",
+   "unit": "g",
+   "gpu": 1,
+   "k100": 34,
+   "p100": 2.8,
+   "aisle": "Produce",
+   "per": {
+    "J": 150.0,
+    "P": 150.0
+   }
+  },
+  {
+   "id": "i12",
+   "name": "high-protein Greek yoghurt",
+   "food": "high-protein Greek yoghurt",
+   "unit": "g",
+   "gpu": 1,
+   "k100": 60,
+   "p100": 10,
+   "aisle": "Dairy and eggs",
+   "per": {
+    "J": 75.0,
+    "P": 75.0
+   }
+  },
+  {
+   "id": "i13",
+   "name": "Lebanese cucumber, grated and squeezed dry",
+   "food": "Lebanese cucumber",
+   "unit": "whole",
+   "gpu": 120,
+   "k100": 15,
+   "p100": 0.7,
+   "aisle": "Produce",
+   "per": {
+    "J": 0.25,
+    "P": 0.25
+   }
+  }
+ ],
+ "steps": [
+  {
+   "title": "Marinate the chicken",
+   "text": "Mix the oil, lemon juice and zest, two of the garlic cloves, oregano, paprika and salt. Toss the chicken through and leave at least 20 minutes, or up to a day in the fridge.",
+   "timer": 1200
+  },
+  {
+   "title": "Boil the sweet potato",
+   "text": "Cover the sweet potato with cold salted water, bring to the boil and simmer until a knife slides straight through.",
+   "timer": 900
+  },
+  {
+   "title": "Make the tzatziki",
+   "text": "Stir the cucumber and the last garlic clove through the yoghurt with a squeeze of lemon and a pinch of salt. Keep it in the fridge.",
+   "timer": 0
+  },
+  {
+   "title": "Barbecue the chicken",
+   "text": "Cook on a hot barbecue plate or grill, 5 to 6 minutes a side, until charred and cooked through (75°C in the thickest part).",
+   "timer": 660
+  },
+  {
+   "title": "Rest, and cook the broccoli",
+   "text": "Rest the chicken 5 minutes. Steam or microwave the broccoli until bright green and just tender.",
+   "timer": 300
+  },
+  {
+   "title": "Mash and serve",
+   "text": "Drain the sweet potato and mash with the butter and milk, then season. Slice the chicken and serve with the mash, broccoli and tzatziki.",
+   "timer": 0
+  }
+ ],
+ "notes": "Leftover cooked thighs keep 3 days in the fridge for a lunch wrap.",
+ "macros": {
+  "J": {
+   "kcal": 794,
+   "protein": 67
+  },
+  "P": {
+   "kcal": 587,
+   "protein": 46
+  }
+ }
+}

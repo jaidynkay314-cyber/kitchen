@@ -1,0 +1,99 @@
+{
+ "schema": "kitchen-recipe",
+ "schemaVersion": 1,
+ "id": "breakie-burgers",
+ "title": "Breakie Burgers",
+ "category": "breakfast",
+ "desc": "Freezer breakfast burgers: English muffin, pork and beef patty, cheese, homemade pickles and hot sauce.",
+ "tags": [
+  "breakfast",
+  "freezer",
+  "grab and go"
+ ],
+ "time": 40,
+ "base": {
+  "J": 6,
+  "P": 6
+ },
+ "portions": {
+  "J": "1 burger with a double lean patty (160 g raw)",
+  "P": "1 burger with a single patty (80 g raw)"
+ },
+ "ingredients": [
+  {
+   "id": "i1",
+   "name": "English muffins",
+   "food": "English muffins",
+   "unit": "whole",
+   "gpu": 67,
+   "k100": 225,
+   "p100": 8,
+   "aisle": "Bakery",
+   "per": {
+    "J": 1.0,
+    "P": 1.0
+   }
+  },
+  {
+   "id": "i2",
+   "name": "pork and beef mince (80 g patties)",
+   "food": "lean pork and beef mince (50/50)",
+   "unit": "g",
+   "gpu": 1,
+   "k100": 170,
+   "p100": 20,
+   "aisle": "Meat",
+   "per": {
+    "J": 160,
+    "P": 80
+   }
+  },
+  {
+   "id": "i3",
+   "name": "small cheese slices",
+   "food": "cheddar slice",
+   "unit": "whole",
+   "gpu": 15,
+   "k100": 360,
+   "p100": 22,
+   "aisle": "Dairy and eggs",
+   "per": {
+    "J": 1.0,
+    "P": 1.0
+   }
+  }
+ ],
+ "steps": [
+  {
+   "title": "Shape",
+   "text": "Shape the mince into 80 g patties, a little wider than the muffins. Season.",
+   "timer": 0
+  },
+  {
+   "title": "Cook",
+   "text": "Cook in a hot pan or on the barbecue about 3 to 4 minutes a side until cooked through.",
+   "timer": 480
+  },
+  {
+   "title": "Build",
+   "text": "Muffin, patty (two for Jaidyn's), cheese slice, pickles and hot sauce.",
+   "timer": 0
+  },
+  {
+   "title": "Freeze",
+   "text": "Cool, wrap each burger and freeze. Microwave from frozen about 90 seconds, then toast if you like.",
+   "timer": 0
+  }
+ ],
+ "notes": "Add an egg for about 70 kcal and 6 g protein.",
+ "macros": {
+  "J": {
+   "kcal": 477,
+   "protein": 41
+  },
+  "P": {
+   "kcal": 341,
+   "protein": 25
+  }
+ }
+}

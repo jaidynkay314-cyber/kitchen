@@ -1,0 +1,222 @@
+{
+ "schema": "kitchen-recipe",
+ "schemaVersion": 1,
+ "id": "chipotle-chilli-con-carne",
+ "title": "Chipotle Chilli Con Carne",
+ "category": "lunch prep",
+ "desc": "Smoky chilli with rice. Post-gym or rest days.",
+ "tags": [
+  "beef",
+  "pork",
+  "freezer",
+  "rice"
+ ],
+ "time": 50,
+ "base": {
+  "J": 4,
+  "P": 3
+ },
+ "portions": {
+  "J": "a sixth of the chilli (weigh the pot, divide by 6) and 3/4 cup cooked rice",
+  "P": "2/3 of Jaidyn's chilli scoop and 1/2 cup cooked rice"
+ },
+ "ingredients": [
+  {
+   "id": "i1",
+   "name": "lean pork and beef mince (50/50)",
+   "food": "lean pork and beef mince (50/50)",
+   "unit": "g",
+   "gpu": 1,
+   "k100": 170,
+   "p100": 20,
+   "aisle": "Meat",
+   "per": {
+    "J": 166.6667,
+    "P": 111.1111
+   }
+  },
+  {
+   "id": "i2",
+   "name": "kidney beans, drained and rinsed",
+   "food": "kidney beans, tinned (drained)",
+   "unit": "tin",
+   "gpu": 240,
+   "k100": 110,
+   "p100": 7.5,
+   "aisle": "Pantry",
+   "per": {
+    "J": 0.3333,
+    "P": 0.2222
+   }
+  },
+  {
+   "id": "i3",
+   "name": "diced tomatoes, tinned",
+   "food": "diced tomatoes, tinned",
+   "unit": "tin",
+   "gpu": 400,
+   "k100": 20,
+   "p100": 1,
+   "aisle": "Pantry",
+   "per": {
+    "J": 0.3333,
+    "P": 0.2222
+   }
+  },
+  {
+   "id": "i4",
+   "name": "brown onion, diced",
+   "food": "brown onion",
+   "unit": "whole",
+   "gpu": 150,
+   "k100": 40,
+   "p100": 1.1,
+   "aisle": "Produce",
+   "per": {
+    "J": 0.1667,
+    "P": 0.1111
+   }
+  },
+  {
+   "id": "i5",
+   "name": "red capsicum, diced",
+   "food": "red capsicum",
+   "unit": "whole",
+   "gpu": 160,
+   "k100": 31,
+   "p100": 1,
+   "aisle": "Produce",
+   "per": {
+    "J": 0.1667,
+    "P": 0.1111
+   }
+  },
+  {
+   "id": "i6",
+   "name": "garlic",
+   "food": "garlic",
+   "unit": "clove",
+   "gpu": 5,
+   "k100": 149,
+   "p100": 6.4,
+   "aisle": "Produce",
+   "per": {
+    "J": 0.6667,
+    "P": 0.4444
+   }
+  },
+  {
+   "id": "i7",
+   "name": "chipotle powder",
+   "food": "chipotle powder",
+   "unit": "tsp",
+   "gpu": 2.7,
+   "k100": 282,
+   "p100": 12,
+   "aisle": "Sauces and spices",
+   "per": {
+    "J": 0.3333,
+    "P": 0.2222
+   }
+  },
+  {
+   "id": "i8",
+   "name": "ground cumin",
+   "food": "ground cumin",
+   "unit": "tsp",
+   "gpu": 2,
+   "k100": 375,
+   "p100": 18,
+   "aisle": "Sauces and spices",
+   "per": {
+    "J": 0.3333,
+    "P": 0.2222
+   }
+  },
+  {
+   "id": "i9",
+   "name": "smoked paprika",
+   "food": "smoked paprika",
+   "unit": "tsp",
+   "gpu": 2.3,
+   "k100": 282,
+   "p100": 14,
+   "aisle": "Sauces and spices",
+   "per": {
+    "J": 0.3333,
+    "P": 0.2222
+   }
+  },
+  {
+   "id": "i10",
+   "name": "dried oregano",
+   "food": "dried oregano",
+   "unit": "tsp",
+   "gpu": 1,
+   "k100": 265,
+   "p100": 9,
+   "aisle": "Sauces and spices",
+   "per": {
+    "J": 0.1667,
+    "P": 0.1111
+   }
+  },
+  {
+   "id": "i11",
+   "name": "white rice, uncooked",
+   "food": "white rice, uncooked",
+   "unit": "cup",
+   "gpu": 185,
+   "k100": 360,
+   "p100": 7,
+   "aisle": "Pantry",
+   "per": {
+    "J": 0.25,
+    "P": 0.1667
+   }
+  }
+ ],
+ "steps": [
+  {
+   "title": "Brown the mince",
+   "text": "Brown the mince in a large pot over medium-high heat, breaking it up. No extra oil needed.",
+   "timer": 600
+  },
+  {
+   "title": "Soften the veg",
+   "text": "Add the onion, capsicum and garlic and cook 4 to 5 minutes.",
+   "timer": 300
+  },
+  {
+   "title": "Bloom the spices",
+   "text": "Stir in all the spices and cook 1 minute until fragrant.",
+   "timer": 60
+  },
+  {
+   "title": "Simmer",
+   "text": "Add the tomatoes and beans and simmer uncovered until thick, stirring now and then.",
+   "timer": 1500
+  },
+  {
+   "title": "Cook the rice",
+   "text": "Cook the rice separately. Season the chilli and add your hot sauce.",
+   "timer": 900
+  },
+  {
+   "title": "Portion",
+   "text": "Weigh the chilli and divide by 6 for one regular serve. Pack 4 regular (3/4 cup rice) and 3 small (2/3 chilli, 1/2 cup rice).",
+   "timer": 0
+  }
+ ],
+ "notes": "The batch makes exactly 4 regular and 3 small serves.",
+ "macros": {
+  "J": {
+   "kcal": 595,
+   "protein": 45
+  },
+  "P": {
+   "kcal": 397,
+   "protein": 30
+  }
+ }
+}

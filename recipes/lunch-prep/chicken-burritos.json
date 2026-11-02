@@ -1,0 +1,216 @@
+{
+ "schema": "kitchen-recipe",
+ "schemaVersion": 1,
+ "id": "chicken-burritos",
+ "title": "Chicken Burritos",
+ "category": "lunch prep",
+ "desc": "Grab-and-go freezer burritos for hungrier days.",
+ "tags": [
+  "chicken",
+  "freezer",
+  "grab and go"
+ ],
+ "time": 45,
+ "base": {
+  "J": 4,
+  "P": 3
+ },
+ "portions": {
+  "J": "1 large burrito",
+  "P": "1 burrito on a regular tortilla with 2/3 of the filling"
+ },
+ "ingredients": [
+  {
+   "id": "i1",
+   "name": "chicken breast",
+   "food": "chicken breast",
+   "unit": "g",
+   "gpu": 1,
+   "k100": 106,
+   "p100": 23,
+   "aisle": "Meat",
+   "per": {
+    "J": 166.6667,
+    "P": 111.1111
+   }
+  },
+  {
+   "id": "i2",
+   "name": "white rice, uncooked",
+   "food": "white rice, uncooked",
+   "unit": "cup",
+   "gpu": 185,
+   "k100": 360,
+   "p100": 7,
+   "aisle": "Pantry",
+   "per": {
+    "J": 0.25,
+    "P": 0.1667
+   }
+  },
+  {
+   "id": "i3",
+   "name": "black beans, drained and rinsed",
+   "food": "black beans, tinned (drained)",
+   "unit": "tin",
+   "gpu": 240,
+   "k100": 91,
+   "p100": 6,
+   "aisle": "Pantry",
+   "per": {
+    "J": 0.1667,
+    "P": 0.1111
+   }
+  },
+  {
+   "id": "i4",
+   "name": "grated cheese",
+   "food": "cheddar, grated",
+   "unit": "g",
+   "gpu": 1,
+   "k100": 400,
+   "p100": 25,
+   "aisle": "Dairy and eggs",
+   "per": {
+    "J": 20.0,
+    "P": 13.3333
+   }
+  },
+  {
+   "id": "i5",
+   "name": "large tortillas",
+   "food": "large tortillas",
+   "unit": "whole",
+   "gpu": 60,
+   "k100": 300,
+   "p100": 8.5,
+   "aisle": "Bakery",
+   "per": {
+    "J": 1,
+    "P": 0
+   }
+  },
+  {
+   "id": "i6",
+   "name": "regular tortillas",
+   "food": "regular tortillas",
+   "unit": "whole",
+   "gpu": 40,
+   "k100": 300,
+   "p100": 8.5,
+   "aisle": "Bakery",
+   "per": {
+    "J": 0,
+    "P": 1
+   }
+  },
+  {
+   "id": "i7",
+   "name": "salsa",
+   "food": "salsa",
+   "unit": "cup",
+   "gpu": 260,
+   "k100": 36,
+   "p100": 1.5,
+   "aisle": "Pantry",
+   "per": {
+    "J": 0.0833,
+    "P": 0.0556
+   }
+  },
+  {
+   "id": "i8",
+   "name": "ground cumin",
+   "food": "ground cumin",
+   "unit": "tsp",
+   "gpu": 2,
+   "k100": 375,
+   "p100": 18,
+   "aisle": "Sauces and spices",
+   "per": {
+    "J": 0.3333,
+    "P": 0.2222
+   }
+  },
+  {
+   "id": "i9",
+   "name": "smoked paprika",
+   "food": "smoked paprika",
+   "unit": "tsp",
+   "gpu": 2.3,
+   "k100": 282,
+   "p100": 14,
+   "aisle": "Sauces and spices",
+   "per": {
+    "J": 0.3333,
+    "P": 0.2222
+   }
+  },
+  {
+   "id": "i10",
+   "name": "chipotle powder",
+   "food": "chipotle powder",
+   "unit": "tsp",
+   "gpu": 2.7,
+   "k100": 282,
+   "p100": 12,
+   "aisle": "Sauces and spices",
+   "per": {
+    "J": 0.1667,
+    "P": 0.1111
+   }
+  },
+  {
+   "id": "i11",
+   "name": "lime (optional)",
+   "food": "lime",
+   "unit": "whole",
+   "gpu": 45,
+   "k100": 30,
+   "p100": 0.7,
+   "aisle": "Produce",
+   "per": {
+    "J": 0.1667,
+    "P": 0.1111
+   }
+  }
+ ],
+ "steps": [
+  {
+   "title": "Cook the chicken",
+   "text": "Rub the chicken with the spices and bake at 200°C until cooked through. Rest 5 minutes, then shred with two forks.",
+   "timer": 1350
+  },
+  {
+   "title": "Cook the rice",
+   "text": "Cook the rice and stir through the lime juice and a pinch of salt.",
+   "timer": 900
+  },
+  {
+   "title": "Mix the filling",
+   "text": "Toss the chicken with the beans, salsa and hot sauce. Let everything cool before rolling.",
+   "timer": 0
+  },
+  {
+   "title": "Roll",
+   "text": "Large tortillas: rice, chicken mix, cheese. Regular tortillas: about 2/3 as much of each. Fold the sides in and roll tightly.",
+   "timer": 0
+  },
+  {
+   "title": "Wrap and freeze",
+   "text": "Wrap each one in cling wrap or foil, then bag and freeze.",
+   "timer": 0
+  }
+ ],
+ "notes": "Microwave from frozen 3 to 4 minutes (foil off), turning halfway.",
+ "macros": {
+  "J": {
+   "kcal": 656,
+   "protein": 55
+  },
+  "P": {
+   "kcal": 437,
+   "protein": 36
+  }
+ }
+}
