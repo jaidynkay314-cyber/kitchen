@@ -1,5 +1,5 @@
 // Kitchen offline cache. Bump VERSION each release. Data files are network-first so new recipes show on launch.
-const VERSION = "kitchen-v1.3";
+const VERSION = "kitchen-v1.3.1";
 const SHELL = ["./", "index.html", "manifest.webmanifest", "icon-192.png", "icon-512.png"];
 const DATA = ["data/recipes.js", "data/foods.js"];
 self.addEventListener("install", e => e.waitUntil(caches.open(VERSION).then(c => c.addAll([...SHELL, ...DATA])).then(() => self.skipWaiting())));
