@@ -1,0 +1,247 @@
+{
+ "schema": "kitchen-recipe",
+ "schemaVersion": 1,
+ "id": "san-choy-bow",
+ "title": "San Choy Bow",
+ "category": "dinner",
+ "desc": "Savoury pork and chicken mince in crisp lettuce cups, with a little rice on the side.",
+ "tags": [
+  "pork",
+  "chicken",
+  "asian",
+  "quick"
+ ],
+ "time": 25,
+ "base": {
+  "J": 1,
+  "P": 1
+ },
+ "portions": {
+  "J": "About 250 g of the cooked mince filling (5 or 6 lettuce cups), 2/3 cup cooked rice",
+  "P": "The rest of the filling (3 or 4 lettuce cups), 1/2 cup cooked rice"
+ },
+ "ingredients": [
+  {
+   "id": "i1",
+   "name": "lean pork mince",
+   "food": "lean pork mince",
+   "unit": "g",
+   "gpu": 1,
+   "k100": 140,
+   "p100": 21,
+   "aisle": "Meat",
+   "per": {
+    "J": 125.0,
+    "P": 75.0
+   }
+  },
+  {
+   "id": "i2",
+   "name": "chicken mince",
+   "food": "chicken mince",
+   "unit": "g",
+   "gpu": 1,
+   "k100": 140,
+   "p100": 19,
+   "aisle": "Meat",
+   "per": {
+    "J": 125.0,
+    "P": 75.0
+   }
+  },
+  {
+   "id": "i3",
+   "name": "garlic",
+   "food": "garlic",
+   "unit": "clove",
+   "gpu": 5,
+   "k100": 149,
+   "p100": 6.4,
+   "aisle": "Produce",
+   "per": {
+    "J": 1.0,
+    "P": 1.0
+   }
+  },
+  {
+   "id": "i4",
+   "name": "fresh ginger, grated",
+   "food": "fresh ginger, grated",
+   "unit": "tbsp",
+   "gpu": 6,
+   "k100": 80,
+   "p100": 1.8,
+   "aisle": "Produce",
+   "per": {
+    "J": 0.5,
+    "P": 0.5
+   }
+  },
+  {
+   "id": "i5",
+   "name": "carrot, grated",
+   "food": "carrot",
+   "unit": "whole",
+   "gpu": 120,
+   "k100": 33,
+   "p100": 0.8,
+   "aisle": "Produce",
+   "per": {
+    "J": 0.625,
+    "P": 0.375
+   }
+  },
+  {
+   "id": "i6",
+   "name": "red capsicum, finely diced",
+   "food": "red capsicum",
+   "unit": "whole",
+   "gpu": 160,
+   "k100": 31,
+   "p100": 1,
+   "aisle": "Produce",
+   "per": {
+    "J": 0.3125,
+    "P": 0.1875
+   }
+  },
+  {
+   "id": "i7",
+   "name": "spring onions, sliced",
+   "food": "spring onions",
+   "unit": "whole",
+   "gpu": 15,
+   "k100": 32,
+   "p100": 1.8,
+   "aisle": "Produce",
+   "per": {
+    "J": 1.5,
+    "P": 1.5
+   }
+  },
+  {
+   "id": "i8",
+   "name": "oyster sauce",
+   "food": "oyster sauce",
+   "unit": "tbsp",
+   "gpu": 18,
+   "k100": 110,
+   "p100": 2,
+   "aisle": "Sauces and spices",
+   "per": {
+    "J": 1.25,
+    "P": 0.75
+   }
+  },
+  {
+   "id": "i9",
+   "name": "soy sauce (salt-reduced)",
+   "food": "soy sauce",
+   "unit": "tbsp",
+   "gpu": 16,
+   "k100": 53,
+   "p100": 8,
+   "aisle": "Sauces and spices",
+   "per": {
+    "J": 0.625,
+    "P": 0.375
+   }
+  },
+  {
+   "id": "i10",
+   "name": "hoisin sauce",
+   "food": "hoisin sauce",
+   "unit": "tbsp",
+   "gpu": 18,
+   "k100": 220,
+   "p100": 3,
+   "aisle": "Sauces and spices",
+   "per": {
+    "J": 0.625,
+    "P": 0.375
+   }
+  },
+  {
+   "id": "i11",
+   "name": "sesame oil",
+   "food": "sesame oil",
+   "unit": "tsp",
+   "gpu": 4.5,
+   "k100": 884,
+   "p100": 0,
+   "aisle": "Sauces and spices",
+   "per": {
+    "J": 0.5,
+    "P": 0.5
+   }
+  },
+  {
+   "id": "i12",
+   "name": "iceberg lettuce, leaves separated into cups",
+   "food": "iceberg lettuce",
+   "unit": "whole",
+   "gpu": 500,
+   "k100": 14,
+   "p100": 0.9,
+   "aisle": "Produce",
+   "per": {
+    "J": 0.5,
+    "P": 0.5
+   }
+  },
+  {
+   "id": "i13",
+   "name": "jasmine rice",
+   "food": "white rice, uncooked",
+   "unit": "cup",
+   "gpu": 185,
+   "k100": 360,
+   "p100": 7,
+   "aisle": "Pantry",
+   "per": {
+    "J": 0.25,
+    "P": 0.17
+   }
+  }
+ ],
+ "steps": [
+  {
+   "title": "Rice and lettuce",
+   "text": "Put the rice on. Separate the lettuce into whole cup-shaped leaves, rinse, and chill them in the fridge so they're crisp.",
+   "timer": 900
+  },
+  {
+   "title": "Brown the mince",
+   "text": "Heat the sesame oil in a wok on high. Add both minces and cook, breaking it up, until browned and any liquid has cooked off.",
+   "timer": 420
+  },
+  {
+   "title": "Add the veg",
+   "text": "Add the garlic, ginger, carrot and capsicum and stir-fry 2 minutes.",
+   "timer": 120
+  },
+  {
+   "title": "Sauce it",
+   "text": "Add the oyster, soy and hoisin sauces and toss until glossy. Stir through most of the spring onion.",
+   "timer": 60
+  },
+  {
+   "title": "Serve",
+   "text": "Spoon into lettuce cups, top with the rest of the spring onion, and serve with the rice on the side.",
+   "timer": 0
+  }
+ ],
+ "notes": "Tinned water chestnuts, diced, add good crunch for almost no calories.",
+ "macros": {
+  "J": {
+   "kcal": 683,
+   "protein": 59
+  },
+  "P": {
+   "kcal": 452,
+   "protein": 37
+  }
+ },
+ "sauce": "sriracha-lime-yoghurt",
+ "short": "San choy bow with rice"
+}

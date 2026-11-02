@@ -1,0 +1,171 @@
+{
+ "schema": "kitchen-recipe",
+ "schemaVersion": 1,
+ "id": "chicken-fajitas",
+ "title": "Chicken Fajitas",
+ "category": "dinner",
+ "desc": "Spiced chicken breast with charred capsicum and onion, in mini tortillas.",
+ "tags": [
+  "chicken",
+  "mexican",
+  "quick"
+ ],
+ "time": 30,
+ "base": {
+  "J": 1,
+  "P": 1
+ },
+ "portions": {
+  "J": "4 mini tortillas, 220 g raw chicken, half the veg",
+  "P": "3 mini tortillas, 140 g raw chicken, half the veg"
+ },
+ "ingredients": [
+  {
+   "id": "i1",
+   "name": "chicken breast, in strips",
+   "food": "chicken breast",
+   "unit": "g",
+   "gpu": 1,
+   "k100": 106,
+   "p100": 23,
+   "aisle": "Meat",
+   "per": {
+    "J": 220,
+    "P": 140
+   }
+  },
+  {
+   "id": "i2",
+   "name": "Fajita spices (smoked paprika, cumin, garlic powder, oregano, chilli)",
+   "food": "spices (your mix)",
+   "unit": "tsp",
+   "gpu": 2.5,
+   "k100": 0,
+   "p100": 0,
+   "aisle": "Sauces and spices",
+   "per": {
+    "J": 1.5,
+    "P": 1.5
+   }
+  },
+  {
+   "id": "i3",
+   "name": "capsicums (mixed colours), sliced",
+   "food": "red capsicum",
+   "unit": "whole",
+   "gpu": 160,
+   "k100": 31,
+   "p100": 1,
+   "aisle": "Produce",
+   "per": {
+    "J": 1.0,
+    "P": 1.0
+   }
+  },
+  {
+   "id": "i4",
+   "name": "red onion, sliced",
+   "food": "red onion",
+   "unit": "whole",
+   "gpu": 150,
+   "k100": 40,
+   "p100": 1.1,
+   "aisle": "Produce",
+   "per": {
+    "J": 0.5,
+    "P": 0.5
+   }
+  },
+  {
+   "id": "i5",
+   "name": "olive oil",
+   "food": "olive oil",
+   "unit": "tsp",
+   "gpu": 4.5,
+   "k100": 884,
+   "p100": 0,
+   "aisle": "Pantry",
+   "per": {
+    "J": 1.0,
+    "P": 1.0
+   }
+  },
+  {
+   "id": "i6",
+   "name": "lime juice",
+   "food": "lime juice",
+   "unit": "tbsp",
+   "gpu": 15,
+   "k100": 25,
+   "p100": 0.4,
+   "aisle": "Produce",
+   "per": {
+    "J": 0.5,
+    "P": 0.5
+   }
+  },
+  {
+   "id": "i7",
+   "name": "mini tortillas",
+   "food": "mini tortillas",
+   "unit": "whole",
+   "gpu": 25,
+   "k100": 300,
+   "p100": 8.5,
+   "aisle": "Bakery",
+   "per": {
+    "J": 4,
+    "P": 3
+   }
+  },
+  {
+   "id": "i8",
+   "name": "salsa",
+   "food": "salsa",
+   "unit": "cup",
+   "gpu": 260,
+   "k100": 36,
+   "p100": 1.5,
+   "aisle": "Pantry",
+   "per": {
+    "J": 0.125,
+    "P": 0.125
+   }
+  }
+ ],
+ "steps": [
+  {
+   "title": "Season",
+   "text": "Toss the chicken with the spices, half the oil and a pinch of salt.",
+   "timer": 0
+  },
+  {
+   "title": "Char the veg",
+   "text": "Very hot pan or barbecue plate. Cook the capsicum and onion with the rest of the oil until soft and charred at the edges. Set aside.",
+   "timer": 360
+  },
+  {
+   "title": "Cook the chicken",
+   "text": "Same pan, high heat. Cook the chicken strips in one layer, turning once, until browned and cooked through.",
+   "timer": 360
+  },
+  {
+   "title": "Serve",
+   "text": "Squeeze the lime over the chicken and veg. Warm the tortillas in a dry pan and load them up with the salsa and sauce.",
+   "timer": 0
+  }
+ ],
+ "notes": "Swap a tortilla each for shredded lettuce to cut about 75 kcal.",
+ "macros": {
+  "J": {
+   "kcal": 666,
+   "protein": 62
+  },
+  "P": {
+   "kcal": 506,
+   "protein": 42
+  }
+ },
+ "sauce": "chipotle-lime-yoghurt",
+ "short": "Chicken fajitas"
+}

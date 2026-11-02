@@ -55,6 +55,23 @@ FOODS = {
  "fresh herbs (dill, mint, parsley or chives)": (40, 3, "Produce", {"tbsp": 4}),
  "tahini": (595, 18, "Pantry", {"tbsp": 15, "tsp": 5}),
  "sriracha": (93, 2, "Sauces and spices", {"tbsp": 17, "tsp": 6}),
+ "honey": (304, 0.3, "Pantry", {"tbsp": 21, "tsp": 7}),
+ "coleslaw mix": (25, 1.2, "Produce", {}),
+ "lean pork mince": (140, 21, "Meat", {}),
+ "chicken mince": (140, 19, "Meat", {}),
+ "iceberg lettuce": (14, 0.9, "Produce", {"whole": 500}),
+ "carrot": (33, 0.8, "Produce", {"whole": 120}),
+ "oyster sauce": (110, 2, "Sauces and spices", {"tbsp": 18}),
+ "hoisin sauce": (220, 3, "Sauces and spices", {"tbsp": 18}),
+ "sesame oil": (884, 0, "Sauces and spices", {"tsp": 4.5, "tbsp": 14}),
+ "mini tortillas": (300, 8.5, "Bakery", {"whole": 25}),
+ "red onion": (40, 1.1, "Produce", {"whole": 150}),
+ "salmon fillet, skin on": (200, 20, "Seafood", {}),
+ "baby potatoes": (70, 2, "Produce", {}),
+ "green beans": (31, 1.8, "Produce", {}),
+ "light feta": (200, 17, "Dairy and eggs", {}),
+ "garam masala": (380, 15, "Sauces and spices", {"tsp": 2}),
+ "tomato paste": (80, 4, "Pantry", {"tbsp": 16}),
 }
 UNIT_G = {"g": 1, "ml": 1, "kg": 1000}
 def grams(food, qty, unit):

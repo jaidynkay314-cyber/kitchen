@@ -229,3 +229,122 @@ sauce("lemon-tahini-yoghurt", "Lemon Tahini Yoghurt", "Nutty and creamy. Great w
 sauce("sriracha-lime-yoghurt", "Sriracha Lime Yoghurt", "Creamy chilli kick. Good on fried rice, chicken bowls and the frittata muffins.", 12,
   [("high-protein Greek yoghurt", 170, "g", "Greek yoghurt"), ("sriracha", 1, "tbsp", "sriracha (more to taste)"), ("lime juice", 2, "tsp", "")],
   [("Mix", "Stir together. Keeps 4 days.", 0)], YOG, ["asian"])
+
+# ---- Batch 2 dinners (picked 2 Nov 2026) ----
+RICE_J, RICE_P = 0.4, 0.25  # cups uncooked: about 220 g and 140 g cooked
+recipe(id="honey-soy-chicken-skewers", sauce="sriracha-lime-yoghurt", title="Honey Soy Chicken Skewers with Rice and Slaw", category="dinner", short="Honey soy chicken skewers, rice, slaw",
+ desc="Sticky honey soy chicken thigh skewers off the barbecue, with rice and a crunchy lime slaw.",
+ tags=["chicken", "bbq", "asian"], time=40, base={"J": 1, "P": 1}, share=0.6,
+ portions={"J": "3 skewers (220 g raw chicken), a cup of cooked rice, a big handful of slaw", "P": "2 skewers (140 g raw chicken), 2/3 cup cooked rice, a handful of slaw"},
+ ingredients=[
+  ("chicken thigh fillet, skinless", 360, "g", {"per": {"J": 220, "P": 140}, "label": "chicken thigh, cut into 3 cm pieces"}),
+  ("soy sauce", 2, "tbsp", {"share": 1, "label": "soy sauce (salt-reduced)"}), ("honey", 1, "tbsp", {"share": 1}),
+  ("garlic", 2, "clove", {"share": 1}), ("fresh ginger, grated", 1, "tsp", {"share": 1}), ("sesame oil", 1, "tsp", {"share": 1}),
+  ("white rice, uncooked", RICE_J + RICE_P, "cup", {"per": {"J": RICE_J, "P": RICE_P}, "label": "jasmine rice"}),
+  ("coleslaw mix", 200, "g", {"per": {"J": 120, "P": 80}}), ("spring onions", 2, "whole", {"share": 1, "label": "spring onions, sliced"}),
+  ("lime juice", 1, "tbsp", {"share": 1, "label": "lime juice, for the slaw"}),
+ ],
+ steps=[
+  ("Marinate", "Mix the soy, honey, garlic, ginger and sesame oil. Toss the chicken through and leave 20 minutes (or overnight). If using bamboo skewers, soak them now.", 1200),
+  ("Cook the rice", "Rinse the rice and cook it (absorption or rice cooker).", 900),
+  ("Thread and grill", "Thread the chicken onto skewers. Barbecue on medium-high, turning every couple of minutes, until sticky, charred at the edges and cooked through. Brush with leftover marinade only in the first half of cooking.", 600),
+  ("Slaw and serve", "Toss the slaw mix and spring onion with the lime juice and a pinch of salt. Serve the skewers over rice with the slaw.", 0),
+ ], notes="The honey catches easily: medium-high, not blazing, and keep them moving.")
+
+recipe(id="san-choy-bow", sauce="sriracha-lime-yoghurt", title="San Choy Bow", category="dinner", short="San choy bow with rice",
+ desc="Savoury pork and chicken mince in crisp lettuce cups, with a little rice on the side.",
+ tags=["pork", "chicken", "asian", "quick"], time=25, base={"J": 1, "P": 1}, share=0.6,
+ portions={"J": "About 250 g of the cooked mince filling (5 or 6 lettuce cups), 2/3 cup cooked rice", "P": "The rest of the filling (3 or 4 lettuce cups), 1/2 cup cooked rice"},
+ ingredients=[
+  ("lean pork mince", 200, "g"), ("chicken mince", 200, "g"),
+  ("garlic", 2, "clove", {"share": 1}), ("fresh ginger, grated", 1, "tbsp", {"share": 1}),
+  ("carrot", 1, "whole", {"label": "carrot, grated"}), ("red capsicum", 0.5, "whole", {"label": "red capsicum, finely diced"}),
+  ("spring onions", 3, "whole", {"share": 1, "label": "spring onions, sliced"}),
+  ("oyster sauce", 2, "tbsp"), ("soy sauce", 1, "tbsp", {"label": "soy sauce (salt-reduced)"}), ("hoisin sauce", 1, "tbsp"), ("sesame oil", 1, "tsp", {"share": 1}),
+  ("iceberg lettuce", 1, "whole", {"share": 1, "label": "iceberg lettuce, leaves separated into cups"}),
+  ("white rice, uncooked", 0.25 + 0.17, "cup", {"per": {"J": 0.25, "P": 0.17}, "label": "jasmine rice"}),
+ ],
+ steps=[
+  ("Rice and lettuce", "Put the rice on. Separate the lettuce into whole cup-shaped leaves, rinse, and chill them in the fridge so they're crisp.", 900),
+  ("Brown the mince", "Heat the sesame oil in a wok on high. Add both minces and cook, breaking it up, until browned and any liquid has cooked off.", 420),
+  ("Add the veg", "Add the garlic, ginger, carrot and capsicum and stir-fry 2 minutes.", 120),
+  ("Sauce it", "Add the oyster, soy and hoisin sauces and toss until glossy. Stir through most of the spring onion.", 60),
+  ("Serve", "Spoon into lettuce cups, top with the rest of the spring onion, and serve with the rice on the side.", 0),
+ ], notes="Tinned water chestnuts, diced, add good crunch for almost no calories.")
+
+recipe(id="chicken-fajitas", sauce="chipotle-lime-yoghurt", title="Chicken Fajitas", category="dinner", short="Chicken fajitas",
+ desc="Spiced chicken breast with charred capsicum and onion, in mini tortillas.",
+ tags=["chicken", "mexican", "quick"], time=30, base={"J": 1, "P": 1}, share=0.6,
+ portions={"J": "4 mini tortillas, 220 g raw chicken, half the veg", "P": "3 mini tortillas, 140 g raw chicken, half the veg"},
+ ingredients=[
+  ("chicken breast", 360, "g", {"per": {"J": 220, "P": 140}, "label": "chicken breast, in strips"}),
+  ("spices (your mix)", 3, "tsp", {"share": 1, "label": "Fajita spices (smoked paprika, cumin, garlic powder, oregano, chilli)"}),
+  ("red capsicum", 2, "whole", {"share": 1, "label": "capsicums (mixed colours), sliced"}), ("red onion", 1, "whole", {"share": 1, "label": "red onion, sliced"}),
+  ("olive oil", 2, "tsp", {"share": 1}), ("lime juice", 1, "tbsp", {"share": 1}),
+  ("mini tortillas", 7, "whole", {"per": {"J": 4, "P": 3}}), ("salsa", 0.25, "cup", {"share": 1}),
+ ],
+ steps=[
+  ("Season", "Toss the chicken with the spices, half the oil and a pinch of salt.", 0),
+  ("Char the veg", "Very hot pan or barbecue plate. Cook the capsicum and onion with the rest of the oil until soft and charred at the edges. Set aside.", 360),
+  ("Cook the chicken", "Same pan, high heat. Cook the chicken strips in one layer, turning once, until browned and cooked through.", 360),
+  ("Serve", "Squeeze the lime over the chicken and veg. Warm the tortillas in a dry pan and load them up with the salsa and sauce.", 0),
+ ], notes="Swap a tortilla each for shredded lettuce to cut about 75 kcal.")
+
+recipe(id="lemon-herb-salmon", sauce="garlic-herb-yoghurt", title="Lemon Herb Salmon with Baby Potatoes and Beans", category="dinner", short="Lemon herb salmon, potatoes, beans",
+ desc="Oven-baked salmon with lemon and herbs, crispy baby potatoes and green beans. One tray, mostly hands off.",
+ tags=["fish", "tray bake", "omega 3"], time=40, base={"J": 1, "P": 1}, share=0.6,
+ portions={"J": "200 g salmon (a large fillet), 250 g potatoes, 125 g beans", "P": "130 g salmon (a regular fillet), 150 g potatoes, 100 g beans"},
+ ingredients=[
+  ("salmon fillet, skin on", 330, "g", {"per": {"J": 200, "P": 130}}),
+  ("baby potatoes", 400, "g", {"per": {"J": 250, "P": 150}, "label": "baby potatoes, halved"}),
+  ("green beans", 225, "g", {"per": {"J": 125, "P": 100}, "label": "green beans, trimmed"}),
+  ("olive oil", 2, "tsp", {"share": 1}), ("lemon", 1, "whole", {"share": 1, "label": "lemon, zested and sliced"}),
+  ("garlic", 2, "clove", {"share": 1}), ("fresh herbs (dill, mint, parsley or chives)", 2, "tbsp", {"share": 1, "label": "fresh dill or parsley, chopped"}),
+ ],
+ steps=[
+  ("Potatoes in", "Oven to 220°C (200°C fan). Toss the potatoes with the oil, salt and pepper on a lined tray and roast.", 1200),
+  ("Season the salmon", "Mix the lemon zest, crushed garlic and herbs. Pat the salmon dry and press the mix on top.", 0),
+  ("Salmon and beans in", "Push the potatoes to the sides. Add the salmon skin side down, lay lemon slices around, and scatter the beans. Roast until the salmon just flakes.", 720),
+  ("Serve", "Squeeze some of the roasted lemon over everything.", 0),
+ ], notes="Salmon is higher in fat than the other dinners, but it's mostly omega 3. Pull it when the centre is still slightly translucent; it finishes on the plate.")
+
+recipe(id="greek-chicken-tray-bake", sauce="tzatziki", title="Greek Chicken Tray Bake", category="dinner", short="Greek chicken tray bake",
+ desc="Lemon, garlic and oregano chicken thighs roasted with potatoes, capsicum and red onion, finished with feta.",
+ tags=["chicken", "tray bake", "greek"], time=50, base={"J": 1, "P": 1}, share=0.6,
+ portions={"J": "220 g raw chicken, 250 g potatoes, half the veg, 30 g feta", "P": "140 g raw chicken, 150 g potatoes, half the veg, 20 g feta"},
+ ingredients=[
+  ("chicken thigh fillet, skinless", 360, "g", {"per": {"J": 220, "P": 140}}),
+  ("baby potatoes", 400, "g", {"per": {"J": 250, "P": 150}, "label": "baby potatoes, halved"}),
+  ("red capsicum", 1, "whole", {"share": 1, "label": "red capsicum, in chunks"}), ("red onion", 1, "whole", {"share": 1, "label": "red onion, in wedges"}),
+  ("olive oil", 1, "tbsp", {"share": 1}), ("lemon", 1, "whole", {"share": 1, "label": "lemon, juiced"}),
+  ("garlic", 3, "clove", {"share": 1}), ("dried oregano", 2, "tsp", {"share": 1}),
+  ("light feta", 50, "g", {"per": {"J": 30, "P": 20}, "label": "light feta, crumbled"}),
+ ],
+ steps=[
+  ("Mix the marinade", "Oven to 220°C (200°C fan). Whisk the oil, lemon juice, crushed garlic, oregano, salt and pepper.", 0),
+  ("Potatoes first", "Toss the potatoes in a third of the marinade on a big lined tray and roast.", 900),
+  ("Everything else", "Toss the chicken, capsicum and onion in the rest of the marinade and add to the tray in a single layer. Roast until the chicken is golden and cooked through.", 1500),
+  ("Feta and serve", "Crumble the feta over and give it 2 more minutes. Serve with tzatziki.", 120),
+ ], notes="Use two trays if it's crowded; crowded trays steam instead of roast.")
+
+recipe(id="butter-chicken-light", title="Lighter Butter Chicken", category="dinner", short="Lighter butter chicken, rice",
+ desc="Butter chicken made with Greek yoghurt instead of cream. Makes two nights' worth, or dinner plus lunch.",
+ tags=["chicken", "curry", "freezer"], time=45, base={"J": 2, "P": 2}, share=0.65,
+ portions={"J": "A quarter of the curry (about 1.5 cups), a cup of cooked rice", "P": "About 1 cup of curry, 2/3 cup cooked rice"},
+ ingredients=[
+  ("chicken thigh fillet, skinless", 660, "g", {"per": {"J": 200, "P": 130}, "label": "chicken thigh, diced"}),
+  ("high-protein Greek yoghurt", 270, "g", {"label": "Greek yoghurt (100 g to marinate, 170 g for the sauce)"}),
+  ("garam masala", 3, "tsp"), ("smoked paprika", 1, "tsp"), ("ground cumin", 1, "tsp"),
+  ("brown onion", 1, "whole", {"label": "brown onion, finely diced"}), ("garlic", 4, "clove"), ("fresh ginger, grated", 1, "tbsp"),
+  ("butter", 15, "g"), ("tomato paste", 2, "tbsp"), ("passata", 400, "g"),
+  ("fresh herbs (dill, mint, parsley or chives)", 2, "tbsp", {"label": "fresh coriander, to serve"}),
+  ("white rice, uncooked", 2 * (RICE_J + RICE_P), "cup", {"per": {"J": RICE_J, "P": RICE_P}, "label": "basmati rice"}),
+ ],
+ steps=[
+  ("Marinate the chicken", "Mix the chicken with 100 g of the yoghurt, 1 tsp garam masala, the paprika and a pinch of salt. Leave 20 minutes, or overnight.", 1200),
+  ("Rice on", "Rinse and cook the rice.", 900),
+  ("Sear the chicken", "Hot non-stick pan, a little spray oil if needed. Sear the chicken in batches until browned on the outside (it finishes in the sauce). Set aside.", 480),
+  ("Build the sauce", "Lower the heat. Melt the butter, cook the onion until soft, then the garlic, ginger, cumin and remaining garam masala for a minute. Stir in the tomato paste, then the passata.", 600),
+  ("Simmer", "Return the chicken and simmer gently until cooked through and the sauce thickens.", 600),
+  ("Finish with yoghurt", "Take it off the heat and let it cool for a minute, then stir in the remaining yoghurt (off the heat stops it splitting). Season and top with coriander.", 0),
+ ], notes="Leftovers keep 3 days or freeze well. Reheat gently and don't boil it, or the yoghurt splits.")

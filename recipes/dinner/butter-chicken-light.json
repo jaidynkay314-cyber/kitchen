@@ -1,0 +1,250 @@
+{
+ "schema": "kitchen-recipe",
+ "schemaVersion": 1,
+ "id": "butter-chicken-light",
+ "title": "Lighter Butter Chicken",
+ "category": "dinner",
+ "desc": "Butter chicken made with Greek yoghurt instead of cream. Makes two nights' worth, or dinner plus lunch.",
+ "tags": [
+  "chicken",
+  "curry",
+  "freezer"
+ ],
+ "time": 45,
+ "base": {
+  "J": 2,
+  "P": 2
+ },
+ "portions": {
+  "J": "A quarter of the curry (about 1.5 cups), a cup of cooked rice",
+  "P": "About 1 cup of curry, 2/3 cup cooked rice"
+ },
+ "ingredients": [
+  {
+   "id": "i1",
+   "name": "chicken thigh, diced",
+   "food": "chicken thigh fillet, skinless",
+   "unit": "g",
+   "gpu": 1,
+   "k100": 121,
+   "p100": 19.5,
+   "aisle": "Meat",
+   "per": {
+    "J": 200,
+    "P": 130
+   }
+  },
+  {
+   "id": "i2",
+   "name": "Greek yoghurt (100 g to marinate, 170 g for the sauce)",
+   "food": "high-protein Greek yoghurt",
+   "unit": "g",
+   "gpu": 1,
+   "k100": 60,
+   "p100": 10,
+   "aisle": "Dairy and eggs",
+   "per": {
+    "J": 81.8182,
+    "P": 53.1818
+   }
+  },
+  {
+   "id": "i3",
+   "name": "garam masala",
+   "food": "garam masala",
+   "unit": "tsp",
+   "gpu": 2,
+   "k100": 380,
+   "p100": 15,
+   "aisle": "Sauces and spices",
+   "per": {
+    "J": 0.9091,
+    "P": 0.5909
+   }
+  },
+  {
+   "id": "i4",
+   "name": "smoked paprika",
+   "food": "smoked paprika",
+   "unit": "tsp",
+   "gpu": 2.3,
+   "k100": 282,
+   "p100": 14,
+   "aisle": "Sauces and spices",
+   "per": {
+    "J": 0.303,
+    "P": 0.197
+   }
+  },
+  {
+   "id": "i5",
+   "name": "ground cumin",
+   "food": "ground cumin",
+   "unit": "tsp",
+   "gpu": 2,
+   "k100": 375,
+   "p100": 18,
+   "aisle": "Sauces and spices",
+   "per": {
+    "J": 0.303,
+    "P": 0.197
+   }
+  },
+  {
+   "id": "i6",
+   "name": "brown onion, finely diced",
+   "food": "brown onion",
+   "unit": "whole",
+   "gpu": 150,
+   "k100": 40,
+   "p100": 1.1,
+   "aisle": "Produce",
+   "per": {
+    "J": 0.303,
+    "P": 0.197
+   }
+  },
+  {
+   "id": "i7",
+   "name": "garlic",
+   "food": "garlic",
+   "unit": "clove",
+   "gpu": 5,
+   "k100": 149,
+   "p100": 6.4,
+   "aisle": "Produce",
+   "per": {
+    "J": 1.2121,
+    "P": 0.7879
+   }
+  },
+  {
+   "id": "i8",
+   "name": "fresh ginger, grated",
+   "food": "fresh ginger, grated",
+   "unit": "tbsp",
+   "gpu": 6,
+   "k100": 80,
+   "p100": 1.8,
+   "aisle": "Produce",
+   "per": {
+    "J": 0.303,
+    "P": 0.197
+   }
+  },
+  {
+   "id": "i9",
+   "name": "butter",
+   "food": "butter",
+   "unit": "g",
+   "gpu": 1,
+   "k100": 717,
+   "p100": 0.9,
+   "aisle": "Dairy and eggs",
+   "per": {
+    "J": 4.5455,
+    "P": 2.9545
+   }
+  },
+  {
+   "id": "i10",
+   "name": "tomato paste",
+   "food": "tomato paste",
+   "unit": "tbsp",
+   "gpu": 16,
+   "k100": 80,
+   "p100": 4,
+   "aisle": "Pantry",
+   "per": {
+    "J": 0.6061,
+    "P": 0.3939
+   }
+  },
+  {
+   "id": "i11",
+   "name": "passata",
+   "food": "passata",
+   "unit": "g",
+   "gpu": 1,
+   "k100": 32,
+   "p100": 1.4,
+   "aisle": "Pantry",
+   "per": {
+    "J": 121.2121,
+    "P": 78.7879
+   }
+  },
+  {
+   "id": "i12",
+   "name": "fresh coriander, to serve",
+   "food": "fresh herbs (dill, mint, parsley or chives)",
+   "unit": "tbsp",
+   "gpu": 4,
+   "k100": 40,
+   "p100": 3,
+   "aisle": "Produce",
+   "per": {
+    "J": 0.6061,
+    "P": 0.3939
+   }
+  },
+  {
+   "id": "i13",
+   "name": "basmati rice",
+   "food": "white rice, uncooked",
+   "unit": "cup",
+   "gpu": 185,
+   "k100": 360,
+   "p100": 7,
+   "aisle": "Pantry",
+   "per": {
+    "J": 0.4,
+    "P": 0.25
+   }
+  }
+ ],
+ "steps": [
+  {
+   "title": "Marinate the chicken",
+   "text": "Mix the chicken with 100 g of the yoghurt, 1 tsp garam masala, the paprika and a pinch of salt. Leave 20 minutes, or overnight.",
+   "timer": 1200
+  },
+  {
+   "title": "Rice on",
+   "text": "Rinse and cook the rice.",
+   "timer": 900
+  },
+  {
+   "title": "Sear the chicken",
+   "text": "Hot non-stick pan, a little spray oil if needed. Sear the chicken in batches until browned on the outside (it finishes in the sauce). Set aside.",
+   "timer": 480
+  },
+  {
+   "title": "Build the sauce",
+   "text": "Lower the heat. Melt the butter, cook the onion until soft, then the garlic, ginger, cumin and remaining garam masala for a minute. Stir in the tomato paste, then the passata.",
+   "timer": 600
+  },
+  {
+   "title": "Simmer",
+   "text": "Return the chicken and simmer gently until cooked through and the sauce thickens.",
+   "timer": 600
+  },
+  {
+   "title": "Finish with yoghurt",
+   "text": "Take it off the heat and let it cool for a minute, then stir in the remaining yoghurt (off the heat stops it splitting). Season and top with coriander.",
+   "timer": 0
+  }
+ ],
+ "notes": "Leftovers keep 3 days or freeze well. Reheat gently and don't boil it, or the yoghurt splits.",
+ "macros": {
+  "J": {
+   "kcal": 677,
+   "protein": 56
+  },
+  "P": {
+   "kcal": 434,
+   "protein": 36
+  }
+ },
+ "short": "Lighter butter chicken, rice"
+}

@@ -1,0 +1,157 @@
+{
+ "schema": "kitchen-recipe",
+ "schemaVersion": 1,
+ "id": "lemon-herb-salmon",
+ "title": "Lemon Herb Salmon with Baby Potatoes and Beans",
+ "category": "dinner",
+ "desc": "Oven-baked salmon with lemon and herbs, crispy baby potatoes and green beans. One tray, mostly hands off.",
+ "tags": [
+  "fish",
+  "tray bake",
+  "omega 3"
+ ],
+ "time": 40,
+ "base": {
+  "J": 1,
+  "P": 1
+ },
+ "portions": {
+  "J": "200 g salmon (a large fillet), 250 g potatoes, 125 g beans",
+  "P": "130 g salmon (a regular fillet), 150 g potatoes, 100 g beans"
+ },
+ "ingredients": [
+  {
+   "id": "i1",
+   "name": "salmon fillet, skin on",
+   "food": "salmon fillet, skin on",
+   "unit": "g",
+   "gpu": 1,
+   "k100": 200,
+   "p100": 20,
+   "aisle": "Seafood",
+   "per": {
+    "J": 200,
+    "P": 130
+   }
+  },
+  {
+   "id": "i2",
+   "name": "baby potatoes, halved",
+   "food": "baby potatoes",
+   "unit": "g",
+   "gpu": 1,
+   "k100": 70,
+   "p100": 2,
+   "aisle": "Produce",
+   "per": {
+    "J": 250,
+    "P": 150
+   }
+  },
+  {
+   "id": "i3",
+   "name": "green beans, trimmed",
+   "food": "green beans",
+   "unit": "g",
+   "gpu": 1,
+   "k100": 31,
+   "p100": 1.8,
+   "aisle": "Produce",
+   "per": {
+    "J": 125,
+    "P": 100
+   }
+  },
+  {
+   "id": "i4",
+   "name": "olive oil",
+   "food": "olive oil",
+   "unit": "tsp",
+   "gpu": 4.5,
+   "k100": 884,
+   "p100": 0,
+   "aisle": "Pantry",
+   "per": {
+    "J": 1.0,
+    "P": 1.0
+   }
+  },
+  {
+   "id": "i5",
+   "name": "lemon, zested and sliced",
+   "food": "lemon",
+   "unit": "whole",
+   "gpu": 60,
+   "k100": 29,
+   "p100": 1.1,
+   "aisle": "Produce",
+   "per": {
+    "J": 0.5,
+    "P": 0.5
+   }
+  },
+  {
+   "id": "i6",
+   "name": "garlic",
+   "food": "garlic",
+   "unit": "clove",
+   "gpu": 5,
+   "k100": 149,
+   "p100": 6.4,
+   "aisle": "Produce",
+   "per": {
+    "J": 1.0,
+    "P": 1.0
+   }
+  },
+  {
+   "id": "i7",
+   "name": "fresh dill or parsley, chopped",
+   "food": "fresh herbs (dill, mint, parsley or chives)",
+   "unit": "tbsp",
+   "gpu": 4,
+   "k100": 40,
+   "p100": 3,
+   "aisle": "Produce",
+   "per": {
+    "J": 1.0,
+    "P": 1.0
+   }
+  }
+ ],
+ "steps": [
+  {
+   "title": "Potatoes in",
+   "text": "Oven to 220°C (200°C fan). Toss the potatoes with the oil, salt and pepper on a lined tray and roast.",
+   "timer": 1200
+  },
+  {
+   "title": "Season the salmon",
+   "text": "Mix the lemon zest, crushed garlic and herbs. Pat the salmon dry and press the mix on top.",
+   "timer": 0
+  },
+  {
+   "title": "Salmon and beans in",
+   "text": "Push the potatoes to the sides. Add the salmon skin side down, lay lemon slices around, and scatter the beans. Roast until the salmon just flakes.",
+   "timer": 720
+  },
+  {
+   "title": "Serve",
+   "text": "Squeeze some of the roasted lemon over everything.",
+   "timer": 0
+  }
+ ],
+ "notes": "Salmon is higher in fat than the other dinners, but it's mostly omega 3. Pull it when the centre is still slightly translucent; it finishes on the plate.",
+ "macros": {
+  "J": {
+   "kcal": 671,
+   "protein": 48
+  },
+  "P": {
+   "kcal": 454,
+   "protein": 32
+  }
+ },
+ "sauce": "garlic-herb-yoghurt",
+ "short": "Lemon herb salmon, potatoes, beans"
+}
