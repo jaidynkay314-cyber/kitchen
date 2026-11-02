@@ -1,0 +1,99 @@
+{
+ "schema": "kitchen-recipe",
+ "schemaVersion": 1,
+ "id": "mustard-lime-yoghurt",
+ "title": "Mustard Lime Yoghurt",
+ "category": "sauce",
+ "desc": "Jaidyn's sauce: Greek yoghurt, wholegrain mustard and lime. Fresh and sharp, great on barbecued chicken.",
+ "tags": [
+  "sauce",
+  "chicken"
+ ],
+ "time": 5,
+ "base": {
+  "J": 3,
+  "P": 2
+ },
+ "portions": {
+  "J": "3 tablespoons",
+  "P": "2 tablespoons"
+ },
+ "ingredients": [
+  {
+   "id": "i1",
+   "name": "Greek yoghurt",
+   "food": "high-protein Greek yoghurt",
+   "unit": "g",
+   "gpu": 1,
+   "k100": 60,
+   "p100": 10,
+   "aisle": "Dairy and eggs",
+   "per": {
+    "J": 14.1667,
+    "P": 14.1667
+   }
+  },
+  {
+   "id": "i2",
+   "name": "wholegrain mustard",
+   "food": "wholegrain mustard",
+   "unit": "tbsp",
+   "gpu": 15,
+   "k100": 163,
+   "p100": 7,
+   "aisle": "Sauces and spices",
+   "per": {
+    "J": 0.0833,
+    "P": 0.0833
+   }
+  },
+  {
+   "id": "i3",
+   "name": "lime juice",
+   "food": "lime juice",
+   "unit": "tsp",
+   "gpu": 5,
+   "k100": 25,
+   "p100": 0.4,
+   "aisle": "Produce",
+   "per": {
+    "J": 0.25,
+    "P": 0.25
+   }
+  },
+  {
+   "id": "i4",
+   "name": "spices to taste",
+   "food": "spices (your mix)",
+   "unit": "tsp",
+   "gpu": 2.5,
+   "k100": 0,
+   "p100": 0,
+   "aisle": "Sauces and spices",
+   "per": {
+    "J": 0.0833,
+    "P": 0.0833
+   }
+  }
+ ],
+ "steps": [
+  {
+   "title": "Mix",
+   "text": "Stir everything together and season with salt and pepper. Taste and add more lime or mustard as you like. Keeps 4 days in the fridge.",
+   "timer": 0
+  }
+ ],
+ "notes": "Made with high-protein Greek yoghurt (about 60 kcal and 10 g protein per 100 g). Full-fat Greek yoghurt roughly doubles the calories and halves the protein.",
+ "macros": {
+  "J": {
+   "kcal": 10.8,
+   "protein": 1.5
+  },
+  "P": {
+   "kcal": 10.8,
+   "protein": 1.5
+  }
+ },
+ "serve": "tbsp",
+ "yield": 12
+}

@@ -1,0 +1,100 @@
+{
+ "schema": "kitchen-recipe",
+ "schemaVersion": 1,
+ "id": "garlic-herb-yoghurt",
+ "title": "Garlic Herb Yoghurt",
+ "category": "sauce",
+ "desc": "Garlicky yoghurt with lemon and fresh herbs. Good with steak, chicken and roast veg.",
+ "tags": [
+  "sauce",
+  "beef",
+  "chicken"
+ ],
+ "time": 5,
+ "base": {
+  "J": 3,
+  "P": 2
+ },
+ "portions": {
+  "J": "3 tablespoons",
+  "P": "2 tablespoons"
+ },
+ "ingredients": [
+  {
+   "id": "i1",
+   "name": "Greek yoghurt",
+   "food": "high-protein Greek yoghurt",
+   "unit": "g",
+   "gpu": 1,
+   "k100": 60,
+   "p100": 10,
+   "aisle": "Dairy and eggs",
+   "per": {
+    "J": 14.1667,
+    "P": 14.1667
+   }
+  },
+  {
+   "id": "i2",
+   "name": "garlic, finely grated",
+   "food": "garlic",
+   "unit": "clove",
+   "gpu": 5,
+   "k100": 149,
+   "p100": 6.4,
+   "aisle": "Produce",
+   "per": {
+    "J": 0.1667,
+    "P": 0.1667
+   }
+  },
+  {
+   "id": "i3",
+   "name": "lemon juice",
+   "food": "lemon juice",
+   "unit": "tbsp",
+   "gpu": 15,
+   "k100": 22,
+   "p100": 0.4,
+   "aisle": "Produce",
+   "per": {
+    "J": 0.0833,
+    "P": 0.0833
+   }
+  },
+  {
+   "id": "i4",
+   "name": "parsley or chives, chopped",
+   "food": "fresh herbs (dill, mint, parsley or chives)",
+   "unit": "tbsp",
+   "gpu": 4,
+   "k100": 40,
+   "p100": 3,
+   "aisle": "Produce",
+   "per": {
+    "J": 0.1667,
+    "P": 0.1667
+   }
+  }
+ ],
+ "steps": [
+  {
+   "title": "Mix",
+   "text": "Stir everything together with salt and pepper. Let it sit 10 minutes so the garlic mellows. Keeps 3 days.",
+   "timer": 0
+  }
+ ],
+ "notes": "Made with high-protein Greek yoghurt (about 60 kcal and 10 g protein per 100 g). Full-fat Greek yoghurt roughly doubles the calories and halves the protein.",
+ "macros": {
+  "J": {
+   "kcal": 10.3,
+   "protein": 1.5
+  },
+  "P": {
+   "kcal": 10.3,
+   "protein": 1.5
+  }
+ },
+ "serve": "tbsp",
+ "yield": 12
+}

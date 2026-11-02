@@ -1,0 +1,99 @@
+{
+ "schema": "kitchen-recipe",
+ "schemaVersion": 1,
+ "id": "chipotle-lime-yoghurt",
+ "title": "Chipotle Lime Yoghurt",
+ "category": "sauce",
+ "desc": "Smoky, a little hot. Made for the burritos, chilli and anything Mexican.",
+ "tags": [
+  "sauce",
+  "mexican"
+ ],
+ "time": 5,
+ "base": {
+  "J": 3,
+  "P": 2
+ },
+ "portions": {
+  "J": "3 tablespoons",
+  "P": "2 tablespoons"
+ },
+ "ingredients": [
+  {
+   "id": "i1",
+   "name": "Greek yoghurt",
+   "food": "high-protein Greek yoghurt",
+   "unit": "g",
+   "gpu": 1,
+   "k100": 60,
+   "p100": 10,
+   "aisle": "Dairy and eggs",
+   "per": {
+    "J": 14.1667,
+    "P": 14.1667
+   }
+  },
+  {
+   "id": "i2",
+   "name": "chipotle powder (half for mild)",
+   "food": "chipotle powder",
+   "unit": "tsp",
+   "gpu": 2.7,
+   "k100": 282,
+   "p100": 12,
+   "aisle": "Sauces and spices",
+   "per": {
+    "J": 0.0833,
+    "P": 0.0833
+   }
+  },
+  {
+   "id": "i3",
+   "name": "lime juice",
+   "food": "lime juice",
+   "unit": "tsp",
+   "gpu": 5,
+   "k100": 25,
+   "p100": 0.4,
+   "aisle": "Produce",
+   "per": {
+    "J": 0.1667,
+    "P": 0.1667
+   }
+  },
+  {
+   "id": "i4",
+   "name": "pinch of ground cumin",
+   "food": "ground cumin",
+   "unit": "tsp",
+   "gpu": 2,
+   "k100": 375,
+   "p100": 18,
+   "aisle": "Sauces and spices",
+   "per": {
+    "J": 0.0208,
+    "P": 0.0208
+   }
+  }
+ ],
+ "steps": [
+  {
+   "title": "Mix",
+   "text": "Stir everything together with a pinch of salt. It gets hotter as it sits. Keeps 4 days.",
+   "timer": 0
+  }
+ ],
+ "notes": "Made with high-protein Greek yoghurt (about 60 kcal and 10 g protein per 100 g). Full-fat Greek yoghurt roughly doubles the calories and halves the protein.",
+ "macros": {
+  "J": {
+   "kcal": 9.5,
+   "protein": 1.5
+  },
+  "P": {
+   "kcal": 9.5,
+   "protein": 1.5
+  }
+ },
+ "serve": "tbsp",
+ "yield": 12
+}

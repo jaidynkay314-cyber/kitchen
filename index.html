@@ -112,6 +112,9 @@ label.f { display: flex; flex-direction: column; gap: 4px; font-size: 13.5px; fo
 .pitem .pc { display: flex; gap: 10px; align-items: center; font-size: 13.5px; }
 .mini { display: inline-flex; align-items: center; gap: 4px; }
 .mini button { width: 28px; height: 28px; border-radius: 8px; border: 1px solid var(--line); background: var(--card); padding: 0; }
+.srows { display: flex; flex-direction: column; gap: 6px; }
+.srows > div { display: grid; grid-template-columns: 70px auto 1fr; gap: 10px; align-items: center; background: var(--sunk); border-radius: 10px; padding: 6px 10px; }
+.srows .sub { text-align: right; white-space: nowrap; }
 .totals { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 13.5px; }
 .totals span { background: var(--sunk); border-radius: 8px; padding: 6px 8px; }
 /* shopping */
@@ -179,17 +182,19 @@ video.scan { width: 100%; border-radius: 12px; background: #000; aspect-ratio: 4
 <script>
 "use strict";
 /* ================= SETUP ================= */
-const VERSION = "1.1";
+const VERSION = "1.2";
 const SL_URL = "https://jaidynkay314-cyber.github.io/solo-lifting/";
 const PEOPLE = { J: "Jaidyn", P: "Paris" };
-const CATS = ["dinner", "lunch prep", "friday", "breakfast", "snack", "other"];
+const CATS = ["dinner", "lunch prep", "friday", "breakfast", "snack", "sauce", "other"];
 const AISLES = ["Produce", "Meat", "Seafood", "Deli", "Dairy and eggs", "Bakery", "Pantry", "Sauces and spices", "Frozen", "Drinks", "Other"];
-const DEFAULT_PANTRY = ["salt", "olive oil", "soy sauce", "sweet chilli sauce", "dried oregano", "smoked paprika", "ground cumin", "chipotle powder"];
+const DEFAULT_PANTRY = ["salt", "olive oil", "soy sauce", "sweet chilli sauce", "dried oregano", "smoked paprika", "ground cumin", "chipotle powder", "spices"];
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const LS = "kitchen.v1";
 let ST = { local: [], foods: [], plan: {}, shop: { done: {}, extra: [] }, pantry: DEFAULT_PANTRY.slice(), gh: { repo: "jaidynkay314-cyber/kitchen", token: "" }, made: {} };
 try { const raw = localStorage.getItem(LS); if (raw) ST = { ...ST, ...JSON.parse(raw) }; } catch (e) {}
+ST.sauce ||= {};
+if (!ST.pv) { if (!ST.pantry.includes("spices")) ST.pantry.push("spices"); ST.pv = 2; } /* 1.2: "spices" joins the pantry staples */
 function save() { try { localStorage.setItem(LS, JSON.stringify(ST)); } catch (e) { toast("Couldn't save on this phone (storage full or blocked)."); } }
 let toastT = null;
 function toast(msg) { const t = $("#toast"); t.textContent = msg; t.hidden = false; clearTimeout(toastT); toastT = setTimeout(() => t.hidden = true, 2600); }
@@ -204,11 +209,21 @@ const unitsFor = f => ["g", "ml", ...Object.keys((f && f.units) || {})].filter((
 const gpuOf = (f, unit) => (f && f.units && f.units[unit]) || UNIT_G[unit] || 1;
 /* an ingredient's grams for one person's portion, and the macros that gives */
 const ingG = (g, x) => (+g.per[x] || 0) * (+g.gpu || 0);
-function macros(r, x) {
+function rawMac(r, x) {
   let k = 0, p = 0;
   for (const g of r.ingredients || []) { const gr = ingG(g, x); k += gr * (+g.k100 || 0) / 100; p += gr * (+g.p100 || 0) / 100; }
-  return { kcal: Math.round(k), protein: Math.round(p) };
+  return { kcal: k, protein: p };
 }
+const r1 = v => Math.round(v * 10) / 10;
+function macros(r, x) { const m = rawMac(r, x); return isSauce(r) ? { kcal: r1(m.kcal), protein: r1(m.protein) } : { kcal: Math.round(m.kcal), protein: Math.round(m.protein) }; }
+/* sauces: recipes whose serves are tablespoons. A meal can carry one, { id, J: tbsp, P: tbsp } per serve */
+const isSauce = r => !!r && r.serve === "tbsp";
+const sauces = () => recipes().filter(isSauce).sort((a, b) => a.title.localeCompare(b.title));
+function sauceAdd(sc, x) { const s = sc && getR(sc.id); if (!isSauce(s) || !sc[x]) return { kcal: 0, protein: 0 }; const m = rawMac(s, x); return { kcal: m.kcal * sc[x], protein: m.protein * sc[x] }; }
+function mealMac(r, x, sc) { const a = rawMac(r, x), b = sauceAdd(sc, x); return { kcal: Math.round(a.kcal + b.kcal), protein: Math.round(a.protein + b.protein) }; }
+/* the sauce's ingredients for a batch of n serves */
+function sauceIngs(sc, n, fullBatch) { const s = sc && getR(sc.id); if (!isSauce(s)) return []; let tb = (n.J || 0) * (sc.J || 0) + (n.P || 0) * (sc.P || 0);
+  if (fullBatch && tb) tb = Math.max(tb, s.yield || 12); /* shopping: buy for a full batch, it keeps a few days */ return tb ? s.ingredients.map(g => ({ g, q: tb * (+g.per.J || 0), s })) : []; }
 /* quantities for display: fractions for spoons and whole things, tidy grams */
 const FR = [[0, ""], [.25, "¼"], [1 / 3, "⅓"], [.5, "½"], [2 / 3, "⅔"], [.75, "¾"], [1, ""]];
 function frac(x) {
@@ -263,8 +278,10 @@ function renderList() {
     <div class="top"><div><h1>Kitchen</h1><p class="sub">${all.length} recipes · portions and macros for Jaidyn and Paris</p></div>
       <a class="btn ghost small" href="#settings" aria-label="Settings">Settings</a></div>
     <input id="q" type="search" placeholder="Search recipes or ingredients" value="${esc(filt.q)}" aria-label="Search recipes">
-    <div class="chips" role="group" aria-label="Category">${cats.map(c => `<button class="chip" data-cat="${c}" aria-pressed="${filt.cat === c}">${c === "all" ? "All" : esc(c[0].toUpperCase() + c.slice(1))}</button>`).join("")}</div>
-    <div class="rlist">${list.map(r => { const j = macros(r, "J"), p = macros(r, "P"); return `<button class="rcard" data-open="${esc(r.id)}">
+    <div class="chips" role="group" aria-label="Category">${cats.map(c => `<button class="chip" data-cat="${c}" aria-pressed="${filt.cat === c}">${c === "all" ? "All" : c === "sauce" ? "Sauces" : esc(c[0].toUpperCase() + c.slice(1))}</button>`).join("")}</div>
+    <div class="rlist">${list.map(r => { const j = macros(r, "J"), p = macros(r, "P"); return isSauce(r) ? `<button class="rcard" data-open="${esc(r.id)}">
+      <span class="cat">sauce${r.local ? " · on this phone" : ""}</span><b>${esc(r.title)}</b><span class="meta"><span>${esc(r.desc)}</span></span>
+      <span class="meta"><span>${j.kcal} kcal · ${j.protein} g protein per tablespoon</span></span></button>` : `<button class="rcard" data-open="${esc(r.id)}">
       <span class="cat">${esc(r.category)}${r.local ? " · on this phone" : ""}</span><b>${esc(r.title)}</b>
       <span class="meta"><span>${r.time ? r.time + " min" : ""}</span>${(r.tags || []).slice(0, 3).map(t => `<span>${esc(t)}</span>`).join("")}${ST.made[r.id] ? `<span>made ${ST.made[r.id]}×</span>` : ""}</span>
       <span class="who"><span class="j"><b>Jaidyn</b> ${j.kcal} kcal · ${j.protein} g</span><span class="p"><b>Paris</b> ${p.kcal} kcal · ${p.protein} g</span></span></button>`; }).join("") || `<p class="empty">No recipes match.</p>`}</div></div>`;
@@ -275,44 +292,56 @@ function renderList() {
 
 /* ================= RECIPE ================= */
 function renderRecipe(id) {
-  const r = getR(id), n = counts[id] ||= { ...r.base };
-  const big = (n.J || 0) + (n.P || 0) > 2;
-  const mj = macros(r, "J"), mp = macros(r, "P");
+  const r = getR(id), n = counts[id] ||= { ...r.base }, sr = isSauce(r);
+  const sc = sr ? null : ST.sauce[id] || null, sauce = sc && getR(sc.id);
+  const big = !sr && (n.J || 0) + (n.P || 0) > 2;
+  const mj = sr ? macros(r, "J") : mealMac(r, "J", sc), mp = sr ? macros(r, "P") : mealMac(r, "P", sc);
+  const unitW = sr ? "tbsp" : "serve";
   const serve = x => `<div class="serve ${x.toLowerCase()}"><span class="name ${x === "J" ? "pj" : "pp"}">${PEOPLE[x]}</span>
-    <span class="step"><button class="btn" data-cnt="${x}" data-d="-1" aria-label="One less serve for ${PEOPLE[x]}">−</button><b class="num">${n[x] || 0}</b><button class="btn" data-cnt="${x}" data-d="1" aria-label="One more serve for ${PEOPLE[x]}">+</button></span>
-    <span class="macro num">${(x === "J" ? mj : mp).kcal}<small> kcal · </small>${(x === "J" ? mj : mp).protein}<small> g protein each</small></span>
+    <span class="step"><button class="btn" data-cnt="${x}" data-d="-1" aria-label="One less ${unitW} for ${PEOPLE[x]}">−</button><b class="num">${n[x] || 0}${sr ? "<small> tbsp</small>" : ""}</b><button class="btn" data-cnt="${x}" data-d="1" aria-label="One more ${unitW} for ${PEOPLE[x]}">+</button></span>
+    <span class="macro num">${(x === "J" ? mj : mp).kcal}<small> kcal · </small>${(x === "J" ? mj : mp).protein}<small> g protein ${sr ? "per tbsp" : sauce ? "each, with sauce" : "each"}</small></span>
     <span class="portion">${esc((r.portions || {})[x] || "")}</span>
     <button class="btn small${x === "J" ? " primary" : ""}" data-log="${x}">${x === "J" ? "Log to Solo Lifting" : "Send to Paris"}</button></div>`;
-  const ings = (r.ingredients || []).map(g => ({ g, q: batchQty(g, n) })).filter(x => x.q > 0);
+  const ings = (r.ingredients || []).map(g => ({ g, q: batchQty(g, n) })).filter(x => x.q > 0).concat(sauceIngs(sc, n));
+  const sauceCard = sr ? "" : `<section class="card"><div class="row"><h2 class="grow">Sauce</h2><span class="split">optional</span></div>
+    <div class="chips" role="group" aria-label="Sauce"><button class="chip" data-sauce="" aria-pressed="${!sauce}">None</button>${sauces().map(s => `<button class="chip" data-sauce="${esc(s.id)}" aria-pressed="${!!sauce && sauce.id === s.id}">${esc(s.title)}${r.sauce === s.id ? " ★" : ""}</button>`).join("")}</div>
+    ${sauce ? `<div class="srows">${["J", "P"].map(x => { const a = sauceAdd(sc, x); return `<div class="${x === "J" ? "pj" : "pp"}"><b>${PEOPLE[x]}</b><span class="mini"><button data-stb="${x}|-1" aria-label="Less sauce for ${PEOPLE[x]}">−</button><b class="num">${sc[x]}</b><button data-stb="${x}|1" aria-label="More sauce for ${PEOPLE[x]}">+</button> tbsp</span><span class="num sub">+${Math.round(a.kcal)} kcal · ${r1(a.protein)} g</span></div>`; }).join("")}</div>
+      <p class="sub">${esc(sauce.desc)} <a href="#r/${esc(sauce.id)}">Sauce recipe</a></p>` : r.sauce && getR(r.sauce) ? `<p class="sub">Goes well with ${esc(getR(r.sauce).title)} (★).</p>` : ""}</section>`;
+  const steps = sauce ? [{ title: `Make the ${sauce.title.toLowerCase()}`, text: sauce.steps.map(s => s.text).join(" "), timer: 0 }, ...(r.steps || [])] : (r.steps || []);
   $("#app").innerHTML = `<div class="wrap">
     <div class="top"><a class="btn ghost small" href="#recipes">← Recipes</a>
       <span class="row"><button class="btn small" data-act="toplan">Add to plan</button><a class="btn small" href="#add/${esc(r.id)}">${r.local ? "Edit" : "Edit a copy"}</a></span></div>
     <div><span class="cat">${esc(r.category)}${r.time ? ` · ${r.time} min` : ""}</span><h1>${esc(r.title)}</h1><p class="sub">${esc(r.desc || "")}</p></div>
     <div class="serves">${serve("J")}${serve("P")}</div>
+    ${sauceCard}
+    ${sr ? `<p class="note">The ingredients below make ${(n.J || 0) + (n.P || 0)} tbsp. A full batch (${r.yield || 12} tbsp) keeps in the fridge for a few days.</p>` : ""}
     ${big ? `<p class="note">This batch makes ${n.J || 0} of Jaidyn's and ${n.P || 0} of Paris's serves. Portion it using the serve guides above.</p>` : ""}
-    <section class="card"><div class="row"><h2 class="grow">Ingredients</h2><span class="split">for ${n.J || 0} + ${n.P || 0} serves</span></div>
-      <ul class="ings">${ings.map(({ g, q }) => `<li><input type="checkbox" aria-label="Got ${esc(g.name)}"><span><span class="qty num">${fmtQty(q, g.unit)}</span> ${esc(g.name)}</span></li>`).join("") || `<li><span></span><span class="sub">Choose how many serves to make.</span></li>`}</ul>
+    <section class="card"><div class="row"><h2 class="grow">Ingredients</h2><span class="split">${sr ? `for ${(n.J || 0) + (n.P || 0)} tbsp` : `for ${n.J || 0} + ${n.P || 0} serves`}</span></div>
+      <ul class="ings">${ings.map(({ g, q, s }) => `<li><input type="checkbox" aria-label="Got ${esc(g.name)}"><span><span class="qty num">${fmtQty(q, g.unit)}</span> ${esc(g.name)}${s ? ` <span class="tag">sauce</span>` : ""}</span></li>`).join("") || `<li><span></span><span class="sub">Choose how many serves to make.</span></li>`}</ul>
       <details><summary class="sub">Each person's portion of every ingredient</summary>
         <table class="ptable"><tr><th>Ingredient</th><th class="pj">Jaidyn</th><th class="pp">Paris</th></tr>
         ${(r.ingredients || []).map(g => `<tr><td>${esc(g.name)}</td><td class="num">${g.per.J ? fmtQty(+g.per.J, g.unit) : "–"}</td><td class="num">${g.per.P ? fmtQty(+g.per.P, g.unit) : "–"}</td></tr>`).join("")}</table></details></section>
     <section class="card"><div class="row"><h2 class="grow">Method</h2><button class="btn primary" data-act="cook">Start cooking</button></div>
-      <ol class="steps">${(r.steps || []).map(s => `<li><span><b>${esc(s.title)}</b>${esc(s.text)}${s.timer ? ` <span class="timer">${Math.round(s.timer / 60)} min</span>` : ""}</span></li>`).join("")}</ol>
+      <ol class="steps">${steps.map(s => `<li><span><b>${esc(s.title)}</b>${esc(s.text)}${s.timer ? ` <span class="timer">${Math.round(s.timer / 60)} min</span>` : ""}</span></li>`).join("")}</ol>
       ${r.notes ? `<p class="note">${esc(r.notes)}</p>` : ""}</section>
     <div class="row"><button class="btn" data-act="made">We made this</button><button class="btn" data-act="export">Export file</button>${r.local ? `<button class="btn danger" data-act="del">Delete from this phone</button>` : ""}</div>
     <p class="sub">Macros are estimates from raw ingredient weights.</p></div>`;
   const app = $("#app");
   app.querySelectorAll("[data-cnt]").forEach(b => b.onclick = () => { const x = b.dataset.cnt; n[x] = Math.max(0, Math.min(40, (n[x] || 0) + +b.dataset.d)); renderRecipe(id); });
   app.querySelectorAll(".ings input").forEach(c => c.onchange = () => c.closest("li").classList.toggle("done", c.checked));
-  app.querySelectorAll("[data-log]").forEach(b => b.onclick = () => logTo(r, b.dataset.log));
-  app.querySelector('[data-act="cook"]').onclick = () => openCook(r);
-  app.querySelector('[data-act="toplan"]').onclick = () => pickDay(r, n);
+  app.querySelectorAll("[data-log]").forEach(b => b.onclick = () => logTo(r, b.dataset.log, sc));
+  app.querySelector('[data-act="cook"]').onclick = () => openCook({ ...r, steps });
+  app.querySelector('[data-act="toplan"]').onclick = () => pickDay(r, n, sc);
+  app.querySelectorAll("[data-sauce]").forEach(b => b.onclick = () => { const v = b.dataset.sauce; if (v) ST.sauce[id] = { id: v, J: (sc && sc.J) || 3, P: (sc && sc.P) || 2 }; else delete ST.sauce[id]; save(); renderRecipe(id); });
+  app.querySelectorAll("[data-stb]").forEach(b => b.onclick = () => { const [x, d] = b.dataset.stb.split("|"); sc[x] = Math.max(0, Math.min(8, sc[x] + +d)); save(); renderRecipe(id); });
   app.querySelector('[data-act="made"]').onclick = () => { ST.made[r.id] = (ST.made[r.id] || 0) + 1; save(); toast(`Nice. Made ${ST.made[r.id]} times.`); };
   app.querySelector('[data-act="export"]').onclick = () => exportRecipe(r);
   const del = app.querySelector('[data-act="del"]'); if (del) del.onclick = () => { if (del.dataset.arm) { ST.local = ST.local.filter(x => x.id !== r.id); save(); location.hash = "#recipes"; toast("Deleted from this phone."); } else { del.dataset.arm = 1; del.textContent = "Tap again to delete"; } };
 }
 /* Jaidyn's portion opens Solo Lifting with the food filled in; Paris's goes to the share sheet so it can be sent to her */
-function logTo(r, x) {
-  const m = macros(r, x), name = `${r.title}${x === "P" ? " (small)" : ""}`.slice(0, 40);
+function logTo(r, x, sc) {
+  const m = isSauce(r) ? { kcal: Math.round(r.base[x] * rawMac(r, x).kcal), protein: r1(r.base[x] * rawMac(r, x).protein) } : mealMac(r, x, sc);
+  const sfx = (sc && getR(sc.id) && sc[x] ? " + sauce" : "") + (x === "P" ? " (small)" : ""), name = `${(r.short || r.title).slice(0, 40 - sfx.length)}${sfx}`;
   if (x === "J") { location.href = `${SL_URL}?go=food&qa=${encodeURIComponent(JSON.stringify({ n: name, k: m.kcal, p: m.protein }))}`; return; }
   const text = `${r.title}: your portion is ${m.kcal} kcal and ${m.protein} g protein. In Solo Lifting: + Food, Quick add.`;
   if (navigator.share) navigator.share({ text }).catch(() => {});
@@ -369,18 +398,18 @@ const addD = (s, n) => { const d = parseD(s); d.setDate(d.getDate() + n); return
 const mondayOf = s => { const d = parseD(s); d.setDate(d.getDate() - ((d.getDay() + 6) % 7)); return dStr(d); };
 let weekStart = mondayOf(dStr(new Date()));
 const weekDays = () => Array.from({ length: 7 }, (_, i) => addD(weekStart, i));
-function pickDay(r, n) {
+function pickDay(r, n, sc) {
   const days = weekDays();
   const box = document.createElement("div"); box.className = "picker"; box.innerHTML = `<div class="wrap"><div class="top"><h2>Add ${esc(r.title)} to…</h2><button class="btn ghost small" data-x>✕</button></div>
     <p class="sub">${n.J || 0} of Jaidyn's and ${n.P || 0} of Paris's serves. You can change these in the plan.</p>
     <div class="res">${days.map(d => `<button data-d="${d}"><span>${parseD(d).toLocaleDateString("en-AU", { weekday: "long", day: "numeric", month: "short" })}</span><small>${(ST.plan[d] || []).length} planned</small></button>`).join("")}
     <button data-d="${addD(weekStart, 7)}"><span>Next Monday</span><small></small></button></div></div>`;
   document.body.appendChild(box);
-  box.onclick = e => { const b = e.target.closest("button"); if (!b) return; if (b.dataset.d) { (ST.plan[b.dataset.d] ||= []).push({ k: uid(), id: r.id, J: n.J || 0, P: n.P || 0 }); save(); toast("Added to the plan."); } box.remove(); };
+  box.onclick = e => { const b = e.target.closest("button"); if (!b) return; if (b.dataset.d) { (ST.plan[b.dataset.d] ||= []).push({ k: uid(), id: r.id, J: n.J || 0, P: n.P || 0, ...(sc ? { sc: { ...sc } } : {}) }); save(); toast("Added to the plan."); } box.remove(); };
 }
 function dayTotals(d) {
   const t = { J: { kcal: 0, protein: 0 }, P: { kcal: 0, protein: 0 } };
-  for (const it of ST.plan[d] || []) { const r = getR(it.id); if (!r) continue; for (const x of ["J", "P"]) if (it[x]) { const m = macros(r, x); t[x].kcal += m.kcal; t[x].protein += m.protein; } }
+  for (const it of ST.plan[d] || []) { const r = getR(it.id); if (!r) continue; for (const x of ["J", "P"]) if (it[x]) { const m = mealMac(r, x, it.sc); t[x].kcal += m.kcal * (isSauce(r) ? 0 : 1); t[x].protein += m.protein * (isSauce(r) ? 0 : 1); } }
   return t;
 }
 function renderPlan() {
@@ -388,10 +417,10 @@ function renderPlan() {
   let wk = { J: { kcal: 0, protein: 0, n: 0 }, P: { kcal: 0, protein: 0, n: 0 } };
   const dayHTML = d => {
     const items = ST.plan[d] || [];
-    for (const it of items) { const r = getR(it.id); if (!r) continue; for (const x of ["J", "P"]) if (it[x]) { const m = macros(r, x); wk[x].kcal += m.kcal; wk[x].protein += m.protein; wk[x].n++; } }
+    for (const it of items) { const r = getR(it.id); if (!r) continue; if (isSauce(r)) continue; for (const x of ["J", "P"]) if (it[x]) { const m = mealMac(r, x, it.sc); wk[x].kcal += m.kcal; wk[x].protein += m.protein; wk[x].n++; } }
     const t = dayTotals(d);
     return `<section class="card day"><div class="dh"><b>${parseD(d).toLocaleDateString("en-AU", { weekday: "long", day: "numeric", month: "short" })}${d === today ? " · today" : ""}</b><button class="btn small ghost" data-addto="${d}">+ Add</button></div>
-      ${items.map(it => { const r = getR(it.id); return r ? `<div class="pitem"><a class="pt" href="#r/${esc(r.id)}">${esc(r.title)}</a><button class="btn small ghost" data-rm="${d}|${it.k}" aria-label="Remove">✕</button>
+      ${items.map(it => { const r = getR(it.id); return r ? `<div class="pitem"><a class="pt" href="#r/${esc(r.id)}">${esc(r.title)}${it.sc && getR(it.sc.id) ? `<br><span class="sub">with ${esc(getR(it.sc.id).title.toLowerCase())}</span>` : ""}</a><button class="btn small ghost" data-rm="${d}|${it.k}" aria-label="Remove">✕</button>
         <span class="pc"><span class="mini pj">Jaidyn <button data-pc="${d}|${it.k}|J|-1" aria-label="Fewer">−</button><b class="num">${it.J}</b><button data-pc="${d}|${it.k}|J|1" aria-label="More">+</button></span>
         <span class="mini pp">Paris <button data-pc="${d}|${it.k}|P|-1" aria-label="Fewer">−</button><b class="num">${it.P}</b><button data-pc="${d}|${it.k}|P|1" aria-label="More">+</button></span></span></div>` : ""; }).join("") || `<p class="sub">Nothing planned.</p>`}
       ${items.length ? `<div class="totals"><span class="pj">Jaidyn: <b class="num">${t.J.kcal}</b> kcal · ${t.J.protein} g per serve set</span><span class="pp">Paris: <b class="num">${t.P.kcal}</b> kcal · ${t.P.protein} g</span></div>` : ""}</section>`;
@@ -414,7 +443,7 @@ function chooseRecipe(d) {
   box.innerHTML = `<div class="wrap"><div class="top"><h2>${parseD(d).toLocaleDateString("en-AU", { weekday: "long" })}</h2><button class="btn ghost small" data-x>✕</button></div>
     <div class="res">${recipes().sort((a, b) => a.title.localeCompare(b.title)).map(r => `<button data-id="${esc(r.id)}"><span>${esc(r.title)}</span><small>${esc(r.category)} · ${r.base.J}+${r.base.P}</small></button>`).join("")}</div></div>`;
   document.body.appendChild(box);
-  box.onclick = e => { const b = e.target.closest("button"); if (!b) return; if (b.dataset.id) { const r = getR(b.dataset.id); (ST.plan[d] ||= []).push({ k: uid(), id: r.id, J: r.base.J, P: r.base.P }); save(); renderPlan(); } box.remove(); };
+  box.onclick = e => { const b = e.target.closest("button"); if (!b) return; if (b.dataset.id) { const r = getR(b.dataset.id); (ST.plan[d] ||= []).push({ k: uid(), id: r.id, J: r.base.J, P: r.base.P, ...(ST.sauce[r.id] ? { sc: { ...ST.sauce[r.id] } } : {}) }); save(); renderPlan(); } box.remove(); };
 }
 
 /* ================= SHOPPING LIST ================= */
@@ -423,12 +452,12 @@ function shopItems() {
   const map = new Map();
   for (const d of weekDays()) for (const it of ST.plan[d] || []) {
     const r = getR(it.id); if (!r) continue;
-    for (const g of r.ingredients || []) {
-      const q = batchQty(g, it); if (!q) continue;
+    for (const { g, q, s } of (r.ingredients || []).map(g => ({ g, q: batchQty(g, it) })).concat(sauceIngs(it.sc, it, true))) {
+      if (!q) continue;
       const metric = g.unit === "g" || g.unit === "ml" || g.unit === "kg";
       const key = `${(g.food || g.name).toLowerCase()}|${metric ? "g" : g.unit}`;
       const e = map.get(key) || { key, name: g.food || g.name, unit: metric ? (g.unit === "ml" ? "ml" : "g") : g.unit, q: 0, aisle: g.aisle || "Other", for: new Set() };
-      e.q += metric ? q * (UNIT_G[g.unit] || 1) : q; e.for.add(r.title); map.set(key, e);
+      e.q += metric ? q * (UNIT_G[g.unit] || 1) : q; e.for.add(s ? s.title : r.title); map.set(key, e);
     }
   }
   for (const x of ST.shop.extra) map.set("x|" + x.k, { key: "x|" + x.k, name: x.n, unit: "", q: 0, aisle: "Other", for: new Set(["added by you"]), extra: x.k });

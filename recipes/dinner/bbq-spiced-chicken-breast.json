@@ -1,0 +1,135 @@
+{
+ "schema": "kitchen-recipe",
+ "schemaVersion": 1,
+ "id": "bbq-spiced-chicken-breast",
+ "title": "BBQ Spiced Chicken Breast with Sweet Potato Mash and Broccolini",
+ "category": "dinner",
+ "desc": "Lean weeknight barbecue: dry-rubbed chicken breast, sweet potato mash and broccolini. Good with a yoghurt sauce.",
+ "tags": [
+  "chicken",
+  "bbq",
+  "high protein",
+  "lean"
+ ],
+ "time": 35,
+ "base": {
+  "J": 1,
+  "P": 1
+ },
+ "portions": {
+  "J": "On the plate: about 190 g cooked chicken (250 g raw), 300 g mash (a heaped cup and a half), 100 g broccolini",
+  "P": "On the plate: about 120 g cooked chicken (160 g raw), 175 g mash (a cup), 75 g broccolini"
+ },
+ "ingredients": [
+  {
+   "id": "i1",
+   "name": "chicken breast",
+   "food": "chicken breast",
+   "unit": "g",
+   "gpu": 1,
+   "k100": 106,
+   "p100": 23,
+   "aisle": "Meat",
+   "per": {
+    "J": 250,
+    "P": 160
+   }
+  },
+  {
+   "id": "i2",
+   "name": "Spices (paprika, garlic and onion powder, whatever you like)",
+   "food": "spices (your mix)",
+   "unit": "tsp",
+   "gpu": 2.5,
+   "k100": 0,
+   "p100": 0,
+   "aisle": "Sauces and spices",
+   "per": {
+    "J": 1.0,
+    "P": 1.0
+   }
+  },
+  {
+   "id": "i3",
+   "name": "sweet potato, peeled and chopped",
+   "food": "sweet potato",
+   "unit": "g",
+   "gpu": 1,
+   "k100": 86,
+   "p100": 1.6,
+   "aisle": "Produce",
+   "per": {
+    "J": 300,
+    "P": 175
+   }
+  },
+  {
+   "id": "i4",
+   "name": "milk, for the mash",
+   "food": "milk, full cream",
+   "unit": "tbsp",
+   "gpu": 15,
+   "k100": 64,
+   "p100": 3.3,
+   "aisle": "Dairy and eggs",
+   "per": {
+    "J": 1.0,
+    "P": 1.0
+   }
+  },
+  {
+   "id": "i5",
+   "name": "broccolini (or 175 g broccoli)",
+   "food": "broccolini",
+   "unit": "bunch",
+   "gpu": 175,
+   "k100": 35,
+   "p100": 3.5,
+   "aisle": "Produce",
+   "per": {
+    "J": 0.5714,
+    "P": 0.4286
+   }
+  }
+ ],
+ "steps": [
+  {
+   "title": "Rub the chicken",
+   "text": "If the breasts are thick, butterfly them or pound to an even thickness so they cook evenly without drying out. Coat both sides with the spices and a pinch of salt.",
+   "timer": 0
+  },
+  {
+   "title": "Boil the sweet potato",
+   "text": "Cover with cold salted water, bring to the boil and simmer until a knife slides straight through.",
+   "timer": 900
+  },
+  {
+   "title": "Barbecue the chicken",
+   "text": "Hot barbecue, no oil needed on a clean, well-heated grill. About 5 to 6 minutes a side until it hits 74°C in the thickest part. Pull it the moment it gets there: that's what keeps breast juicy.",
+   "timer": 660
+  },
+  {
+   "title": "Rest, and cook the broccolini",
+   "text": "Rest the chicken 5 minutes under foil. Steam or microwave the broccolini until bright green and just tender, or throw it on the barbecue for the last 3 minutes.",
+   "timer": 300
+  },
+  {
+   "title": "Mash and serve",
+   "text": "Drain the sweet potato, mash with the milk and season. Slice the chicken and plate up with the mash, broccolini and your sauce.",
+   "timer": 0
+  }
+ ],
+ "notes": "Raw chicken breast loses about a quarter of its weight cooking, so 250 g raw is about 190 g on the plate. Weigh raw if you can; the cooked weights are a guide. A knob of butter in the mash adds about 70 kcal.",
+ "macros": {
+  "J": {
+   "kcal": 568,
+   "protein": 66
+  },
+  "P": {
+   "kcal": 356,
+   "protein": 43
+  }
+ },
+ "sauce": "mustard-lime-yoghurt",
+ "short": "BBQ chicken breast, mash, broccolini"
+}

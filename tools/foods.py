@@ -48,6 +48,13 @@ FOODS = {
  "zucchini": (17, 1.2, "Produce", {"whole": 200}),
  "baby spinach": (23, 2.9, "Produce", {}),
  "frozen mixed veg": (65, 3, "Frozen", {}),
+ "spices (your mix)": (0, 0, "Sauces and spices", {"tsp": 2.5, "tbsp": 7}),
+ "wholegrain mustard": (163, 7, "Sauces and spices", {"tbsp": 15, "tsp": 5}),
+ "lime juice": (25, 0.4, "Produce", {"tbsp": 15, "tsp": 5}),
+ "lemon juice": (22, 0.4, "Produce", {"tbsp": 15, "tsp": 5}),
+ "fresh herbs (dill, mint, parsley or chives)": (40, 3, "Produce", {"tbsp": 4}),
+ "tahini": (595, 18, "Pantry", {"tbsp": 15, "tsp": 5}),
+ "sriracha": (93, 2, "Sauces and spices", {"tbsp": 17, "tsp": 6}),
 }
 UNIT_G = {"g": 1, "ml": 1, "kg": 1000}
 def grams(food, qty, unit):

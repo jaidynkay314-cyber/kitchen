@@ -27,6 +27,8 @@ Live app: https://jaidynkay314-cyber.github.io/kitchen/
 5. Add the plating guide, steps (with optional timer minutes), and notes. **Save to this phone.**
 6. To get it into the shared repo: open it, **Export file**, and send the file to Claude. Or set up publishing (below).
 
+**Sauces.** Every meal has an optional **Sauce** row. Pick one (★ marks the suggested pairing) and set tablespoons for each of you (3 and 2 to start). The sauce adds to each person's calories and protein, its ingredients join the list, and "Make the sauce" becomes step 1. The **Sauces** filter on the Recipes tab lists them all. The shopping list buys enough for a full batch, since it keeps a few days.
+
 To change one of the built-in recipes, open it and tap **Edit a copy**.
 
 **Settings.** Pantry staples list, optional GitHub publishing, and **Back up everything** / **Restore a backup** for recipes and foods saved on the phone.
@@ -56,6 +58,9 @@ To change one of the built-in recipes, open it and tap **Edit a copy**.
 - `per` is one person's portion in `unit`. `gpu` is grams per unit. Macros = Σ per × gpu × k100 / 100.
 - Batch amount = J serves × per.J + P serves × per.P, so any mix of serves scales exactly.
 - `macros` is stored for readability only; the app always recalculates.
+
+### Sauces
+A sauce is a recipe with `"serve": "tbsp"` and `"yield"` (tablespoons per batch): its serves are tablespoons and `per` is one tablespoon. A meal's optional `"sauce"` is the suggested pairing. The chosen sauce and tablespoons are stored per recipe in `ST.sauce[id] = { id, J, P }` and copied onto plan items as `sc`. Meal macros = meal + tbsp × sauce per tbsp, rounded once at the end.
 
 ### Editor model
 Batch amount plus serve counts plus a Paris share (recipe default, or per ingredient: a ratio, Jaidyn only, Paris only). `per.J = batch / (J + P × share)`, `per.P = per.J × share`. Opening any recipe in the editor reproduces its stored macros exactly (tested across all recipes).

@@ -27,18 +27,20 @@ def build(r):
     macros = {}
     for x in PEOPLE:
         k = sum(g["per"][x] * g["gpu"] * g["k100"] / 100 for g in ings); p = sum(g["per"][x] * g["gpu"] * g["p100"] / 100 for g in ings)
-        macros[x] = {"kcal": round(k), "protein": round(p)}
+        macros[x] = {"kcal": round(k, 1), "protein": round(p, 1)} if r.get("serve") else {"kcal": round(k), "protein": round(p)}
     return {"schema": "kitchen-recipe", "schemaVersion": 1, "id": r["id"], "title": r["title"], "category": r["category"],
             "desc": r["desc"], "tags": r["tags"], "time": r["time"], "base": b, "portions": r["portions"], "ingredients": ings,
-            "steps": [{"title": t, "text": s, "timer": tm} for t, s, tm in r["steps"]], "notes": r.get("notes", ""), "macros": macros}
+            "steps": [{"title": t, "text": s, "timer": tm} for t, s, tm in r["steps"]], "notes": r.get("notes", ""), "macros": macros,
+            **({"serve": r["serve"], "yield": r["yield_tbsp"]} if r.get("serve") else {}), **({"sauce": r["sauce"]} if r.get("sauce") else {}), **({"short": r["short"]} if r.get("short") else {})}
 
 def md(o):
     b = o["base"]; lines = [f"# {o['title']}", "", o["desc"], "", f"Category: {o['category']} · {o['time']} min · tags: {', '.join(o['tags'])}", "",
         "| | Portion | kcal | Protein |", "|---|---|---|---|"]
     for x, n in PEOPLE.items(): lines.append(f"| {n} | {o['portions'][x]} | {o['macros'][x]['kcal']} | {o['macros'][x]['protein']} g |")
-    lines += ["", f"## Ingredients (makes {b['J']} of Jaidyn's{f' and {b[chr(80)]} of Paris' + chr(39) + 's' if b['P'] else ''} serves)", ""]
+    if o.get("serve"): lines += ["", f"Per tablespoon: {round(o['macros']['J']['kcal'])} kcal, {o['macros']['J']['protein']} g protein (macros above are per tablespoon).", "", f"## Ingredients (makes about {o['yield']} tbsp)", ""]
+    else: lines += ["", f"## Ingredients (makes {b['J']} of Jaidyn's{f' and {b[chr(80)]} of Paris' + chr(39) + 's' if b['P'] else ''} serves)", ""]
     for g in o["ingredients"]:
-        tot = b["J"] * g["per"]["J"] + b["P"] * g["per"]["P"]
+        tot = o["yield"] * g["per"]["J"] if o.get("serve") else b["J"] * g["per"]["J"] + b["P"] * g["per"]["P"]
         if tot: lines.append(f"- {nice(tot)} {g['unit']} {g['name']}")
     lines += ["", "## Method", ""]
     for n, s in enumerate(o["steps"], 1): lines.append(f"{n}. **{s['title']}.** {s['text']}" + (f" ({round(s['timer']/60)} min)" if s["timer"] else ""))
