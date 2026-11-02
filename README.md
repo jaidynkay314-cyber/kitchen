@@ -27,6 +27,8 @@ Live app: https://jaidynkay314-cyber.github.io/kitchen/
 5. Add the plating guide, steps (with optional timer minutes), and notes. **Save to this phone.**
 6. To get it into the shared repo: open it, **Export file**, and send the file to Claude. Or set up publishing (below).
 
+**Lean meals.** Meals with lots of protein for the calories get a green **Lean** tag, and the **Lean** filter on the Recipes tab lists them leanest first. Good after a big day out or on a beer night. It's worked out automatically (Jaidyn's serve at 9.6 kcal per gram of protein or less), so new recipes qualify on their own. Each recipe page shows its kcal per gram of protein.
+
 **Sauces.** Every meal has an optional **Sauce** row. Pick one (★ marks the suggested pairing) and set tablespoons for each of you (3 and 2 to start). The sauce adds to each person's calories and protein, its ingredients join the list, and "Make the sauce" becomes step 1. The **Sauces** filter on the Recipes tab lists them all. The shopping list buys enough for a full batch, since it keeps a few days.
 
 To change one of the built-in recipes, open it and tap **Edit a copy**.
