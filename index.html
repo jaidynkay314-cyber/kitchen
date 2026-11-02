@@ -182,7 +182,7 @@ video.scan { width: 100%; border-radius: 12px; background: #000; aspect-ratio: 4
 <script>
 "use strict";
 /* ================= SETUP ================= */
-const VERSION = "1.2";
+const VERSION = "1.3";
 const SL_URL = "https://jaidynkay314-cyber.github.io/solo-lifting/";
 const PEOPLE = { J: "Jaidyn", P: "Paris" };
 const CATS = ["dinner", "lunch prep", "friday", "breakfast", "snack", "sauce", "other"];
@@ -264,9 +264,10 @@ function route() {
   if (view === "shop") return renderShop();
   if (view === "add") return renderEditor(arg);
   if (view === "settings") return renderSettings();
+  if (view === "join" && arg) return renderJoin(arg);
   renderList();
 }
-addEventListener("hashchange", () => { route(); scrollTo(0, 0); });
+addEventListener("hashchange", () => { route(); scrollTo(0, 0); if (/^#(plan|shop)/.test(location.hash)) syncSoon(0); });
 
 /* ================= RECIPE LIST ================= */
 function renderList() {
@@ -405,7 +406,7 @@ function pickDay(r, n, sc) {
     <div class="res">${days.map(d => `<button data-d="${d}"><span>${parseD(d).toLocaleDateString("en-AU", { weekday: "long", day: "numeric", month: "short" })}</span><small>${(ST.plan[d] || []).length} planned</small></button>`).join("")}
     <button data-d="${addD(weekStart, 7)}"><span>Next Monday</span><small></small></button></div></div>`;
   document.body.appendChild(box);
-  box.onclick = e => { const b = e.target.closest("button"); if (!b) return; if (b.dataset.d) { (ST.plan[b.dataset.d] ||= []).push({ k: uid(), id: r.id, J: n.J || 0, P: n.P || 0, ...(sc ? { sc: { ...sc } } : {}) }); save(); toast("Added to the plan."); } box.remove(); };
+  box.onclick = e => { const b = e.target.closest("button"); if (!b) return; if (b.dataset.d) { planPut(b.dataset.d, { k: uid(), id: r.id, J: n.J || 0, P: n.P || 0, ...(sc ? { sc: { ...sc } } : {}) }); toast("Added to the plan."); } box.remove(); };
 }
 function dayTotals(d) {
   const t = { J: { kcal: 0, protein: 0 }, P: { kcal: 0, protein: 0 } };
@@ -427,15 +428,15 @@ function renderPlan() {
   };
   const body = days.map(dayHTML).join("");
   $("#app").innerHTML = `<div class="wrap">
-    <div class="top"><div><h1>Week plan</h1><p class="sub">Week of ${parseD(weekStart).toLocaleDateString("en-AU", { day: "numeric", month: "long" })}</p></div>
+    <div class="top"><div><h1>Week plan</h1><p class="sub">Week of ${parseD(weekStart).toLocaleDateString("en-AU", { day: "numeric", month: "long" })}${syncLine()}</p></div>
       <span class="row"><button class="btn small" data-wk="-7" aria-label="Previous week">←</button><button class="btn small" data-wk="7" aria-label="Next week">→</button></span></div>
     <div class="totals"><span class="pj">Jaidyn's planned meals: <b class="num">${wk.J.n}</b>, ${wk.J.kcal.toLocaleString("en-AU")} kcal, ${wk.J.protein} g protein</span><span class="pp">Paris's: <b class="num">${wk.P.n}</b>, ${wk.P.kcal.toLocaleString("en-AU")} kcal, ${wk.P.protein} g</span></div>
     <p class="note">Batch preps count every serve they make (for example 4 of yours and 3 of Paris's), so the day they're cooked shows the whole batch. The totals add up what's planned, not a full day's eating.</p>
     ${body}<a class="btn primary" href="#shop">Make the shopping list</a></div>`;
   const app = $("#app");
   app.querySelectorAll("[data-wk]").forEach(b => b.onclick = () => { weekStart = addD(weekStart, +b.dataset.wk); renderPlan(); });
-  app.querySelectorAll("[data-rm]").forEach(b => b.onclick = () => { const [d, k] = b.dataset.rm.split("|"); ST.plan[d] = (ST.plan[d] || []).filter(x => x.k !== k); if (!ST.plan[d].length) delete ST.plan[d]; save(); renderPlan(); });
-  app.querySelectorAll("[data-pc]").forEach(b => b.onclick = () => { const [d, k, x, dd] = b.dataset.pc.split("|"), it = (ST.plan[d] || []).find(y => y.k === k); if (it) { it[x] = Math.max(0, Math.min(40, it[x] + +dd)); save(); renderPlan(); } });
+  app.querySelectorAll("[data-rm]").forEach(b => b.onclick = () => { const [d, k] = b.dataset.rm.split("|"); planDel(k); renderPlan(); });
+  app.querySelectorAll("[data-pc]").forEach(b => b.onclick = () => { const [d, k, x, dd] = b.dataset.pc.split("|"), it = (ST.plan[d] || []).find(y => y.k === k); if (it) { planPut(d, { ...it, [x]: Math.max(0, Math.min(40, it[x] + +dd)) }); renderPlan(); } });
   app.querySelectorAll("[data-addto]").forEach(b => b.onclick = () => chooseRecipe(b.dataset.addto));
 }
 function chooseRecipe(d) {
@@ -443,7 +444,7 @@ function chooseRecipe(d) {
   box.innerHTML = `<div class="wrap"><div class="top"><h2>${parseD(d).toLocaleDateString("en-AU", { weekday: "long" })}</h2><button class="btn ghost small" data-x>✕</button></div>
     <div class="res">${recipes().sort((a, b) => a.title.localeCompare(b.title)).map(r => `<button data-id="${esc(r.id)}"><span>${esc(r.title)}</span><small>${esc(r.category)} · ${r.base.J}+${r.base.P}</small></button>`).join("")}</div></div>`;
   document.body.appendChild(box);
-  box.onclick = e => { const b = e.target.closest("button"); if (!b) return; if (b.dataset.id) { const r = getR(b.dataset.id); (ST.plan[d] ||= []).push({ k: uid(), id: r.id, J: r.base.J, P: r.base.P, ...(ST.sauce[r.id] ? { sc: { ...ST.sauce[r.id] } } : {}) }); save(); renderPlan(); } box.remove(); };
+  box.onclick = e => { const b = e.target.closest("button"); if (!b) return; if (b.dataset.id) { const r = getR(b.dataset.id); planPut(d, { k: uid(), id: r.id, J: r.base.J, P: r.base.P, ...(ST.sauce[r.id] ? { sc: { ...ST.sauce[r.id] } } : {}) }); renderPlan(); } box.remove(); };
 }
 
 /* ================= SHOPPING LIST ================= */
@@ -460,7 +461,7 @@ function shopItems() {
       e.q += metric ? q * (UNIT_G[g.unit] || 1) : q; e.for.add(s ? s.title : r.title); map.set(key, e);
     }
   }
-  for (const x of ST.shop.extra) map.set("x|" + x.k, { key: "x|" + x.k, name: x.n, unit: "", q: 0, aisle: "Other", for: new Set(["added by you"]), extra: x.k });
+  for (const x of ST.shop.extra) map.set("x|" + x.k, { key: "x|" + x.k, name: x.n, unit: "", q: 0, aisle: "Other", for: new Set(["added to the list"]), extra: x.k });
   return [...map.values()];
 }
 /* shopping quantities round up to what you'd actually buy */
@@ -477,18 +478,18 @@ function renderShop() {
   const order = [...AISLES, ...Object.keys(by).filter(a => !AISLES.includes(a))].filter(a => by[a]);
   const left = list.filter(e => !ST.shop.done[e.key]).length;
   $("#app").innerHTML = `<div class="wrap">
-    <div class="top"><div><h1>Shopping list</h1><p class="sub">${list.length ? `${left} of ${list.length} to get · week of ${parseD(weekStart).toLocaleDateString("en-AU", { day: "numeric", month: "short" })}` : "Plan some meals and they'll show up here."}</p></div>
+    <div class="top"><div><h1>Shopping list</h1><p class="sub">${list.length ? `${left} of ${list.length} to get · week of ${parseD(weekStart).toLocaleDateString("en-AU", { day: "numeric", month: "short" })}` : "Plan some meals and they'll show up here."}${syncLine()}</p></div>
       <button class="btn small" data-act="share" ${list.length ? "" : "disabled"}>Share</button></div>
     ${order.map(a => `<section class="card aisle"><h3>${esc(a)}</h3><ul class="shop">${by[a].sort((x, y) => x.name.localeCompare(y.name)).map(e => `<li class="${ST.shop.done[e.key] ? "done" : ""}"><input type="checkbox" data-k="${esc(e.key)}" ${ST.shop.done[e.key] ? "checked" : ""} aria-label="Got ${esc(e.name)}">
       <span><span>${esc(e.name)}</span><br><span class="for">${esc([...e.for].join(", "))}</span></span><b class="num">${e.extra ? `<button class="btn small ghost" data-rmx="${e.extra}" aria-label="Remove">✕</button>` : buyQty(e)}</b></li>`).join("")}</ul></section>`).join("")}
     <section class="card"><h3>Add something else</h3><div class="row"><input id="xn" class="grow" placeholder="e.g. paper towel, bananas" aria-label="Extra item"><button class="btn" data-act="addx">Add</button></div></section>
     <div class="row">${hidden || showPantry ? `<button class="btn" data-act="pantry">${showPantry ? "Hide pantry staples" : `Show ${hidden} pantry staple${hidden === 1 ? "" : "s"}`}</button>` : ""}<button class="btn" data-act="clear">Clear ticks</button><a class="btn ghost" href="#settings">Edit pantry staples</a></div></div>`;
   const app = $("#app");
-  app.querySelectorAll("[data-k]").forEach(c => c.onchange = () => { if (c.checked) ST.shop.done[c.dataset.k] = 1; else delete ST.shop.done[c.dataset.k]; save(); c.closest("li").classList.toggle("done", c.checked); });
-  app.querySelectorAll("[data-rmx]").forEach(b => b.onclick = () => { ST.shop.extra = ST.shop.extra.filter(x => x.k !== b.dataset.rmx); save(); renderShop(); });
+  app.querySelectorAll("[data-k]").forEach(c => c.onchange = () => { tickSet(c.dataset.k, c.checked); c.closest("li").classList.toggle("done", c.checked); });
+  app.querySelectorAll("[data-rmx]").forEach(b => b.onclick = () => { extraSet(b.dataset.rmx, null); renderShop(); });
   const act = a => app.querySelector(`[data-act="${a}"]`);
-  act("addx").onclick = () => { const n = $("#xn").value.trim(); if (!n) return; ST.shop.extra.push({ k: uid(), n }); save(); renderShop(); };
-  act("clear").onclick = () => { ST.shop.done = {}; save(); renderShop(); };
+  act("addx").onclick = () => { const n = $("#xn").value.trim(); if (!n) return; extraSet(uid(), n); renderShop(); };
+  act("clear").onclick = () => { for (const k of Object.keys(ST.shop.done)) tickSet(k, false); renderShop(); };
   if (act("pantry")) act("pantry").onclick = () => { showPantry = !showPantry; renderShop(); };
   act("share").onclick = () => {
     const text = order.map(a => `${a}\n` + by[a].filter(e => !ST.shop.done[e.key]).map(e => `- ${e.name}${buyQty(e) ? " " + buyQty(e) : ""}`).join("\n")).join("\n\n");
@@ -703,20 +704,120 @@ function renderSettings() {
   $("#app").innerHTML = `<div class="wrap"><div class="top"><h1>Settings</h1><a class="btn ghost small" href="#recipes">Done</a></div>
     <section class="card"><h2>Pantry staples</h2><p class="sub">Left off the shopping list unless you ask for them. One per line.</p>
       <textarea id="s-pantry" rows="6">${esc(ST.pantry.join("\n"))}</textarea></section>
+    <section class="card" id="s-share"><h2>Share the plan and shopping list</h2>${shareCard()}</section>
     <section class="card"><h2>Publish to GitHub (optional)</h2><p class="sub">Lets "Save and publish" put recipes straight into the kitchen repo. Use a fine-grained token with <b>Contents: read and write</b> on that one repo only. It's stored on this phone only.</p>
       <label class="f">Repo<input id="s-repo" value="${esc(ST.gh.repo)}"></label><label class="f">Token<input id="s-token" type="password" autocomplete="off" value="${esc(ST.gh.token)}" placeholder="github_pat_…"></label></section>
     <section class="card"><h2>On this phone</h2><p class="sub">${ST.local.length} recipe${ST.local.length === 1 ? "" : "s"} saved here, ${ST.foods.length} custom food${ST.foods.length === 1 ? "" : "s"}.</p>
       <div class="row"><button class="btn" data-act="backup">Back up everything</button><label class="btn">Restore a backup<input type="file" id="s-restore" accept="application/json" hidden></label></div></section>
     <button class="btn primary" data-act="saveset">Save settings</button><p class="sub">Kitchen ${VERSION}</p></div>`;
   const app = $("#app");
+  bindShare(app);
   app.querySelector('[data-act="saveset"]').onclick = () => { ST.pantry = $("#s-pantry").value.split("\n").map(s => s.trim()).filter(Boolean); ST.gh = { repo: $("#s-repo").value.trim(), token: $("#s-token").value.trim() }; save(); toast("Settings saved."); };
-  app.querySelector('[data-act="backup"]').onclick = () => { const text = JSON.stringify({ schema: "kitchen-backup", schemaVersion: 1, at: new Date().toISOString(), ...ST, gh: { repo: ST.gh.repo } }, null, 1);
+  app.querySelector('[data-act="backup"]').onclick = () => { const text = JSON.stringify({ schema: "kitchen-backup", schemaVersion: 1, at: new Date().toISOString(), ...ST, gh: { repo: ST.gh.repo }, hh: undefined, outbox: undefined, since: undefined }, null, 1);
     const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([text], { type: "application/json" })); a.download = `kitchen-backup-${dStr(new Date())}.json`; a.click(); };
-  $("#s-restore").onchange = async e => { try { const o = JSON.parse(await e.target.files[0].text()); if (o.schema !== "kitchen-backup") throw 0; ST = { ...ST, ...o, gh: ST.gh }; delete ST.schema; delete ST.schemaVersion; delete ST.at; save(); toast("Restored."); renderSettings(); } catch (er) { toast("That isn't a Kitchen backup file."); } };
+  $("#s-restore").onchange = async e => { try { const o = JSON.parse(await e.target.files[0].text()); if (o.schema !== "kitchen-backup") throw 0; ST = { ...ST, ...o, gh: ST.gh, hh: ST.hh, outbox: ST.outbox, since: ST.since }; delete ST.schema; delete ST.schemaVersion; delete ST.at; save(); toast("Restored."); renderSettings(); } catch (er) { toast("That isn't a Kitchen backup file."); } };
 }
+
+
+/* ================= SHARED PLAN AND SHOPPING LIST =================
+   Optional. A household code links phones through the same Supabase project as Solo Lifting.
+   Table kitchen_items (only reachable through the kitchen_push / kitchen_pull functions, which need the code): one row per planned meal ("plan"), shopping tick ("tick") or extra item ("extra").
+   body null = deleted. Each phone queues its changes in ST.outbox, pushes them (upsert), then pulls
+   everything changed since ST.since. Row-level keys mean two phones editing at once don't clobber each other. */
+const SB = { url: "https://zhepmvshaweekrljnwkc.supabase.co", key: "sb_publishable_Q5MRIwuQzXuyjseaY7YxBA_-AUn7AhE" };
+ST.outbox ||= {}; ST.since ||= "";
+const SY = { busy: false, t: null, err: "", at: 0, again: false };
+function planPut(d, it) { for (const day of Object.keys(ST.plan)) { ST.plan[day] = ST.plan[day].filter(x => x.k !== it.k); if (!ST.plan[day].length) delete ST.plan[day]; } (ST.plan[d] ||= []).push(it); queue("plan", it.k, { ...it, d }); }
+function planDel(k) { for (const day of Object.keys(ST.plan)) { ST.plan[day] = ST.plan[day].filter(x => x.k !== k); if (!ST.plan[day].length) delete ST.plan[day]; } queue("plan", k, null); }
+function tickSet(key, on) { if (on) ST.shop.done[key] = 1; else delete ST.shop.done[key]; queue("tick", key, on ? 1 : null); }
+function extraSet(k, n) { ST.shop.extra = ST.shop.extra.filter(x => x.k !== k); if (n) ST.shop.extra.push({ k, n }); queue("extra", k, n ? { n } : null); }
+function queue(kind, id, body) { if (ST.hh) ST.outbox[kind + "|" + id] = { kind, id, body, n: (ST.outbox[kind + "|" + id]?.n || 0) + 1 }; save(); syncSoon(); }
+function syncSoon(ms = 700) { if (!ST.hh) return; clearTimeout(SY.t); SY.t = setTimeout(sync, ms); }
+const sbHead = extra => ({ apikey: SB.key, Authorization: `Bearer ${SB.key}`, "Content-Type": "application/json", ...extra });
+async function sync() {
+  if (!ST.hh) return; if (SY.busy) { SY.again = true; return; } SY.busy = true; let changed = false;
+  try {
+    const sent = Object.entries(ST.outbox).map(([key, v]) => ({ key, n: v.n, row: { kind: v.kind, id: v.id, body: v.body } }));
+    const rpc = async (fn, args) => { const r = await fetch(`${SB.url}/rest/v1/rpc/${fn}`, { method: "POST", headers: sbHead(), body: JSON.stringify(args) });
+      if (!r.ok) throw new Error(r.status === 404 ? "the kitchen table isn't set up in Supabase yet" : "sync failed (" + r.status + ")"); return r.status === 204 ? null : r.json(); };
+    for (let i = 0; i < sent.length; i += 200) await rpc("kitchen_push", { p_hh: ST.hh, p_rows: sent.slice(i, i + 200).map(x => x.row) });
+    for (const x of sent) if (ST.outbox[x.key] && ST.outbox[x.key].n === x.n) delete ST.outbox[x.key]; /* keep anything edited mid-upload */
+    let since = ST.since;
+    for (;;) {
+      const rows = (await rpc("kitchen_pull", { p_hh: ST.hh, p_since: since || null })) || [];
+      for (const row of rows) { if (applyRow(row)) changed = true; }
+      const last = rows.length ? rows[rows.length - 1].updated_at : since;
+      if (rows.length < 500 || last === since) { since = last; break; }
+      since = last;
+    }
+    ST.since = since; SY.err = ""; SY.at = Date.now(); save();
+  } catch (e) { SY.err = navigator.onLine === false ? "offline, will sync when there's signal" : String(e.message || e); }
+  SY.busy = false;
+  if (SY.again) { SY.again = false; syncSoon(100); }
+  refreshShared(changed);
+}
+/* apply one server row unless this phone has a newer change waiting to go up */
+function applyRow({ kind, id, body }) {
+  if (ST.outbox[kind + "|" + id]) return false;
+  const before = JSON.stringify([ST.plan, ST.shop]);
+  if (kind === "plan") { for (const day of Object.keys(ST.plan)) { ST.plan[day] = ST.plan[day].filter(x => x.k !== id); if (!ST.plan[day].length) delete ST.plan[day]; } if (body && body.d) { const { d, ...it } = body; (ST.plan[d] ||= []).push(it); } }
+  if (kind === "tick") { if (body) ST.shop.done[id] = 1; else delete ST.shop.done[id]; }
+  if (kind === "extra") { ST.shop.extra = ST.shop.extra.filter(x => x.k !== id); if (body && body.n) ST.shop.extra.push({ k: id, n: body.n }); }
+  return before !== JSON.stringify([ST.plan, ST.shop]);
+}
+function refreshShared(changed) {
+  const v = (location.hash.slice(1) || "recipes").split("/")[0], a = document.activeElement;
+  const typing = a && /INPUT|TEXTAREA/.test(a.tagName) && a.type !== "checkbox";
+  if (typing) return;
+  if (v === "plan" && (changed || true)) renderPlan();
+  else if (v === "shop") renderShop();
+  else if (v === "settings" && $("#s-share")) { $("#s-share").innerHTML = `<h2>Share the plan and shopping list</h2>${shareCard()}`; bindShare($("#app")); }
+}
+function syncLine() {
+  if (!ST.hh) return "";
+  const pend = Object.keys(ST.outbox).length;
+  return ` · <span class="${SY.err ? "danger" : ""}">${SY.err ? "Shared, " + esc(SY.err) : SY.busy ? "Shared, syncing…" : pend ? "Shared, " + pend + " change" + (pend > 1 ? "s" : "") + " to send" : "Shared"}</span>`;
+}
+const joinLink = () => `${location.origin}${location.pathname}#join/${ST.hh}`;
+function shareCard() {
+  if (!ST.hh) return `<p class="sub">Put the week plan and shopping list on both phones. Either of you can add meals and tick things off, and the other phone updates when it opens. Recipes stay as they are.</p>
+    <button class="btn primary" data-act="share-start">Start sharing</button>`;
+  return `<p class="sub">This phone is sharing the plan and shopping list${SY.at ? `, last synced ${new Date(SY.at).toLocaleTimeString("en-AU", { hour: "numeric", minute: "2-digit" })}` : ""}.${SY.err ? ` <span class="danger">${esc(SY.err)}.</span>` : ""}</p>
+    <p class="sub">To add Paris, send her the invite link and have her open it on her phone (in Chrome, after installing Kitchen is fine too).</p>
+    <div class="row"><button class="btn primary" data-act="share-invite">Send invite link</button><button class="btn" data-act="share-now">Sync now</button><button class="btn ghost" data-act="share-stop">Stop sharing on this phone</button></div>`;
+}
+function bindShare(app) {
+  const on = (a, f) => { const b = app.querySelector(`[data-act="${a}"]`); if (b) b.onclick = f; };
+  on("share-start", () => { const a = new Uint8Array(12); crypto.getRandomValues(a); joinHousehold([...a].map(x => x.toString(36).padStart(2, "0")).join("").slice(0, 20), true); });
+  on("share-invite", () => { const url = joinLink(), text = `Join our Kitchen meal plan and shopping list: ${url}`; if (navigator.share) navigator.share({ title: "Kitchen", text, url }).catch(() => {}); else navigator.clipboard.writeText(url).then(() => toast("Invite link copied."), () => toast(url)); });
+  on("share-now", () => sync());
+  on("share-stop", e => { const b = e.target; if (!b.dataset.arm) { b.dataset.arm = 1; b.textContent = "Tap again to stop"; return; } ST.hh = null; ST.outbox = {}; ST.since = ""; save(); toast("Stopped sharing. Your copy stays on this phone."); renderSettings(); });
+}
+/* joining: everything already on this phone is added to the shared plan, then the shared plan comes down */
+function joinHousehold(code, fresh) {
+  ST.hh = code; ST.since = ""; ST.outbox = {};
+  for (const [d, items] of Object.entries(ST.plan)) for (const it of items) ST.outbox["plan|" + it.k] = { kind: "plan", id: it.k, body: { ...it, d }, n: 1 };
+  for (const k of Object.keys(ST.shop.done)) ST.outbox["tick|" + k] = { kind: "tick", id: k, body: 1, n: 1 };
+  for (const x of ST.shop.extra) ST.outbox["extra|" + x.k] = { kind: "extra", id: x.k, body: { n: x.n }, n: 1 };
+  save(); toast(fresh ? "Sharing is on. Now send Paris the invite link." : "Joined. The shared plan is coming through."); sync();
+  if (fresh) renderSettings(); else location.hash = "#plan";
+}
+function renderJoin(code) {
+  if (!/^[a-z0-9]{12,40}$/.test(code)) { location.hash = "#recipes"; return; }
+  if (ST.hh === code) { location.hash = "#plan"; return; }
+  $("#app").innerHTML = `<div class="wrap"><h1>Join the shared plan?</h1>
+    <p class="sub">This links this phone to a shared week plan and shopping list. Anything already planned on this phone is added to it. Recipes aren't affected.</p>
+    ${ST.hh ? `<p class="note">This phone is already sharing a different plan. Joining switches it over.</p>` : ""}
+    <div class="row"><button class="btn primary" data-act="join">Join</button><a class="btn" href="#recipes">Not now</a></div></div>`;
+  $("#app").querySelector('[data-act="join"]').onclick = () => joinHousehold(code, false);
+}
+addEventListener("visibilitychange", () => { if (!document.hidden) syncSoon(50); });
+addEventListener("online", () => syncSoon(50));
+setInterval(() => { if (!document.hidden) { const v = (location.hash.slice(1) || "").split("/")[0]; if (v === "plan" || v === "shop") syncSoon(0); } }, 30000);
 
 /* ================= START ================= */
 route();
+syncSoon(0);
 if ("serviceWorker" in navigator && location.protocol === "https:") navigator.serviceWorker.register("sw.js").catch(() => {});
 </script>
 

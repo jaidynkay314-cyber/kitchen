@@ -31,6 +31,12 @@ Live app: https://jaidynkay314-cyber.github.io/kitchen/
 
 To change one of the built-in recipes, open it and tap **Edit a copy**.
 
+**Share the plan and shopping list with Paris.**
+1. One-off setup (already done if Kitchen says "Shared"): run `kitchen-setup.sql` in Supabase (SQL Editor, New query, paste, Run). It's the same Supabase project as Solo Lifting.
+2. Settings, **Start sharing**, then **Send invite link** and send it to Paris.
+3. Paris opens the link on her phone and taps **Join**. Anything already planned on either phone is kept.
+4. From then on, either of you can add or change meals, tick things off or add extras. The other phone catches up when it opens the app, comes back to it, or sits on the Plan or Shop tab (every 30 seconds). It works offline and sends changes when there's signal. Plan and Shop show "Shared" with the sync status.
+
 **Settings.** Pantry staples list, optional GitHub publishing, and **Back up everything** / **Restore a backup** for recipes and foods saved on the phone.
 
 ## Technical details
@@ -61,6 +67,13 @@ To change one of the built-in recipes, open it and tap **Edit a copy**.
 
 ### Sauces
 A sauce is a recipe with `"serve": "tbsp"` and `"yield"` (tablespoons per batch): its serves are tablespoons and `per` is one tablespoon. A meal's optional `"sauce"` is the suggested pairing. The chosen sauce and tablespoons are stored per recipe in `ST.sauce[id] = { id, J, P }` and copied onto plan items as `sc`. Meal macros = meal + tbsp × sauce per tbsp, rounded once at the end.
+
+### Shared plan and shopping list
+- Supabase table `kitchen_items (hh, kind, id, body, updated_at)`, one row per planned meal (`plan`, id = item key, body = item plus `d` date), shopping tick (`tick`, id = shopping key, body 1) or extra item (`extra`, body `{n}`). `body` null means deleted. A trigger stamps `updated_at`.
+- Row level security is on with no policies, so the table can't be read or listed directly. The app only calls two `security definer` functions: `kitchen_push(p_hh, p_rows)` (upsert) and `kitchen_pull(p_hh, p_since)` (changes since, 500 at a time). Both need the household code, a random 20-character string that only appears in the invite link.
+- Each phone keeps `ST.hh`, `ST.outbox` (pending changes keyed `kind|id`, with an edit counter so a change made mid-upload isn't lost) and `ST.since`. Sync = push the outbox, then pull and apply anything newer, skipping keys that still have a local change waiting. Two people editing different meals or ticks never clash; the same item edited on both phones goes to whoever synced last.
+- Sync runs on start, when the app comes back to the foreground, when signal returns, when you open Plan or Shop, 0.7 s after any change, and every 30 s while Plan or Shop is open.
+- Joining queues everything already on that phone, so nothing is lost. **Stop sharing on this phone** keeps the local copy. Backups never include the household code.
 
 ### Editor model
 Batch amount plus serve counts plus a Paris share (recipe default, or per ingredient: a ratio, Jaidyn only, Paris only). `per.J = batch / (J + P × share)`, `per.P = per.J × share`. Opening any recipe in the editor reproduces its stored macros exactly (tested across all recipes).
