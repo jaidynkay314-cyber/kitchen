@@ -348,3 +348,87 @@ recipe(id="butter-chicken-light", title="Lighter Butter Chicken", category="dinn
   ("Simmer", "Return the chicken and simmer gently until cooked through and the sauce thickens.", 600),
   ("Finish with yoghurt", "Take it off the heat and let it cool for a minute, then stir in the remaining yoghurt (off the heat stops it splitting). Season and top with coriander.", 0),
  ], notes="Leftovers keep 3 days or freeze well. Reheat gently and don't boil it, or the yoghurt splits.")
+
+# ---- Batch 3 dinners (picked 2 Nov 2026) ----
+recipe(id="korean-beef-bowl", title="Korean Beef Bowl", category="dinner", short="Korean beef bowl",
+ desc="Sweet, spicy gochujang beef mince over rice with quick-pickled cucumber and a fried egg.",
+ tags=["beef", "asian", "quick"], time=25, base={"J": 1, "P": 1}, share=0.6,
+ portions={"J": "200 g raw mince, a cup of cooked rice, 1 egg, half the cucumber", "P": "130 g raw mince, 2/3 cup cooked rice, 1 egg, half the cucumber"},
+ ingredients=[
+  ("lean beef mince (5% fat)", 330, "g", {"per": {"J": 200, "P": 130}}),
+  ("gochujang", 1.5, "tbsp", {"share": 1}), ("soy sauce", 1, "tbsp", {"share": 1, "label": "soy sauce (salt-reduced)"}), ("honey", 2, "tsp", {"share": 1}),
+  ("garlic", 2, "clove", {"share": 1}), ("fresh ginger, grated", 1, "tsp", {"share": 1}), ("sesame oil", 1, "tsp", {"share": 1}),
+  ("white rice, uncooked", RICE_J + RICE_P, "cup", {"per": {"J": RICE_J, "P": RICE_P}, "label": "jasmine or short-grain rice"}),
+  ("Lebanese cucumber", 1, "whole", {"share": 1, "label": "Lebanese cucumber, thinly sliced"}), ("rice vinegar", 2, "tbsp", {"share": 1}),
+  ("eggs", 2, "whole", {"share": 1}), ("spring onions", 2, "whole", {"share": 1, "label": "spring onions, sliced"}),
+ ],
+ steps=[
+  ("Rice and pickles", "Put the rice on. Toss the cucumber with the rice vinegar and a pinch each of salt and sugar. Leave it to pickle while you cook.", 900),
+  ("Mix the sauce", "Stir together the gochujang, soy, honey, garlic and ginger.", 0),
+  ("Cook the beef", "Hot pan, high heat. Brown the mince well, breaking it up, until any liquid cooks off and it starts to crisp.", 420),
+  ("Sauce the beef", "Add the sauce and toss for a minute until sticky. Finish with the sesame oil.", 60),
+  ("Fry the eggs", "Wipe the pan, a little spray oil, and fry the eggs to your liking.", 180),
+  ("Bowl up", "Rice, beef, drained cucumber, egg on top, spring onion over everything.", 0),
+ ], notes="Gochujang is in the Asian aisle at Woolies. It varies in heat by brand, so start with 1 tbsp.")
+
+recipe(id="satay-chicken", title="Satay Chicken with Rice and Greens", category="dinner", short="Satay chicken, rice, greens",
+ desc="Chicken breast in a light peanut and coconut satay sauce, with rice and steamed bok choy.",
+ tags=["chicken", "asian"], time=30, base={"J": 1, "P": 1}, share=0.6,
+ portions={"J": "220 g raw chicken with half the sauce, a cup of cooked rice, half the greens", "P": "140 g raw chicken with a bit less sauce, 2/3 cup cooked rice, half the greens"},
+ ingredients=[
+  ("chicken breast", 360, "g", {"per": {"J": 220, "P": 140}, "label": "chicken breast, sliced"}),
+  ("peanut butter", 2, "tbsp", {"label": "smooth peanut butter"}), ("light coconut milk", 125, "ml"),
+  ("soy sauce", 1, "tbsp", {"label": "soy sauce (salt-reduced)"}), ("lime juice", 1, "tbsp"), ("honey", 1, "tsp"), ("garlic", 1, "clove"),
+  ("white rice, uncooked", RICE_J + RICE_P, "cup", {"per": {"J": RICE_J, "P": RICE_P}, "label": "jasmine rice"}),
+  ("bok choy", 3, "whole", {"share": 1, "label": "baby bok choy, halved"}),
+ ],
+ steps=[
+  ("Rice on", "Rinse and cook the rice.", 900),
+  ("Make the satay", "Whisk the peanut butter, coconut milk, soy, lime juice, honey and grated garlic until smooth.", 0),
+  ("Cook the chicken", "Hot non-stick pan with a little spray oil. Cook the chicken until golden and just cooked through.", 360),
+  ("Sauce it", "Pour in the satay and simmer a minute or two until it coats the chicken. Loosen with a splash of water if it's thick.", 120),
+  ("Greens and serve", "Steam or microwave the bok choy for 2 to 3 minutes. Serve the chicken over rice with the greens.", 180),
+ ], notes="Most of the calories here are in the peanut butter. It's measured, not scooped.")
+
+recipe(id="thai-basil-chicken", title="Thai Basil Chicken (Pad Kra Pao)", category="dinner", short="Thai basil chicken, rice, egg",
+ desc="Fast, fiery chicken mince with garlic, chilli, green beans and basil over rice, with a crispy fried egg.",
+ tags=["chicken", "thai", "quick"], time=20, base={"J": 1, "P": 1}, share=0.6,
+ portions={"J": "220 g raw mince, a cup of cooked rice, 1 egg", "P": "140 g raw mince, 2/3 cup cooked rice, 1 egg"},
+ ingredients=[
+  ("chicken mince", 360, "g", {"per": {"J": 220, "P": 140}}),
+  ("garlic", 4, "clove", {"share": 1}), ("fresh chilli", 2, "whole", {"share": 1, "label": "red chillies (bird's eye if you like it hot)"}),
+  ("green beans", 150, "g", {"share": 1, "label": "green beans, in short pieces"}),
+  ("oyster sauce", 1.5, "tbsp", {"share": 1}), ("soy sauce", 1, "tbsp", {"share": 1, "label": "soy sauce (salt-reduced)"}),
+  ("fish sauce", 2, "tsp", {"share": 1}), ("honey", 1, "tsp", {"share": 1, "label": "honey or sugar"}),
+  ("fresh herbs (dill, mint, parsley or chives)", 4, "tbsp", {"share": 1, "label": "Thai basil (or regular basil), a big handful"}),
+  ("olive oil", 2, "tsp", {"share": 1, "label": "oil"}), ("eggs", 2, "whole", {"share": 1}),
+  ("white rice, uncooked", RICE_J + RICE_P, "cup", {"per": {"J": RICE_J, "P": RICE_P}, "label": "jasmine rice"}),
+ ],
+ steps=[
+  ("Rice on, prep", "Cook the rice. Pound or finely chop the garlic and chilli together. Mix the oyster, soy, fish sauce and honey.", 900),
+  ("Fry the eggs", "Heat the oil in a wok until very hot and fry the eggs until the edges are crispy. Set aside.", 120),
+  ("Garlic, chilli, chicken", "Same wok, high heat. Fry the garlic and chilli 20 seconds, add the mince and cook, breaking it up, until browned.", 300),
+  ("Beans and sauce", "Add the beans and sauce and toss 2 minutes until the beans are just tender.", 120),
+  ("Basil and serve", "Off the heat, stir through the basil until wilted. Serve over rice with the egg on top.", 0),
+ ], notes="This one is meant to be hot. Seed the chillies or use one for a milder version.")
+
+recipe(id="garlic-chilli-prawn-linguine", title="Garlic Chilli Prawn Linguine", category="dinner", short="Garlic chilli prawn linguine",
+ desc="Prawns, garlic, chilli, cherry tomatoes and lemon through linguine. Light on the oil, big on flavour.",
+ tags=["seafood", "pasta", "quick"], time=25, base={"J": 1, "P": 1}, share=0.65,
+ portions={"J": "200 g raw prawns, 100 g dry pasta (about 2 cups cooked)", "P": "130 g raw prawns, 65 g dry pasta (about 1.3 cups cooked)"},
+ ingredients=[
+  ("raw prawns, peeled", 330, "g", {"per": {"J": 200, "P": 130}}),
+  ("linguine, dry", 165, "g", {"per": {"J": 100, "P": 65}, "label": "linguine"}),
+  ("olive oil", 1, "tbsp", {"share": 1}), ("garlic", 4, "clove", {"share": 1, "label": "garlic, thinly sliced"}),
+  ("spices (your mix)", 1, "tsp", {"share": 1, "label": "chilli flakes (to taste)"}),
+  ("cherry tomatoes", 250, "g", {"share": 1, "label": "cherry tomatoes, halved"}), ("lemon", 1, "whole", {"share": 1, "label": "lemon, zested and juiced"}),
+  ("baby spinach", 60, "g", {"share": 1}), ("parmesan, grated", 20, "g", {"per": {"J": 12, "P": 8}}),
+  ("fresh herbs (dill, mint, parsley or chives)", 2, "tbsp", {"share": 1, "label": "parsley, chopped"}),
+ ],
+ steps=[
+  ("Pasta on", "Cook the linguine in well-salted water. Save a mug of pasta water before draining.", 600),
+  ("Garlic and chilli", "Meanwhile, warm the oil in a big pan on medium. Add the garlic and chilli and cook gently until the garlic is just golden.", 120),
+  ("Tomatoes", "Turn up the heat, add the tomatoes and cook until they start to burst.", 180),
+  ("Prawns", "Add the prawns and cook until pink and curled, about 2 minutes. Don't overcook them.", 120),
+  ("Toss it all", "Add the drained pasta, spinach, lemon zest and juice and a good splash of pasta water. Toss until glossy and the spinach wilts. Top with parmesan and parsley.", 0),
+ ], notes="The pasta water does the job extra oil would do. Use it.")

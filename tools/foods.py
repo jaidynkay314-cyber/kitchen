@@ -72,6 +72,16 @@ FOODS = {
  "light feta": (200, 17, "Dairy and eggs", {}),
  "garam masala": (380, 15, "Sauces and spices", {"tsp": 2}),
  "tomato paste": (80, 4, "Pantry", {"tbsp": 16}),
+ "gochujang": (220, 4, "Sauces and spices", {"tbsp": 20}),
+ "rice vinegar": (20, 0, "Sauces and spices", {"tbsp": 15}),
+ "peanut butter": (600, 25, "Pantry", {"tbsp": 20}),
+ "light coconut milk": (75, 0.8, "Pantry", {"ml": 1}),
+ "bok choy": (13, 1.5, "Produce", {"whole": 100}),
+ "fish sauce": (35, 5, "Sauces and spices", {"tbsp": 18, "tsp": 6}),
+ "linguine, dry": (355, 12.5, "Pantry", {}),
+ "raw prawns, peeled": (85, 20, "Seafood", {}),
+ "cherry tomatoes": (18, 0.9, "Produce", {}),
+ "fresh chilli": (40, 2, "Produce", {"whole": 15}),
 }
 UNIT_G = {"g": 1, "ml": 1, "kg": 1000}
 def grams(food, qty, unit):

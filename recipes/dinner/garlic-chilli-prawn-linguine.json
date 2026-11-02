@@ -1,0 +1,203 @@
+{
+ "schema": "kitchen-recipe",
+ "schemaVersion": 1,
+ "id": "garlic-chilli-prawn-linguine",
+ "title": "Garlic Chilli Prawn Linguine",
+ "category": "dinner",
+ "desc": "Prawns, garlic, chilli, cherry tomatoes and lemon through linguine. Light on the oil, big on flavour.",
+ "tags": [
+  "seafood",
+  "pasta",
+  "quick"
+ ],
+ "time": 25,
+ "base": {
+  "J": 1,
+  "P": 1
+ },
+ "portions": {
+  "J": "200 g raw prawns, 100 g dry pasta (about 2 cups cooked)",
+  "P": "130 g raw prawns, 65 g dry pasta (about 1.3 cups cooked)"
+ },
+ "ingredients": [
+  {
+   "id": "i1",
+   "name": "raw prawns, peeled",
+   "food": "raw prawns, peeled",
+   "unit": "g",
+   "gpu": 1,
+   "k100": 85,
+   "p100": 20,
+   "aisle": "Seafood",
+   "per": {
+    "J": 200,
+    "P": 130
+   }
+  },
+  {
+   "id": "i2",
+   "name": "linguine",
+   "food": "linguine, dry",
+   "unit": "g",
+   "gpu": 1,
+   "k100": 355,
+   "p100": 12.5,
+   "aisle": "Pantry",
+   "per": {
+    "J": 100,
+    "P": 65
+   }
+  },
+  {
+   "id": "i3",
+   "name": "olive oil",
+   "food": "olive oil",
+   "unit": "tbsp",
+   "gpu": 14,
+   "k100": 884,
+   "p100": 0,
+   "aisle": "Pantry",
+   "per": {
+    "J": 0.5,
+    "P": 0.5
+   }
+  },
+  {
+   "id": "i4",
+   "name": "garlic, thinly sliced",
+   "food": "garlic",
+   "unit": "clove",
+   "gpu": 5,
+   "k100": 149,
+   "p100": 6.4,
+   "aisle": "Produce",
+   "per": {
+    "J": 2.0,
+    "P": 2.0
+   }
+  },
+  {
+   "id": "i5",
+   "name": "chilli flakes (to taste)",
+   "food": "spices (your mix)",
+   "unit": "tsp",
+   "gpu": 2.5,
+   "k100": 0,
+   "p100": 0,
+   "aisle": "Sauces and spices",
+   "per": {
+    "J": 0.5,
+    "P": 0.5
+   }
+  },
+  {
+   "id": "i6",
+   "name": "cherry tomatoes, halved",
+   "food": "cherry tomatoes",
+   "unit": "g",
+   "gpu": 1,
+   "k100": 18,
+   "p100": 0.9,
+   "aisle": "Produce",
+   "per": {
+    "J": 125.0,
+    "P": 125.0
+   }
+  },
+  {
+   "id": "i7",
+   "name": "lemon, zested and juiced",
+   "food": "lemon",
+   "unit": "whole",
+   "gpu": 60,
+   "k100": 29,
+   "p100": 1.1,
+   "aisle": "Produce",
+   "per": {
+    "J": 0.5,
+    "P": 0.5
+   }
+  },
+  {
+   "id": "i8",
+   "name": "baby spinach",
+   "food": "baby spinach",
+   "unit": "g",
+   "gpu": 1,
+   "k100": 23,
+   "p100": 2.9,
+   "aisle": "Produce",
+   "per": {
+    "J": 30.0,
+    "P": 30.0
+   }
+  },
+  {
+   "id": "i9",
+   "name": "parmesan, grated",
+   "food": "parmesan, grated",
+   "unit": "g",
+   "gpu": 1,
+   "k100": 400,
+   "p100": 35,
+   "aisle": "Dairy and eggs",
+   "per": {
+    "J": 12,
+    "P": 8
+   }
+  },
+  {
+   "id": "i10",
+   "name": "parsley, chopped",
+   "food": "fresh herbs (dill, mint, parsley or chives)",
+   "unit": "tbsp",
+   "gpu": 4,
+   "k100": 40,
+   "p100": 3,
+   "aisle": "Produce",
+   "per": {
+    "J": 1.0,
+    "P": 1.0
+   }
+  }
+ ],
+ "steps": [
+  {
+   "title": "Pasta on",
+   "text": "Cook the linguine in well-salted water. Save a mug of pasta water before draining.",
+   "timer": 600
+  },
+  {
+   "title": "Garlic and chilli",
+   "text": "Meanwhile, warm the oil in a big pan on medium. Add the garlic and chilli and cook gently until the garlic is just golden.",
+   "timer": 120
+  },
+  {
+   "title": "Tomatoes",
+   "text": "Turn up the heat, add the tomatoes and cook until they start to burst.",
+   "timer": 180
+  },
+  {
+   "title": "Prawns",
+   "text": "Add the prawns and cook until pink and curled, about 2 minutes. Don't overcook them.",
+   "timer": 120
+  },
+  {
+   "title": "Toss it all",
+   "text": "Add the drained pasta, spinach, lemon zest and juice and a good splash of pasta water. Toss until glossy and the spinach wilts. Top with parmesan and parsley.",
+   "timer": 0
+  }
+ ],
+ "notes": "The pasta water does the job extra oil would do. Use it.",
+ "macros": {
+  "J": {
+   "kcal": 689,
+   "protein": 60
+  },
+  "P": {
+   "kcal": 490,
+   "protein": 40
+  }
+ },
+ "short": "Garlic chilli prawn linguine"
+}

@@ -1,0 +1,188 @@
+{
+ "schema": "kitchen-recipe",
+ "schemaVersion": 1,
+ "id": "satay-chicken",
+ "title": "Satay Chicken with Rice and Greens",
+ "category": "dinner",
+ "desc": "Chicken breast in a light peanut and coconut satay sauce, with rice and steamed bok choy.",
+ "tags": [
+  "chicken",
+  "asian"
+ ],
+ "time": 30,
+ "base": {
+  "J": 1,
+  "P": 1
+ },
+ "portions": {
+  "J": "220 g raw chicken with half the sauce, a cup of cooked rice, half the greens",
+  "P": "140 g raw chicken with a bit less sauce, 2/3 cup cooked rice, half the greens"
+ },
+ "ingredients": [
+  {
+   "id": "i1",
+   "name": "chicken breast, sliced",
+   "food": "chicken breast",
+   "unit": "g",
+   "gpu": 1,
+   "k100": 106,
+   "p100": 23,
+   "aisle": "Meat",
+   "per": {
+    "J": 220,
+    "P": 140
+   }
+  },
+  {
+   "id": "i2",
+   "name": "smooth peanut butter",
+   "food": "peanut butter",
+   "unit": "tbsp",
+   "gpu": 20,
+   "k100": 600,
+   "p100": 25,
+   "aisle": "Pantry",
+   "per": {
+    "J": 1.25,
+    "P": 0.75
+   }
+  },
+  {
+   "id": "i3",
+   "name": "light coconut milk",
+   "food": "light coconut milk",
+   "unit": "ml",
+   "gpu": 1,
+   "k100": 75,
+   "p100": 0.8,
+   "aisle": "Pantry",
+   "per": {
+    "J": 78.125,
+    "P": 46.875
+   }
+  },
+  {
+   "id": "i4",
+   "name": "soy sauce (salt-reduced)",
+   "food": "soy sauce",
+   "unit": "tbsp",
+   "gpu": 16,
+   "k100": 53,
+   "p100": 8,
+   "aisle": "Sauces and spices",
+   "per": {
+    "J": 0.625,
+    "P": 0.375
+   }
+  },
+  {
+   "id": "i5",
+   "name": "lime juice",
+   "food": "lime juice",
+   "unit": "tbsp",
+   "gpu": 15,
+   "k100": 25,
+   "p100": 0.4,
+   "aisle": "Produce",
+   "per": {
+    "J": 0.625,
+    "P": 0.375
+   }
+  },
+  {
+   "id": "i6",
+   "name": "honey",
+   "food": "honey",
+   "unit": "tsp",
+   "gpu": 7,
+   "k100": 304,
+   "p100": 0.3,
+   "aisle": "Pantry",
+   "per": {
+    "J": 0.625,
+    "P": 0.375
+   }
+  },
+  {
+   "id": "i7",
+   "name": "garlic",
+   "food": "garlic",
+   "unit": "clove",
+   "gpu": 5,
+   "k100": 149,
+   "p100": 6.4,
+   "aisle": "Produce",
+   "per": {
+    "J": 0.625,
+    "P": 0.375
+   }
+  },
+  {
+   "id": "i8",
+   "name": "jasmine rice",
+   "food": "white rice, uncooked",
+   "unit": "cup",
+   "gpu": 185,
+   "k100": 360,
+   "p100": 7,
+   "aisle": "Pantry",
+   "per": {
+    "J": 0.4,
+    "P": 0.25
+   }
+  },
+  {
+   "id": "i9",
+   "name": "baby bok choy, halved",
+   "food": "bok choy",
+   "unit": "whole",
+   "gpu": 100,
+   "k100": 13,
+   "p100": 1.5,
+   "aisle": "Produce",
+   "per": {
+    "J": 1.5,
+    "P": 1.5
+   }
+  }
+ ],
+ "steps": [
+  {
+   "title": "Rice on",
+   "text": "Rinse and cook the rice.",
+   "timer": 900
+  },
+  {
+   "title": "Make the satay",
+   "text": "Whisk the peanut butter, coconut milk, soy, lime juice, honey and grated garlic until smooth.",
+   "timer": 0
+  },
+  {
+   "title": "Cook the chicken",
+   "text": "Hot non-stick pan with a little spray oil. Cook the chicken until golden and just cooked through.",
+   "timer": 360
+  },
+  {
+   "title": "Sauce it",
+   "text": "Pour in the satay and simmer a minute or two until it coats the chicken. Loosen with a splash of water if it's thick.",
+   "timer": 120
+  },
+  {
+   "title": "Greens and serve",
+   "text": "Steam or microwave the bok choy for 2 to 3 minutes. Serve the chicken over rice with the greens.",
+   "timer": 180
+  }
+ ],
+ "notes": "Most of the calories here are in the peanut butter. It's measured, not scooped.",
+ "macros": {
+  "J": {
+   "kcal": 753,
+   "protein": 66
+  },
+  "P": {
+   "kcal": 475,
+   "protein": 42
+  }
+ },
+ "short": "Satay chicken, rice, greens"
+}
