@@ -308,6 +308,22 @@ recipe(id="lemon-herb-salmon", sauce="garlic-herb-yoghurt", title="Lemon Herb Sa
   ("Serve", "Squeeze some of the roasted lemon over everything.", 0),
  ], notes="Salmon is higher in fat than the other dinners, but it's mostly omega 3. Pull it when the centre is still slightly translucent; it finishes on the plate.")
 
+recipe(id="baked-salmon-couscous", sauce="garlic-herb-yoghurt", title="Baked Salmon with Couscous and Broccolini", category="dinner", short="Baked salmon, couscous, broccolini",
+ desc="Plain salmon fillets baked until browned, on fluffy couscous with broccolini and a Greek yoghurt sauce. Easy weeknight omega 3.",
+ tags=["fish", "omega 3", "quick"], time=25, base={"J": 1, "P": 1}, share=0.65,
+ portions={"J": "200 g salmon (a large fillet), about 1 cup cooked couscous, 100 g broccolini", "P": "130 g salmon (a regular fillet), about 2/3 cup cooked couscous, 90 g broccolini"},
+ ingredients=[
+  ("salmon fillet, skin on", 330, "g", {"per": {"J": 200, "P": 130}, "label": "salmon fillets"}),
+  ("couscous, dry", 115, "g", {"per": {"J": 70, "P": 45}, "label": "couscous (dry)"}),
+  ("broccolini", 190, "g", {"per": {"J": 100, "P": 90}, "label": "broccolini, trimmed"}),
+ ],
+ steps=[
+  ("Salmon in", "Oven to 220°C (200°C fan). Pat the salmon dry and put it skin side down on a lined tray, nothing on it. Bake until browned on top and it just flakes in the middle.", 900),
+  ("Couscous", "While it bakes, boil the kettle. Put the couscous in a bowl with a pinch of salt, pour over the same volume of boiling water (about 3/4 cup for both of you), cover with a plate and leave 5 minutes. Fluff with a fork.", 300),
+  ("Broccolini", "Steam or microwave the broccolini with a splash of water for 3 to 4 minutes, until bright green and just tender.", 210),
+  ("Serve", "Couscous on the plate, broccolini alongside, salmon on top and the sauce over or beside it.", 0),
+ ], notes="Salmon is higher in fat than the other dinners, but it's mostly omega 3. Thicker fillets may need 2 to 3 more minutes. Wholemeal couscous cooks the same way and roughly doubles the fibre.")
+
 recipe(id="greek-chicken-tray-bake", sauce="tzatziki", title="Greek Chicken Tray Bake", category="dinner", short="Greek chicken tray bake",
  desc="Lemon, garlic and oregano chicken thighs roasted with potatoes, capsicum and red onion, finished with feta.",
  tags=["chicken", "tray bake", "greek"], time=50, base={"J": 1, "P": 1}, share=0.6,

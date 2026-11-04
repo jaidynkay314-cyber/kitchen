@@ -1,0 +1,101 @@
+{
+ "schema": "kitchen-recipe",
+ "schemaVersion": 1,
+ "id": "baked-salmon-couscous",
+ "title": "Baked Salmon with Couscous and Broccolini",
+ "category": "dinner",
+ "desc": "Plain salmon fillets baked until browned, on fluffy couscous with broccolini and a Greek yoghurt sauce. Easy weeknight omega 3.",
+ "tags": [
+  "fish",
+  "omega 3",
+  "quick"
+ ],
+ "time": 25,
+ "base": {
+  "J": 1,
+  "P": 1
+ },
+ "portions": {
+  "J": "200 g salmon (a large fillet), about 1 cup cooked couscous, 100 g broccolini",
+  "P": "130 g salmon (a regular fillet), about 2/3 cup cooked couscous, 90 g broccolini"
+ },
+ "ingredients": [
+  {
+   "id": "i1",
+   "name": "salmon fillets",
+   "food": "salmon fillet, skin on",
+   "unit": "g",
+   "gpu": 1,
+   "k100": 200,
+   "p100": 20,
+   "aisle": "Seafood",
+   "per": {
+    "J": 200,
+    "P": 130
+   }
+  },
+  {
+   "id": "i2",
+   "name": "couscous (dry)",
+   "food": "couscous, dry",
+   "unit": "g",
+   "gpu": 1,
+   "k100": 360,
+   "p100": 12.5,
+   "aisle": "Pantry",
+   "per": {
+    "J": 70,
+    "P": 45
+   }
+  },
+  {
+   "id": "i3",
+   "name": "broccolini, trimmed",
+   "food": "broccolini",
+   "unit": "g",
+   "gpu": 1,
+   "k100": 35,
+   "p100": 3.5,
+   "aisle": "Produce",
+   "per": {
+    "J": 100,
+    "P": 90
+   }
+  }
+ ],
+ "steps": [
+  {
+   "title": "Salmon in",
+   "text": "Oven to 220°C (200°C fan). Pat the salmon dry and put it skin side down on a lined tray, nothing on it. Bake until browned on top and it just flakes in the middle.",
+   "timer": 900
+  },
+  {
+   "title": "Couscous",
+   "text": "While it bakes, boil the kettle. Put the couscous in a bowl with a pinch of salt, pour over the same volume of boiling water (about 3/4 cup for both of you), cover with a plate and leave 5 minutes. Fluff with a fork.",
+   "timer": 300
+  },
+  {
+   "title": "Broccolini",
+   "text": "Steam or microwave the broccolini with a splash of water for 3 to 4 minutes, until bright green and just tender.",
+   "timer": 210
+  },
+  {
+   "title": "Serve",
+   "text": "Couscous on the plate, broccolini alongside, salmon on top and the sauce over or beside it.",
+   "timer": 0
+  }
+ ],
+ "notes": "Salmon is higher in fat than the other dinners, but it's mostly omega 3. Thicker fillets may need 2 to 3 more minutes. Wholemeal couscous cooks the same way and roughly doubles the fibre.",
+ "macros": {
+  "J": {
+   "kcal": 687,
+   "protein": 52
+  },
+  "P": {
+   "kcal": 454,
+   "protein": 35
+  }
+ },
+ "sauce": "garlic-herb-yoghurt",
+ "short": "Baked salmon, couscous, broccolini"
+}

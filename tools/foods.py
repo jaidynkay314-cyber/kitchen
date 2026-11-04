@@ -20,6 +20,7 @@ FOODS = {
  "white rice, uncooked": (360, 7, "Pantry", {"cup": 185}),
  "brown rice, uncooked": (362, 7.5, "Pantry", {"cup": 190}),
  "rolled oats": (375, 12, "Pantry", {"cup": 90}),
+ "couscous, dry": (360, 12.5, "Pantry", {"cup": 185}),
  "kidney beans, tinned (drained)": (110, 7.5, "Pantry", {"tin": 240}),
  "black beans, tinned (drained)": (91, 6, "Pantry", {"tin": 240}),
  "diced tomatoes, tinned": (20, 1, "Pantry", {"tin": 400}),
