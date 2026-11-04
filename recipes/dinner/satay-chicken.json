@@ -119,12 +119,12 @@
   },
   {
    "id": "i8",
-   "name": "jasmine rice",
-   "food": "white rice, uncooked",
+   "name": "brown rice",
+   "food": "brown rice, uncooked",
    "unit": "cup",
-   "gpu": 185,
-   "k100": 360,
-   "p100": 7,
+   "gpu": 190,
+   "k100": 362,
+   "p100": 7.5,
    "aisle": "Pantry",
    "per": {
     "J": 0.4,
@@ -149,8 +149,8 @@
  "steps": [
   {
    "title": "Rice on",
-   "text": "Rinse and cook the rice.",
-   "timer": 900
+   "text": "Rinse and cook the rice. Brown rice takes about 30 minutes.",
+   "timer": 1800
   },
   {
    "title": "Make the satay",
@@ -176,12 +176,12 @@
  "notes": "Most of the calories here are in the peanut butter. It's measured, not scooped.",
  "macros": {
   "J": {
-   "kcal": 753,
+   "kcal": 762,
    "protein": 66
   },
   "P": {
-   "kcal": 475,
-   "protein": 42
+   "kcal": 480,
+   "protein": 43
   }
  },
  "short": "Satay chicken, rice, greens"

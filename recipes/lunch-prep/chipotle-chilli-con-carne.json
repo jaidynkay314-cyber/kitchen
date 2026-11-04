@@ -163,12 +163,12 @@
   },
   {
    "id": "i11",
-   "name": "white rice, uncooked",
-   "food": "white rice, uncooked",
+   "name": "brown rice, uncooked",
+   "food": "brown rice, uncooked",
    "unit": "cup",
-   "gpu": 185,
-   "k100": 360,
-   "p100": 7,
+   "gpu": 190,
+   "k100": 362,
+   "p100": 7.5,
    "aisle": "Pantry",
    "per": {
     "J": 0.25,
@@ -199,8 +199,8 @@
   },
   {
    "title": "Cook the rice",
-   "text": "Cook the rice separately. Season the chilli and add your hot sauce.",
-   "timer": 900
+   "text": "Cook the rice separately. Season the chilli and add your hot sauce. Brown rice takes about 30 minutes.",
+   "timer": 1800
   },
   {
    "title": "Portion",
@@ -211,11 +211,11 @@
  "notes": "The batch makes exactly 4 regular and 3 small serves.",
  "macros": {
   "J": {
-   "kcal": 595,
+   "kcal": 601,
    "protein": 45
   },
   "P": {
-   "kcal": 397,
+   "kcal": 401,
    "protein": 30
   }
  },

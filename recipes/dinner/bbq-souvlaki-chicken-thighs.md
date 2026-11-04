@@ -6,8 +6,8 @@ Category: dinner · 45 min · tags: chicken, bbq, high protein
 
 | | Portion | kcal | Protein |
 |---|---|---|---|
-| Jaidyn | 250 g chicken, about 300 g sweet potato mash, half the broccoli and tzatziki | 794 | 67 g |
-| Paris | 150 g chicken, about 200 g sweet potato mash, half the broccoli and tzatziki | 587 | 46 g |
+| Jaidyn | 250 g chicken, about 300 g sweet potato mash, half the broccoli and tzatziki | 790 | 67 g |
+| Paris | 150 g chicken, about 200 g sweet potato mash, half the broccoli and tzatziki | 583 | 46 g |
 
 ## Ingredients (makes 1 of Jaidyn's and 1 of Paris's serves)
 
@@ -20,7 +20,7 @@ Category: dinner · 45 min · tags: chicken, bbq, high protein
 - 0.5 tsp salt
 - 500 g sweet potato, peeled and chopped
 - 10 g butter
-- 2 tbsp milk, full cream
+- 2 tbsp milk, trim
 - 300 g broccoli, in florets
 - 150 g high-protein Greek yoghurt
 - 0.5 whole Lebanese cucumber, grated and squeezed dry

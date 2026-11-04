@@ -191,12 +191,12 @@
   },
   {
    "id": "i13",
-   "name": "jasmine rice",
-   "food": "white rice, uncooked",
+   "name": "brown rice",
+   "food": "brown rice, uncooked",
    "unit": "cup",
-   "gpu": 185,
-   "k100": 360,
-   "p100": 7,
+   "gpu": 190,
+   "k100": 362,
+   "p100": 7.5,
    "aisle": "Pantry",
    "per": {
     "J": 0.25,
@@ -207,8 +207,8 @@
  "steps": [
   {
    "title": "Rice and lettuce",
-   "text": "Put the rice on. Separate the lettuce into whole cup-shaped leaves, rinse, and chill them in the fridge so they're crisp.",
-   "timer": 900
+   "text": "Put the rice on. Separate the lettuce into whole cup-shaped leaves, rinse, and chill them in the fridge so they're crisp. Brown rice takes about 30 minutes.",
+   "timer": 1800
   },
   {
    "title": "Brown the mince",
@@ -234,11 +234,11 @@
  "notes": "Tinned water chestnuts, diced, add good crunch for almost no calories.",
  "macros": {
   "J": {
-   "kcal": 683,
+   "kcal": 689,
    "protein": 59
   },
   "P": {
-   "kcal": 452,
+   "kcal": 456,
    "protein": 37
   }
  },

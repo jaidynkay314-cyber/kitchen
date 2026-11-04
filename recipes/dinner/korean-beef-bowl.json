@@ -120,12 +120,12 @@
   },
   {
    "id": "i8",
-   "name": "jasmine or short-grain rice",
-   "food": "white rice, uncooked",
+   "name": "brown rice",
+   "food": "brown rice, uncooked",
    "unit": "cup",
-   "gpu": 185,
-   "k100": 360,
-   "p100": 7,
+   "gpu": 190,
+   "k100": 362,
+   "p100": 7.5,
    "aisle": "Pantry",
    "per": {
     "J": 0.4,
@@ -192,8 +192,8 @@
  "steps": [
   {
    "title": "Rice and pickles",
-   "text": "Put the rice on. Toss the cucumber with the rice vinegar and a pinch each of salt and sugar. Leave it to pickle while you cook.",
-   "timer": 900
+   "text": "Put the rice on. Toss the cucumber with the rice vinegar and a pinch each of salt and sugar. Leave it to pickle while you cook. Brown rice takes about 30 minutes.",
+   "timer": 1800
   },
   {
    "title": "Mix the sauce",
@@ -224,11 +224,11 @@
  "notes": "Gochujang is in the Asian aisle at Woolies. It varies in heat by brand, so start with 1 tbsp.",
  "macros": {
   "J": {
-   "kcal": 715,
+   "kcal": 724,
    "protein": 56
   },
   "P": {
-   "kcal": 520,
+   "kcal": 525,
    "protein": 39
   }
  },

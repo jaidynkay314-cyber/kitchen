@@ -6,8 +6,8 @@ Category: dinner · 30 min · tags: chicken, asian
 
 | | Portion | kcal | Protein |
 |---|---|---|---|
-| Jaidyn | 220 g raw chicken with half the sauce, a cup of cooked rice, half the greens | 753 | 66 g |
-| Paris | 140 g raw chicken with a bit less sauce, 2/3 cup cooked rice, half the greens | 475 | 42 g |
+| Jaidyn | 220 g raw chicken with half the sauce, a cup of cooked rice, half the greens | 762 | 66 g |
+| Paris | 140 g raw chicken with a bit less sauce, 2/3 cup cooked rice, half the greens | 480 | 43 g |
 
 ## Ingredients (makes 1 of Jaidyn's and 1 of Paris's serves)
 
@@ -18,12 +18,12 @@ Category: dinner · 30 min · tags: chicken, asian
 - 1 tbsp lime juice
 - 1 tsp honey
 - 1 clove garlic
-- 0.65 cup jasmine rice
+- 0.65 cup brown rice
 - 3 whole baby bok choy, halved
 
 ## Method
 
-1. **Rice on.** Rinse and cook the rice. (15 min)
+1. **Rice on.** Rinse and cook the rice. Brown rice takes about 30 minutes. (30 min)
 2. **Make the satay.** Whisk the peanut butter, coconut milk, soy, lime juice, honey and grated garlic until smooth.
 3. **Cook the chicken.** Hot non-stick pan with a little spray oil. Cook the chicken until golden and just cooked through. (6 min)
 4. **Sauce it.** Pour in the satay and simmer a minute or two until it coats the chicken. Loosen with a splash of water if it's thick. (2 min)

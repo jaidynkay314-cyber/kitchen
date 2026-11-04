@@ -6,8 +6,8 @@ Category: dinner · 30 min · tags: pork, asian, fakeaway
 
 | | Portion | kcal | Protein |
 |---|---|---|---|
-| Jaidyn | 200 g raw pork, half the veg and sauce, a cup of cooked rice | 728 | 53 g |
-| Paris | 130 g raw pork, half the veg and sauce, 2/3 cup cooked rice | 552 | 35 g |
+| Jaidyn | 200 g raw pork, half the veg and sauce, a cup of cooked rice | 737 | 53 g |
+| Paris | 130 g raw pork, half the veg and sauce, 2/3 cup cooked rice | 557 | 35 g |
 
 ## Ingredients (makes 1 of Jaidyn's and 1 of Paris's serves)
 
@@ -22,11 +22,11 @@ Category: dinner · 30 min · tags: pork, asian, fakeaway
 - 1 tbsp soy sauce (salt-reduced)
 - 2 tsp oil
 - 2 whole spring onions, sliced
-- 0.65 cup jasmine rice
+- 0.65 cup brown rice
 
 ## Method
 
-1. **Rice on.** Rinse and cook the rice. (15 min)
+1. **Rice on.** Rinse and cook the rice. Brown rice takes about 30 minutes. (30 min)
 2. **Mix the sauce.** Whisk the tomato sauce, vinegar, honey, soy, 1 tsp cornflour and the pineapple juice from the tin.
 3. **Coat and sear the pork.** Toss the pork in the cornflour with a pinch of salt. Heat the oil in a wok on high and sear the pork until golden and just cooked. Set aside. (6 min)
 4. **Veg.** Same wok, stir-fry the onion and capsicum 2 to 3 minutes so they keep some crunch. Add the pineapple. (3 min)

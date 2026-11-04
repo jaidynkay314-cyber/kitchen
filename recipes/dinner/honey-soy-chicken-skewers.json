@@ -106,12 +106,12 @@
   },
   {
    "id": "i7",
-   "name": "jasmine rice",
-   "food": "white rice, uncooked",
+   "name": "brown rice",
+   "food": "brown rice, uncooked",
    "unit": "cup",
-   "gpu": 185,
-   "k100": 360,
-   "p100": 7,
+   "gpu": 190,
+   "k100": 362,
+   "p100": 7.5,
    "aisle": "Pantry",
    "per": {
     "J": 0.4,
@@ -169,8 +169,8 @@
   },
   {
    "title": "Cook the rice",
-   "text": "Rinse the rice and cook it (absorption or rice cooker).",
-   "timer": 900
+   "text": "Rinse the rice and cook it (absorption or rice cooker). Brown rice takes about 30 minutes.",
+   "timer": 1800
   },
   {
    "title": "Thread and grill",
@@ -186,12 +186,12 @@
  "notes": "The honey catches easily: medium-high, not blazing, and keep them moving.",
  "macros": {
   "J": {
-   "kcal": 638,
-   "protein": 51
+   "kcal": 647,
+   "protein": 52
   },
   "P": {
-   "kcal": 431,
-   "protein": 33
+   "kcal": 437,
+   "protein": 34
   }
  },
  "sauce": "sriracha-lime-yoghurt",

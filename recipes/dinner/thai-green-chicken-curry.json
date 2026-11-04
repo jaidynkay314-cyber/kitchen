@@ -162,12 +162,12 @@
   },
   {
    "id": "i11",
-   "name": "jasmine rice",
-   "food": "white rice, uncooked",
+   "name": "brown rice",
+   "food": "brown rice, uncooked",
    "unit": "cup",
-   "gpu": 185,
-   "k100": 360,
-   "p100": 7,
+   "gpu": 190,
+   "k100": 362,
+   "p100": 7.5,
    "aisle": "Pantry",
    "per": {
     "J": 0.4,
@@ -178,8 +178,8 @@
  "steps": [
   {
    "title": "Rice on",
-   "text": "Rinse and cook the rice.",
-   "timer": 900
+   "text": "Rinse and cook the rice. Brown rice takes about 30 minutes.",
+   "timer": 1800
   },
   {
    "title": "Fry the paste",
@@ -205,11 +205,11 @@
  "notes": "Curry pastes vary a lot in heat. Start with 1.5 tbsp if you're not sure about the brand.",
  "macros": {
   "J": {
-   "kcal": 755,
+   "kcal": 764,
    "protein": 51
   },
   "P": {
-   "kcal": 473,
+   "kcal": 478,
    "protein": 33
   }
  },

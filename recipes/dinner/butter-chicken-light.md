@@ -6,8 +6,8 @@ Category: dinner · 45 min · tags: chicken, curry, freezer
 
 | | Portion | kcal | Protein |
 |---|---|---|---|
-| Jaidyn | A quarter of the curry (about 1.5 cups), a cup of cooked rice | 677 | 56 g |
-| Paris | About 1 cup of curry, 2/3 cup cooked rice | 434 | 36 g |
+| Jaidyn | A quarter of the curry (about 1.5 cups), a cup of cooked rice | 686 | 56 g |
+| Paris | About 1 cup of curry, 2/3 cup cooked rice | 439 | 37 g |
 
 ## Ingredients (makes 2 of Jaidyn's and 2 of Paris's serves)
 
@@ -23,12 +23,12 @@ Category: dinner · 45 min · tags: chicken, curry, freezer
 - 2 tbsp tomato paste
 - 400 g passata
 - 2 tbsp fresh coriander, to serve
-- 1.3 cup basmati rice
+- 1.3 cup brown rice
 
 ## Method
 
 1. **Marinate the chicken.** Mix the chicken with 100 g of the yoghurt, 1 tsp garam masala, the paprika and a pinch of salt. Leave 20 minutes, or overnight. (20 min)
-2. **Rice on.** Rinse and cook the rice. (15 min)
+2. **Rice on.** Rinse and cook the rice. Brown rice takes about 30 minutes. (30 min)
 3. **Sear the chicken.** Hot non-stick pan, a little spray oil if needed. Sear the chicken in batches until browned on the outside (it finishes in the sauce). Set aside. (8 min)
 4. **Build the sauce.** Lower the heat. Melt the butter, cook the onion until soft, then the garlic, ginger, cumin and remaining garam masala for a minute. Stir in the tomato paste, then the passata. (10 min)
 5. **Simmer.** Return the chicken and simmer gently until cooked through and the sauce thickens. (10 min)

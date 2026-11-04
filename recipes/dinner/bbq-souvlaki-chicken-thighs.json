@@ -148,12 +148,12 @@
   },
   {
    "id": "i10",
-   "name": "milk, full cream",
-   "food": "milk, full cream",
+   "name": "milk, trim",
+   "food": "milk, trim",
    "unit": "tbsp",
    "gpu": 15,
-   "k100": 64,
-   "p100": 3.3,
+   "k100": 36,
+   "p100": 3.7,
    "aisle": "Dairy and eggs",
    "per": {
     "J": 1.0,
@@ -238,11 +238,11 @@
  "notes": "Leftover cooked thighs keep 3 days in the fridge for a lunch wrap.",
  "macros": {
   "J": {
-   "kcal": 794,
+   "kcal": 790,
    "protein": 67
   },
   "P": {
-   "kcal": 587,
+   "kcal": 583,
    "protein": 46
   }
  }

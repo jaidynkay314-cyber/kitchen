@@ -22,12 +22,12 @@
  "ingredients": [
   {
    "id": "i1",
-   "name": "English muffins",
-   "food": "English muffins",
+   "name": "wholemeal or wholegrain English muffins",
+   "food": "wholemeal English muffins",
    "unit": "whole",
    "gpu": 67,
-   "k100": 225,
-   "p100": 8,
+   "k100": 222,
+   "p100": 9.5,
    "aisle": "Bakery",
    "per": {
     "J": 1.0,
@@ -88,12 +88,12 @@
  "notes": "Add an egg for about 70 kcal and 6 g protein.",
  "macros": {
   "J": {
-   "kcal": 477,
-   "protein": 41
+   "kcal": 475,
+   "protein": 42
   },
   "P": {
-   "kcal": 341,
-   "protein": 25
+   "kcal": 339,
+   "protein": 26
   }
  }
 }

@@ -4,7 +4,7 @@
  "id": "chicken-fried-rice",
  "title": "Chicken Fried Rice",
  "category": "lunch prep",
- "desc": "Freezer-friendly fried rice. Best as a pre-gym lunch: lower fat and fibre.",
+ "desc": "Freezer-friendly fried rice. Best as a pre-gym lunch: lower in fat.",
  "tags": [
   "chicken",
   "freezer",
@@ -36,12 +36,12 @@
   },
   {
    "id": "i2",
-   "name": "white rice (cook the day before)",
-   "food": "white rice, uncooked",
+   "name": "brown rice (cook the day before)",
+   "food": "brown rice, uncooked",
    "unit": "cup",
-   "gpu": 185,
-   "k100": 360,
-   "p100": 7,
+   "gpu": 190,
+   "k100": 362,
+   "p100": 7.5,
    "aisle": "Pantry",
    "per": {
     "J": 0.3333,
@@ -182,12 +182,12 @@
  "notes": "Keeps 2 to 3 months frozen. Reheat until steaming hot all the way through.",
  "macros": {
   "J": {
-   "kcal": 561,
+   "kcal": 568,
    "protein": 53
   },
   "P": {
-   "kcal": 374,
-   "protein": 35
+   "kcal": 379,
+   "protein": 36
   }
  },
  "sauce": "sriracha-lime-yoghurt"

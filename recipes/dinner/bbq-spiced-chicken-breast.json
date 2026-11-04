@@ -65,12 +65,12 @@
   },
   {
    "id": "i4",
-   "name": "milk, for the mash",
-   "food": "milk, full cream",
+   "name": "trim milk, for the mash",
+   "food": "milk, trim",
    "unit": "tbsp",
    "gpu": 15,
-   "k100": 64,
-   "p100": 3.3,
+   "k100": 36,
+   "p100": 3.7,
    "aisle": "Dairy and eggs",
    "per": {
     "J": 1.0,
@@ -122,11 +122,11 @@
  "notes": "Raw chicken breast loses about a quarter of its weight cooking, so 250 g raw is about 190 g on the plate. Weigh raw if you can; the cooked weights are a guide. A knob of butter in the mash adds about 70 kcal.",
  "macros": {
   "J": {
-   "kcal": 568,
+   "kcal": 563,
    "protein": 66
   },
   "P": {
-   "kcal": 356,
+   "kcal": 352,
    "protein": 43
   }
  },

@@ -190,12 +190,12 @@
   },
   {
    "id": "i13",
-   "name": "basmati rice",
-   "food": "white rice, uncooked",
+   "name": "brown rice",
+   "food": "brown rice, uncooked",
    "unit": "cup",
-   "gpu": 185,
-   "k100": 360,
-   "p100": 7,
+   "gpu": 190,
+   "k100": 362,
+   "p100": 7.5,
    "aisle": "Pantry",
    "per": {
     "J": 0.4,
@@ -211,8 +211,8 @@
   },
   {
    "title": "Rice on",
-   "text": "Rinse and cook the rice.",
-   "timer": 900
+   "text": "Rinse and cook the rice. Brown rice takes about 30 minutes.",
+   "timer": 1800
   },
   {
    "title": "Sear the chicken",
@@ -238,12 +238,12 @@
  "notes": "Leftovers keep 3 days or freeze well. Reheat gently and don't boil it, or the yoghurt splits.",
  "macros": {
   "J": {
-   "kcal": 677,
+   "kcal": 686,
    "protein": 56
   },
   "P": {
-   "kcal": 434,
-   "protein": 36
+   "kcal": 439,
+   "protein": 37
   }
  },
  "short": "Lighter butter chicken, rice"

@@ -1,18 +1,18 @@
 # Chicken Fried Rice
 
-Freezer-friendly fried rice. Best as a pre-gym lunch: lower fat and fibre.
+Freezer-friendly fried rice. Best as a pre-gym lunch: lower in fat.
 
 Category: lunch prep · 40 min · tags: chicken, freezer, rice
 
 | | Portion | kcal | Protein |
 |---|---|---|---|
-| Jaidyn | 1 regular container (a sixth of the batch) | 561 | 53 g |
-| Paris | 2/3 of a regular container | 374 | 35 g |
+| Jaidyn | 1 regular container (a sixth of the batch) | 568 | 53 g |
+| Paris | 2/3 of a regular container | 379 | 36 g |
 
 ## Ingredients (makes 4 of Jaidyn's and 3 of Paris's serves)
 
 - 1000 g chicken breast, diced small
-- 2 cup white rice (cook the day before)
+- 2 cup brown rice (cook the day before)
 - 6 whole eggs
 - 500 g frozen mixed veg
 - 4 whole spring onions, sliced

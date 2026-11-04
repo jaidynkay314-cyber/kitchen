@@ -6,12 +6,12 @@ Category: breakfast · 40 min · tags: breakfast, freezer, grab and go
 
 | | Portion | kcal | Protein |
 |---|---|---|---|
-| Jaidyn | 1 burger with a double lean patty (160 g raw) | 477 | 41 g |
-| Paris | 1 burger with a single patty (80 g raw) | 341 | 25 g |
+| Jaidyn | 1 burger with a double lean patty (160 g raw) | 475 | 42 g |
+| Paris | 1 burger with a single patty (80 g raw) | 339 | 26 g |
 
 ## Ingredients (makes 6 of Jaidyn's and 6 of Paris's serves)
 
-- 12 whole English muffins
+- 12 whole wholemeal or wholegrain English muffins
 - 1440 g pork and beef mince (80 g patties)
 - 12 whole small cheese slices
 

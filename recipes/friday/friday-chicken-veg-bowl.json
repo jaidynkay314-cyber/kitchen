@@ -50,12 +50,12 @@
   },
   {
    "id": "i3",
-   "name": "jasmine rice (about 2/3 cup)",
-   "food": "white rice, uncooked",
+   "name": "brown rice (about 2/3 cup)",
+   "food": "brown rice, uncooked",
    "unit": "g",
    "gpu": 1,
-   "k100": 360,
-   "p100": 7,
+   "k100": 362,
+   "p100": 7.5,
    "aisle": "Pantry",
    "per": {
     "J": 20.8333,
@@ -122,8 +122,8 @@
  "steps": [
   {
    "title": "Cook the rice",
-   "text": "Cook the rice and spread it on a tray to cool.",
-   "timer": 900
+   "text": "Cook the rice and spread it on a tray to cool. Brown rice takes about 30 minutes.",
+   "timer": 1800
   },
   {
    "title": "Brown the chicken",
@@ -153,7 +153,7 @@
    "protein": 49
   },
   "P": {
-   "kcal": 258,
+   "kcal": 259,
    "protein": 33
   }
  },

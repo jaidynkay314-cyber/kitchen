@@ -176,12 +176,12 @@
   },
   {
    "id": "i12",
-   "name": "jasmine rice",
-   "food": "white rice, uncooked",
+   "name": "brown rice",
+   "food": "brown rice, uncooked",
    "unit": "cup",
-   "gpu": 185,
-   "k100": 360,
-   "p100": 7,
+   "gpu": 190,
+   "k100": 362,
+   "p100": 7.5,
    "aisle": "Pantry",
    "per": {
     "J": 0.4,
@@ -192,8 +192,8 @@
  "steps": [
   {
    "title": "Rice on, prep",
-   "text": "Cook the rice. Pound or finely chop the garlic and chilli together. Mix the oyster, soy, fish sauce and honey.",
-   "timer": 900
+   "text": "Cook the rice. Pound or finely chop the garlic and chilli together. Mix the oyster, soy, fish sauce and honey. Brown rice takes about 30 minutes.",
+   "timer": 1800
   },
   {
    "title": "Fry the eggs",
@@ -219,11 +219,11 @@
  "notes": "This one is meant to be hot. Seed the chillies or use one for a milder version.",
  "macros": {
   "J": {
-   "kcal": 765,
-   "protein": 57
+   "kcal": 774,
+   "protein": 58
   },
   "P": {
-   "kcal": 553,
+   "kcal": 558,
    "protein": 40
   }
  },

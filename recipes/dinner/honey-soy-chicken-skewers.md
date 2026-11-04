@@ -6,8 +6,8 @@ Category: dinner · 40 min · tags: chicken, bbq, asian
 
 | | Portion | kcal | Protein |
 |---|---|---|---|
-| Jaidyn | 3 skewers (220 g raw chicken), a cup of cooked rice, a big handful of slaw | 638 | 51 g |
-| Paris | 2 skewers (140 g raw chicken), 2/3 cup cooked rice, a handful of slaw | 431 | 33 g |
+| Jaidyn | 3 skewers (220 g raw chicken), a cup of cooked rice, a big handful of slaw | 647 | 52 g |
+| Paris | 2 skewers (140 g raw chicken), 2/3 cup cooked rice, a handful of slaw | 437 | 34 g |
 
 ## Ingredients (makes 1 of Jaidyn's and 1 of Paris's serves)
 
@@ -17,7 +17,7 @@ Category: dinner · 40 min · tags: chicken, bbq, asian
 - 2 clove garlic
 - 1 tsp fresh ginger, grated
 - 1 tsp sesame oil
-- 0.65 cup jasmine rice
+- 0.65 cup brown rice
 - 200 g coleslaw mix
 - 2 whole spring onions, sliced
 - 1 tbsp lime juice, for the slaw
@@ -25,7 +25,7 @@ Category: dinner · 40 min · tags: chicken, bbq, asian
 ## Method
 
 1. **Marinate.** Mix the soy, honey, garlic, ginger and sesame oil. Toss the chicken through and leave 20 minutes (or overnight). If using bamboo skewers, soak them now. (20 min)
-2. **Cook the rice.** Rinse the rice and cook it (absorption or rice cooker). (15 min)
+2. **Cook the rice.** Rinse the rice and cook it (absorption or rice cooker). Brown rice takes about 30 minutes. (30 min)
 3. **Thread and grill.** Thread the chicken onto skewers. Barbecue on medium-high, turning every couple of minutes, until sticky, charred at the edges and cooked through. Brush with leftover marinade only in the first half of cooking. (10 min)
 4. **Slaw and serve.** Toss the slaw mix and spring onion with the lime juice and a pinch of salt. Serve the skewers over rice with the slaw.
 

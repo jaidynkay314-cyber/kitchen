@@ -6,15 +6,15 @@ Category: dinner · 35 min · tags: chicken, bbq, high protein, lean
 
 | | Portion | kcal | Protein |
 |---|---|---|---|
-| Jaidyn | On the plate: about 190 g cooked chicken (250 g raw), 300 g mash (a heaped cup and a half), 100 g broccolini | 568 | 66 g |
-| Paris | On the plate: about 120 g cooked chicken (160 g raw), 175 g mash (a cup), 75 g broccolini | 356 | 43 g |
+| Jaidyn | On the plate: about 190 g cooked chicken (250 g raw), 300 g mash (a heaped cup and a half), 100 g broccolini | 563 | 66 g |
+| Paris | On the plate: about 120 g cooked chicken (160 g raw), 175 g mash (a cup), 75 g broccolini | 352 | 43 g |
 
 ## Ingredients (makes 1 of Jaidyn's and 1 of Paris's serves)
 
 - 410 g chicken breast
 - 2 tsp Spices (paprika, garlic and onion powder, whatever you like)
 - 475 g sweet potato, peeled and chopped
-- 2 tbsp milk, for the mash
+- 2 tbsp trim milk, for the mash
 - 1 bunch broccolini (or 175 g broccoli)
 
 ## Method

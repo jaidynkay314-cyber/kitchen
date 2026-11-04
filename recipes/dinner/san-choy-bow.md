@@ -6,8 +6,8 @@ Category: dinner · 25 min · tags: pork, chicken, asian, quick
 
 | | Portion | kcal | Protein |
 |---|---|---|---|
-| Jaidyn | About 250 g of the cooked mince filling (5 or 6 lettuce cups), 2/3 cup cooked rice | 683 | 59 g |
-| Paris | The rest of the filling (3 or 4 lettuce cups), 1/2 cup cooked rice | 452 | 37 g |
+| Jaidyn | About 250 g of the cooked mince filling (5 or 6 lettuce cups), 2/3 cup cooked rice | 689 | 59 g |
+| Paris | The rest of the filling (3 or 4 lettuce cups), 1/2 cup cooked rice | 456 | 37 g |
 
 ## Ingredients (makes 1 of Jaidyn's and 1 of Paris's serves)
 
@@ -23,11 +23,11 @@ Category: dinner · 25 min · tags: pork, chicken, asian, quick
 - 1 tbsp hoisin sauce
 - 1 tsp sesame oil
 - 1 whole iceberg lettuce, leaves separated into cups
-- 0.42 cup jasmine rice
+- 0.42 cup brown rice
 
 ## Method
 
-1. **Rice and lettuce.** Put the rice on. Separate the lettuce into whole cup-shaped leaves, rinse, and chill them in the fridge so they're crisp. (15 min)
+1. **Rice and lettuce.** Put the rice on. Separate the lettuce into whole cup-shaped leaves, rinse, and chill them in the fridge so they're crisp. Brown rice takes about 30 minutes. (30 min)
 2. **Brown the mince.** Heat the sesame oil in a wok on high. Add both minces and cook, breaking it up, until browned and any liquid has cooked off. (7 min)
 3. **Add the veg.** Add the garlic, ginger, carrot and capsicum and stir-fry 2 minutes. (2 min)
 4. **Sauce it.** Add the oyster, soy and hoisin sauces and toss until glossy. Stir through most of the spring onion. (1 min)

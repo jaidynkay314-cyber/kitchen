@@ -36,12 +36,12 @@
   },
   {
    "id": "i2",
-   "name": "white rice, uncooked",
-   "food": "white rice, uncooked",
+   "name": "brown rice, uncooked",
+   "food": "brown rice, uncooked",
    "unit": "cup",
-   "gpu": 185,
-   "k100": 360,
-   "p100": 7,
+   "gpu": 190,
+   "k100": 362,
+   "p100": 7.5,
    "aisle": "Pantry",
    "per": {
     "J": 0.25,
@@ -183,8 +183,8 @@
   },
   {
    "title": "Cook the rice",
-   "text": "Cook the rice and stir through the lime juice and a pinch of salt.",
-   "timer": 900
+   "text": "Cook the rice and stir through the lime juice and a pinch of salt. Brown rice takes about 30 minutes.",
+   "timer": 1800
   },
   {
    "title": "Mix the filling",
@@ -205,12 +205,12 @@
  "notes": "Microwave from frozen 3 to 4 minutes (foil off), turning halfway.",
  "macros": {
   "J": {
-   "kcal": 656,
+   "kcal": 661,
    "protein": 55
   },
   "P": {
-   "kcal": 437,
-   "protein": 36
+   "kcal": 441,
+   "protein": 37
   }
  },
  "sauce": "chipotle-lime-yoghurt"

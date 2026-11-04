@@ -6,8 +6,8 @@ Category: dinner · 20 min · tags: chicken, thai, quick
 
 | | Portion | kcal | Protein |
 |---|---|---|---|
-| Jaidyn | 220 g raw mince, a cup of cooked rice, 1 egg | 765 | 57 g |
-| Paris | 140 g raw mince, 2/3 cup cooked rice, 1 egg | 553 | 40 g |
+| Jaidyn | 220 g raw mince, a cup of cooked rice, 1 egg | 774 | 58 g |
+| Paris | 140 g raw mince, 2/3 cup cooked rice, 1 egg | 558 | 40 g |
 
 ## Ingredients (makes 1 of Jaidyn's and 1 of Paris's serves)
 
@@ -22,11 +22,11 @@ Category: dinner · 20 min · tags: chicken, thai, quick
 - 4 tbsp Thai basil (or regular basil), a big handful
 - 2 tsp oil
 - 2 whole eggs
-- 0.65 cup jasmine rice
+- 0.65 cup brown rice
 
 ## Method
 
-1. **Rice on, prep.** Cook the rice. Pound or finely chop the garlic and chilli together. Mix the oyster, soy, fish sauce and honey. (15 min)
+1. **Rice on, prep.** Cook the rice. Pound or finely chop the garlic and chilli together. Mix the oyster, soy, fish sauce and honey. Brown rice takes about 30 minutes. (30 min)
 2. **Fry the eggs.** Heat the oil in a wok until very hot and fry the eggs until the edges are crispy. Set aside. (2 min)
 3. **Garlic, chilli, chicken.** Same wok, high heat. Fry the garlic and chilli 20 seconds, add the mince and cook, breaking it up, until browned. (5 min)
 4. **Beans and sauce.** Add the beans and sauce and toss 2 minutes until the beans are just tender. (2 min)

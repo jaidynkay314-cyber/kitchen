@@ -6,8 +6,8 @@ Category: dinner · 30 min · tags: chicken, thai, curry
 
 | | Portion | kcal | Protein |
 |---|---|---|---|
-| Jaidyn | 200 g raw chicken and a generous ladle of curry, a cup of cooked rice | 755 | 51 g |
-| Paris | 130 g raw chicken and a smaller ladle, 2/3 cup cooked rice | 473 | 33 g |
+| Jaidyn | 200 g raw chicken and a generous ladle of curry, a cup of cooked rice | 764 | 51 g |
+| Paris | 130 g raw chicken and a smaller ladle, 2/3 cup cooked rice | 478 | 33 g |
 
 ## Ingredients (makes 1 of Jaidyn's and 1 of Paris's serves)
 
@@ -21,11 +21,11 @@ Category: dinner · 30 min · tags: chicken, thai, curry
 - 1 tsp honey or brown sugar
 - 1 tbsp lime juice
 - 3 tbsp Thai basil or coriander
-- 0.65 cup jasmine rice
+- 0.65 cup brown rice
 
 ## Method
 
-1. **Rice on.** Rinse and cook the rice. (15 min)
+1. **Rice on.** Rinse and cook the rice. Brown rice takes about 30 minutes. (30 min)
 2. **Fry the paste.** In a deep pan or wok on medium, fry the curry paste with a splash of the coconut milk until fragrant. (2 min)
 3. **Brown the chicken.** Add the chicken and stir until it's coated and sealed. (3 min)
 4. **Simmer.** Add the rest of the coconut milk, half a cup of water, the zucchini and capsicum. Simmer until the chicken is cooked through. (8 min)
