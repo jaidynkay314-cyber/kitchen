@@ -16,13 +16,13 @@
   "P": 1
  },
  "portions": {
-  "J": "200 g salmon (a large fillet), about 1 cup cooked couscous, 100 g broccolini",
-  "P": "130 g salmon (a regular fillet), about 2/3 cup cooked couscous, 90 g broccolini"
+  "J": "200 g raw salmon (a large fillet, about 150 g cooked), about 1 cup cooked couscous, 100 g broccolini",
+  "P": "130 g raw salmon (a regular fillet, about 100 g cooked), about 2/3 cup cooked couscous, 90 g broccolini"
  },
  "ingredients": [
   {
    "id": "i1",
-   "name": "salmon fillets",
+   "name": "salmon fillets (raw weight)",
    "food": "salmon fillet, skin on",
    "unit": "g",
    "gpu": 1,

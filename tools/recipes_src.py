@@ -295,7 +295,7 @@ recipe(id="lemon-herb-salmon", sauce="garlic-herb-yoghurt", title="Lemon Herb Sa
  tags=["fish", "tray bake", "omega 3"], time=40, base={"J": 1, "P": 1}, share=0.6,
  portions={"J": "200 g salmon (a large fillet), 250 g potatoes, 125 g beans", "P": "130 g salmon (a regular fillet), 150 g potatoes, 100 g beans"},
  ingredients=[
-  ("salmon fillet, skin on", 330, "g", {"per": {"J": 200, "P": 130}}),
+  ("salmon fillet, skin on", 330, "g", {"per": {"J": 200, "P": 130}, "label": "salmon fillet, skin on (raw weight)"}),
   ("baby potatoes", 400, "g", {"per": {"J": 250, "P": 150}, "label": "baby potatoes, halved"}),
   ("green beans", 225, "g", {"per": {"J": 125, "P": 100}, "label": "green beans, trimmed"}),
   ("olive oil", 2, "tsp", {"share": 1}), ("lemon", 1, "whole", {"share": 1, "label": "lemon, zested and sliced"}),
@@ -311,9 +311,9 @@ recipe(id="lemon-herb-salmon", sauce="garlic-herb-yoghurt", title="Lemon Herb Sa
 recipe(id="baked-salmon-couscous", sauce="garlic-herb-yoghurt", title="Baked Salmon with Couscous and Broccolini", category="dinner", short="Baked salmon, couscous, broccolini",
  desc="Plain salmon fillets baked until browned, on fluffy couscous with broccolini and a Greek yoghurt sauce. Easy weeknight omega 3.",
  tags=["fish", "omega 3", "quick"], time=25, base={"J": 1, "P": 1}, share=0.65,
- portions={"J": "200 g salmon (a large fillet), about 1 cup cooked couscous, 100 g broccolini", "P": "130 g salmon (a regular fillet), about 2/3 cup cooked couscous, 90 g broccolini"},
+ portions={"J": "200 g raw salmon (a large fillet, about 150 g cooked), about 1 cup cooked couscous, 100 g broccolini", "P": "130 g raw salmon (a regular fillet, about 100 g cooked), about 2/3 cup cooked couscous, 90 g broccolini"},
  ingredients=[
-  ("salmon fillet, skin on", 330, "g", {"per": {"J": 200, "P": 130}, "label": "salmon fillets"}),
+  ("salmon fillet, skin on", 330, "g", {"per": {"J": 200, "P": 130}, "label": "salmon fillets (raw weight)"}),
   ("couscous, dry", 115, "g", {"per": {"J": 70, "P": 45}, "label": "couscous (dry)"}),
   ("broccolini", 190, "g", {"per": {"J": 100, "P": 90}, "label": "broccolini, trimmed"}),
  ],

@@ -22,7 +22,7 @@
  "ingredients": [
   {
    "id": "i1",
-   "name": "salmon fillet, skin on",
+   "name": "salmon fillet, skin on (raw weight)",
    "food": "salmon fillet, skin on",
    "unit": "g",
    "gpu": 1,

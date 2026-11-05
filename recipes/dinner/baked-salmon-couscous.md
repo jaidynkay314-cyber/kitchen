@@ -6,12 +6,12 @@ Category: dinner · 25 min · tags: fish, omega 3, quick
 
 | | Portion | kcal | Protein |
 |---|---|---|---|
-| Jaidyn | 200 g salmon (a large fillet), about 1 cup cooked couscous, 100 g broccolini | 687 | 52 g |
-| Paris | 130 g salmon (a regular fillet), about 2/3 cup cooked couscous, 90 g broccolini | 454 | 35 g |
+| Jaidyn | 200 g raw salmon (a large fillet, about 150 g cooked), about 1 cup cooked couscous, 100 g broccolini | 687 | 52 g |
+| Paris | 130 g raw salmon (a regular fillet, about 100 g cooked), about 2/3 cup cooked couscous, 90 g broccolini | 454 | 35 g |
 
 ## Ingredients (makes 1 of Jaidyn's and 1 of Paris's serves)
 
-- 330 g salmon fillets
+- 330 g salmon fillets (raw weight)
 - 115 g couscous (dry)
 - 190 g broccolini, trimmed
 

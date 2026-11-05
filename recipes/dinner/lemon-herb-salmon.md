@@ -11,7 +11,7 @@ Category: dinner · 40 min · tags: fish, tray bake, omega 3
 
 ## Ingredients (makes 1 of Jaidyn's and 1 of Paris's serves)
 
-- 330 g salmon fillet, skin on
+- 330 g salmon fillet, skin on (raw weight)
 - 400 g baby potatoes, halved
 - 225 g green beans, trimmed
 - 2 tsp olive oil
